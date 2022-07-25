@@ -38,35 +38,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
         public async Task<IActionResult> AddCategory(CreateCategoryRequest request)
         {
             var category = await _icategoryService.AddCategory(request);
-            return Ok(category);
+            return Ok();
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateCategory(UpdateCategoryRequest request)
         {
-            //var category = await _dataContext.Category.FindAsync(request.CategoryId);
-            //if (category == null)
-            //    return BadRequest("Category not found");
-            //category.CategoryName = request.CategoryName;
-            //category.Description = request.Description;
-            //category.Status = request.Status;
-
-            //await _dataContext.SaveChangesAsync();
-
-            //return Ok(await _dataContext.Category.ToListAsync());
-
             var category = await _icategoryService.UpdateCategory(request);
-            return Ok(category);
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
             var category = await _icategoryService.DeleteCategory(id);
-            return Ok(category);
-
+            return Ok();
         }
-
-
     }
 }
