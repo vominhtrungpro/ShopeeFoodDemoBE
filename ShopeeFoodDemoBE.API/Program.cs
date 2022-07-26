@@ -4,8 +4,22 @@ using ShopeeFoodDemoBE.BLL.Implementations;
 using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using ShopeeFoodDemoBE.DAL.Repos.Implementations;
+using System.Web.Http.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("*");
+                          policy.WithMethods("*");
+                          policy.WithHeaders("*");
+                      });
+});
 
 //Add services to the container.
 builder.Services.AddDbContext<DataContext>(options =>
@@ -15,6 +29,15 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+builder.Services.AddTransient<ICityService, CityService>();
+builder.Services.AddTransient<ICityRepository, CityRepository>();
+
+builder.Services.AddTransient<IRestaurantTypeService, RestaurantTypeService>();
+builder.Services.AddTransient<IRestaurantTypeRepository, RestaurantTypeRepository>();
+
+builder.Services.AddTransient<IRestaurantService, RestaurantService>();
+builder.Services.AddTransient<IRestaurantRepository, RestaurantRepository>();
 
 // Add services to the container.
 
@@ -37,5 +60,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(MyAllowSpecificOrigins); //TODO: rename
 
 app.Run();
