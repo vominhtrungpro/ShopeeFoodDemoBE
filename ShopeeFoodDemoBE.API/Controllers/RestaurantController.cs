@@ -36,6 +36,34 @@ namespace ShopeeFoodDemoBE.API.Controllers
             return Ok(restaurant);
         }
 
+        [HttpGet("cityid-{id}")]
+        public async Task<IActionResult> GetRestaurantByCityId(int id)
+        {
+            var restaurant = await _irestaurantService.GetRestaurantByCityId(id);
+            return Ok(restaurant);
+        }
+
+        [HttpPost("listcityid")]
+        public async Task<IActionResult> GetRestaurantByListCityId(RestaurantRequestListCityListRestaurantType request)
+        {
+            var restaurant = await _irestaurantService.GetRestaurantByListCityIdAndListRestaurantType(request);
+            return Ok(restaurant);
+        }
+
+        [HttpGet("restauranttypeid-{id}")]
+        public async Task<IActionResult> GetRestaurantByRestaurantTypeId(int id)
+        {
+            var restaurant = await _irestaurantService.GetRestaurantByRestaurantTypeId(id);
+            return Ok(restaurant);
+        }
+
+        [HttpGet("more-categoryid-{id1}-cityid-{id2}")]
+        public async Task<IActionResult> GetRestaurantByCategoryIdAndCityId(int id1, int id2)
+        {
+            var restaurant = await _irestaurantService.GetRestaurantByCategoryIdAndCityId(id1, id2);
+            return Ok(restaurant);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddRestaurant(RestaurantRequest request)
         {

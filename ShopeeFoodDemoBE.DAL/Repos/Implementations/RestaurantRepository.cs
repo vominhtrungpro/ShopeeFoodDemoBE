@@ -49,6 +49,88 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             }).ToListAsync();
         }
 
+        public async Task<List<Restaurant>> GetRestaurantByRestaurantTypeId(int id)
+        {
+            var query = from r in _dataContext.Restaurant
+                        join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
+                        where t.RestaurantTypeId == id
+                        select new { r };
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            }).ToListAsync();
+        }
+
+        public async Task<List<Restaurant>> GetRestaurantByCityId(int id)
+        {
+            var query = from r in _dataContext.Restaurant
+                        join c in _dataContext.City on r.CityId equals c.CityId
+                        where c.CityId == id
+                        select new { r };
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            }).ToListAsync();
+        }
+
+        public async Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int id1, int id2)
+        {
+            var query = from r in _dataContext.Restaurant
+                        join c in _dataContext.City on r.CityId equals c.CityId
+                        join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
+                        join ca in _dataContext.Category on t.CategoryId equals ca.CategoryId
+                        where c.CityId == id2 && ca.CategoryId == id1
+                        select new { r };
+
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            }).ToListAsync();
+        }
+
+        public async Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantType(List<int> id1,List<int> id2)
+        {
+
+            var query = from r in _dataContext.Restaurant
+                        join c in _dataContext.City on r.CityId equals c.CityId
+                        join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
+                        where id1.Contains(c.CityId) && id2.Contains(t.RestaurantTypeId)
+                        select new { r };
+
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            }).ToListAsync();
+        }
+
         public async Task<Boolean> AddRestaurant(Restaurant restaurant)
         {
             _dataContext.Restaurant.Add(restaurant);

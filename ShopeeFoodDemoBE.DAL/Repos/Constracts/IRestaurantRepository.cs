@@ -15,6 +15,14 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Constracts
 
         Task<List<Restaurant>> GetRestaurantByCategoryId(int id);
 
+        Task<List<Restaurant>> GetRestaurantByCityId(int id);
+
+        Task<List<Restaurant>> GetRestaurantByRestaurantTypeId(int id);
+
+        Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int id1, int id2);
+
+        Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantType(List<int> id1,List<int> id2);
+
         Task<Boolean> AddRestaurant(Restaurant restaurant);
 
         Task<Boolean> UpdateRestaurant(Restaurant restaurant);
