@@ -4,8 +4,22 @@ using ShopeeFoodDemoBE.BLL.Implementations;
 using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using ShopeeFoodDemoBE.DAL.Repos.Implementations;
+using System.Web.Http.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("*");
+                          policy.WithMethods("*");
+                          policy.WithHeaders("*");
+                      });
+});
 
 //Add services to the container.
 builder.Services.AddDbContext<DataContext>(options =>
@@ -15,6 +29,31 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+builder.Services.AddTransient<ICityService, CityService>();
+builder.Services.AddTransient<ICityRepository, CityRepository>();
+
+builder.Services.AddTransient<IRestaurantTypeService, RestaurantTypeService>();
+builder.Services.AddTransient<IRestaurantTypeRepository, RestaurantTypeRepository>();
+
+builder.Services.AddTransient<IRestaurantService, RestaurantService>();
+builder.Services.AddTransient<IRestaurantRepository, RestaurantRepository>();
+
+builder.Services.AddTransient<IMenuService, MenuService>();
+builder.Services.AddTransient<IMenuRepository, MenuRepository>();
+
+builder.Services.AddTransient<IOptionTypeService, OptionTypeService>();
+builder.Services.AddTransient<IOptionTypeRepository, OptionTypeRepository>();
+
+builder.Services.AddTransient<IOptionService, OptionService>();
+builder.Services.AddTransient<IOptionRepository, OptionRepository>();
+
+
+builder.Services.AddTransient<IItemOptionService, ItemOptionService>();
+builder.Services.AddTransient<IItemOptionRepository, ItemOptionRepository>();
+
+builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
 // Add services to the container.
 
@@ -37,5 +76,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(MyAllowSpecificOrigins); //TODO: rename
 
 app.Run();
