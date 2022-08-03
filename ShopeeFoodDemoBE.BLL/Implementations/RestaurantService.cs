@@ -48,6 +48,7 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return _irestaurantRepository.GetRestaurantByCategoryIdAndCityId(id1, id2);
         }
 
+
         public Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(RestaurantRequestListCityListRestaurantType request)
         {
             //if (!request.CityId.Any())

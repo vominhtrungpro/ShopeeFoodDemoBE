@@ -6,21 +6,11 @@ using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.BLL.Models.Requests
 {
-    public class RestaurantRequest
+    public class CityRequest
     {
-
-
-        public int RestaurantId { get; set; }
-
         public int CityId { get; set; }
 
-        public int RestaurantTypeId { get; set; }
-
-        public string RestaurantName { get; set; }
-
-        public string RestaurantAddress { get; set; }
-
-        public string RestaurantImage { get; set; }
+        public string CityName { get; set; }
 
         public string Description { get; set; }
 

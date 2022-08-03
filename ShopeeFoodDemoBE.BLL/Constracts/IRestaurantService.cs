@@ -22,7 +22,7 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int id1, int id2);
 
-        public Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(RestaurantRequestListCityListRestaurantType request);
+        Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(RestaurantRequestListCityListRestaurantType request);
 
         Task<Boolean> AddRestaurant(RestaurantRequest request);
 

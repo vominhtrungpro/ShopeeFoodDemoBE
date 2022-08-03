@@ -43,6 +43,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             return Ok(restaurant);
         }
 
+
         [HttpPost("listcityidrestauranttypeid")]
         public async Task<IActionResult> GetRestaurantByListCityId(RestaurantRequestListCityListRestaurantType request)
         {

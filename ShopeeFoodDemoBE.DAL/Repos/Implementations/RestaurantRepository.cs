@@ -110,11 +110,13 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
         }
 
         public async Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(List<int> id1,List<int> id2)
+
         {
 
             var query = from r in _dataContext.Restaurant
                         join c in _dataContext.City on r.CityId equals c.CityId
                         join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
+
                         //where id1.Contains(c.CityId) && id2.Contains(t.RestaurantTypeId)
                         select new { r };
 

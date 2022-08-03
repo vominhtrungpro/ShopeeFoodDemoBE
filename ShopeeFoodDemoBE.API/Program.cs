@@ -42,6 +42,7 @@ builder.Services.AddTransient<IRestaurantRepository, RestaurantRepository>();
 builder.Services.AddTransient<IMenuService, MenuService>();
 builder.Services.AddTransient<IMenuRepository, MenuRepository>();
 
+
 builder.Services.AddTransient<IOptionTypeService, OptionTypeService>();
 builder.Services.AddTransient<IOptionTypeRepository, OptionTypeRepository>();
 
@@ -54,6 +55,8 @@ builder.Services.AddTransient<IItemOptionRepository, ItemOptionRepository>();
 
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
+
+
 
 // Add services to the container.
 
