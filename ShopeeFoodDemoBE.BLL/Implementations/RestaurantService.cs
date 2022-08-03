@@ -48,9 +48,15 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return _irestaurantRepository.GetRestaurantByCategoryIdAndCityId(id1, id2);
         }
 
-        public Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantType(RestaurantRequestListCityListRestaurantType request)
+
+        public Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(RestaurantRequestListCityListRestaurantType request)
         {
-            return _irestaurantRepository.GetRestaurantByListCityIdAndListRestaurantType(request.CityId, request.RestaurantTypeId);
+            //if (!request.CityId.Any())
+            //    return _irestaurantRepository.GetRestaurantByListRestaurantTypeId(request.RestaurantTypeId);
+            //else if (!request.RestaurantTypeId.Any())
+            //    return _irestaurantRepository.GetRestaurantByListCityId(request.CityId);
+            //else
+                return _irestaurantRepository.GetRestaurantByListCityIdAndListRestaurantTypeId(request.CityId, request.RestaurantTypeId);
         }
 
         public Task<Boolean> AddRestaurant(RestaurantRequest request)

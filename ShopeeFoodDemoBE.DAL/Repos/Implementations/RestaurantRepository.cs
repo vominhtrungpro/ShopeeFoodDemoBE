@@ -109,13 +109,65 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             }).ToListAsync();
         }
 
-        public async Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantType(List<int> id1,List<int> id2)
+        public async Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(List<int> id1,List<int> id2)
+
         {
 
             var query = from r in _dataContext.Restaurant
                         join c in _dataContext.City on r.CityId equals c.CityId
                         join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
-                        where id1.Contains(c.CityId) && id2.Contains(t.RestaurantTypeId)
+
+                        //where id1.Contains(c.CityId) && id2.Contains(t.RestaurantTypeId)
+                        select new { r };
+
+            if (!id2.Any())
+                query = query.Where(a => id1.Contains(a.r.CityId));
+            else if (!id1.Any())
+                query = query.Where(a => id2.Contains(a.r.RestaurantTypeId));
+            else
+                query = query.Where(a => id1.Contains(a.r.CityId) && id2.Contains(a.r.RestaurantTypeId));
+
+
+
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            }).ToListAsync();
+        }
+
+        public async Task<List<Restaurant>> GetRestaurantByListCityId(List<int> id)
+        {
+            var query = from r in _dataContext.Restaurant
+                        join c in _dataContext.City on r.CityId equals c.CityId
+                        where id.Contains(c.CityId)
+                        select new { r };
+
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            }).ToListAsync();
+        }
+
+        public async Task<List<Restaurant>> GetRestaurantByListRestaurantTypeId(List<int> id)
+        {
+
+            var query = from r in _dataContext.Restaurant
+                        join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
+                        where id.Contains(t.RestaurantTypeId)
                         select new { r };
 
             return await query.Select(x => new Restaurant()
