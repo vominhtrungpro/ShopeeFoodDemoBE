@@ -12,20 +12,20 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class CityService : ICityService
     {
-        private readonly ICityRepository _icityRepository;
-        public CityService(ICityRepository icityRepository)
+        private readonly ICityRepository _cityRepository;
+        public CityService(ICityRepository cityRepository)
         {
-            _icityRepository = icityRepository;
+            _cityRepository = cityRepository;
         }
 
         public Task<List<City>> GetAllCity()
         {
-            return _icityRepository.GetAllCity();
+            return _cityRepository.GetAllCity();
         }
 
         public Task<City> GetCityById(int id)
         {
-            return _icityRepository.GetCityById(id);
+            return _cityRepository.GetCityById(id);
         }
 
         public Task<Boolean> AddCity(CityRequest request)
@@ -36,22 +36,22 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _icityRepository.AddCity(city);
+            return _cityRepository.AddCity(city);
         }
 
         public async Task<Boolean> UpdateCity(CityRequest request)
         {
-            var city = await _icityRepository.GetCityById(request.CityId);
+            var city = await _cityRepository.GetCityById(request.CityId);
             city.CityName = request.CityName;
             city.Description = request.Description;
             city.Status = request.Status;
-            await _icityRepository.UpdateCity(city);
+            await _cityRepository.UpdateCity(city);
             return true;
         }
 
         public Task<Boolean> DeleteCity(int id)
         {
-            return _icityRepository.DeleteCity(id);
+            return _cityRepository.DeleteCity(id);
         }
     }
 }

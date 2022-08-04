@@ -12,20 +12,20 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class CategoryService : ICategoryService
     {
-        private readonly ICategoryRepository _icategoryRepository;
-        public CategoryService(ICategoryRepository icategoryRepository)
+        private readonly ICategoryRepository _categoryRepository;
+        public CategoryService(ICategoryRepository categoryRepository)
         {
-            _icategoryRepository = icategoryRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public Task<List<Category>> GetAllCategory()
         {
-            return _icategoryRepository.GetAllCategory();
+            return _categoryRepository.GetAllCategory();
         }
 
         public Task<Category> GetCategoryById(int id)
         {
-            return _icategoryRepository.GetCategoryById(id);
+            return _categoryRepository.GetCategoryById(id);
         }
 
         public Task<Boolean> AddCategory(CreateCategoryRequest request)
@@ -36,22 +36,22 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _icategoryRepository.AddCategory(category);
+            return _categoryRepository.AddCategory(category);
         }
 
         public async Task<Boolean> UpdateCategory(UpdateCategoryRequest request)
         {
-            var category = await _icategoryRepository.GetCategoryById(request.CategoryId);
+            var category = await _categoryRepository.GetCategoryById(request.CategoryId);
             category.CategoryName = request.CategoryName;
             category.Description = request.Description;
             category.Status = request.Status;
-            await _icategoryRepository.UpdateCategory(category);
+            await _categoryRepository.UpdateCategory(category);
             return true;
         }
 
         public Task<Boolean> DeleteCategory(int id)
         {
-            return _icategoryRepository.DeleteCategory(id);
+            return _categoryRepository.DeleteCategory(id);
         }
     }
 }

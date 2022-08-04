@@ -12,20 +12,20 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class ItemOptionService : IItemOptionService
     {
-        private readonly IItemOptionRepository _iitemoptionRepository;
-        public ItemOptionService(IItemOptionRepository iitemoptionRepository)
+        private readonly IItemOptionRepository _itemoptionRepository;
+        public ItemOptionService(IItemOptionRepository itemoptionRepository)
         {
-            _iitemoptionRepository = iitemoptionRepository;
+            _itemoptionRepository = itemoptionRepository;
         }
 
         public Task<List<ItemOption>> GetAllItemOption()
         {
-            return _iitemoptionRepository.GetAllItemOption();
+            return _itemoptionRepository.GetAllItemOption();
         }
 
         public Task<ItemOption> GetItemOptionById(int id)
         {
-            return _iitemoptionRepository.GetItemOptionById(id);
+            return _itemoptionRepository.GetItemOptionById(id);
         }
 
         public Task<Boolean> AddItemOption(ItemOptionRequest request)
@@ -35,21 +35,21 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 ProductId = request.ProductId,
                 OptionId = request.OptionId
             };
-            return _iitemoptionRepository.AddItemOption(itemoption);
+            return _itemoptionRepository.AddItemOption(itemoption);
         }
 
         public async Task<Boolean> UpdateItemOption(ItemOptionRequest request)
         {
-            var itemoption = await _iitemoptionRepository.GetItemOptionById(request.ItemOptionId);
+            var itemoption = await _itemoptionRepository.GetItemOptionById(request.ItemOptionId);
             itemoption.ProductId = request.ProductId;
             itemoption.OptionId = request.OptionId;
-            await _iitemoptionRepository.UpdateItemOption(itemoption);
+            await _itemoptionRepository.UpdateItemOption(itemoption);
             return true;
         }
 
         public Task<Boolean> DeleteItemOption(int id)
         {
-            return _iitemoptionRepository.DeleteItemOption(id);
+            return _itemoptionRepository.DeleteItemOption(id);
         }
     }
 }

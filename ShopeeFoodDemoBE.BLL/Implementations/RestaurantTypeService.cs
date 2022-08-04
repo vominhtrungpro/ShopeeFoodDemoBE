@@ -12,25 +12,25 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class RestaurantTypeService : IRestaurantTypeService
     {
-        private readonly IRestaurantTypeRepository _irestauranttypeRepository;
-        public RestaurantTypeService(IRestaurantTypeRepository irestauranttypeRepository)
+        private readonly IRestaurantTypeRepository _restauranttypeRepository;
+        public RestaurantTypeService(IRestaurantTypeRepository restauranttypeRepository)
         {
-            _irestauranttypeRepository = irestauranttypeRepository;
+            _restauranttypeRepository = restauranttypeRepository;
         }
 
         public Task<List<RestaurantType>> GetAllRestaurantType()
         {
-            return _irestauranttypeRepository.GetAllRestaurantType();
+            return _restauranttypeRepository.GetAllRestaurantType();
         }
 
         public Task<RestaurantType> GetRestaurantTypeById(int id)
         {
-            return _irestauranttypeRepository.GetRestaurantTypeById(id);
+            return _restauranttypeRepository.GetRestaurantTypeById(id);
         }
 
         public Task<List<RestaurantType>> GetRestaurantTypeByCategoryId(int id)
         {
-            return _irestauranttypeRepository.GetRestaurantTypeByCategoryId(id);
+            return _restauranttypeRepository.GetRestaurantTypeByCategoryId(id);
         }
 
         public Task<Boolean> AddRestaurantType(RestaurantTypeRequest request)
@@ -42,23 +42,23 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _irestauranttypeRepository.AddRestaurantType(restauranttype);
+            return _restauranttypeRepository.AddRestaurantType(restauranttype);
         }
 
         public async Task<Boolean> UpdateRestaurantType(RestaurantTypeRequest request)
         {
-            var restauranttype = await _irestauranttypeRepository.GetRestaurantTypeById(request.RestaurantTypeId);
+            var restauranttype = await _restauranttypeRepository.GetRestaurantTypeById(request.RestaurantTypeId);
             restauranttype.RestaurantTypeName = request.RestaurantTypeName;
             restauranttype.CategoryId = request.CategoryId;
             restauranttype.Description = request.Description;
             restauranttype.Status = request.Status;
-            await _irestauranttypeRepository.UpdateRestaurantType(restauranttype);
+            await _restauranttypeRepository.UpdateRestaurantType(restauranttype);
             return true;
         }
 
         public Task<Boolean> DeleteRestaurantType(int id)
         {
-            return _irestauranttypeRepository.DeleteRestaurantType(id);
+            return _restauranttypeRepository.DeleteRestaurantType(id);
         }
     }
 }

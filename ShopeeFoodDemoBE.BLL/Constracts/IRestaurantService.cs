@@ -1,4 +1,5 @@
 ﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,11 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<List<Restaurant>> GetRestaurantByRestaurantTypeId(int id);
 
-        Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int id1, int id2);
+        Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId);
 
-        Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(RestaurantRequestListCityListRestaurantType request);
+        Task<List<Restaurant>> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request);
+
+        Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantRespone respone);
 
         Task<Boolean> AddRestaurant(RestaurantRequest request);
 

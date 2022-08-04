@@ -12,20 +12,20 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class OptionTypeService : IOptionTypeService
     {
-        private readonly IOptionTypeRepository _ioptiontypeRepository;
-        public OptionTypeService(IOptionTypeRepository ioptiontypeRepository)
+        private readonly IOptionTypeRepository _optiontypeRepository;
+        public OptionTypeService(IOptionTypeRepository optiontypeRepository)
         {
-            _ioptiontypeRepository = ioptiontypeRepository;
+            _optiontypeRepository = optiontypeRepository;
         }
 
         public Task<List<OptionType>> GetAllOptionType()
         {
-            return _ioptiontypeRepository.GetAllOptionType();
+            return _optiontypeRepository.GetAllOptionType();
         }
 
         public Task<OptionType> GetOptionTypeById(int id)
         {
-            return _ioptiontypeRepository.GetOptionTypeById(id);
+            return _optiontypeRepository.GetOptionTypeById(id);
         }
 
         public Task<Boolean> AddOptionType(OptionTypeRequest request)
@@ -36,22 +36,22 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _ioptiontypeRepository.AddOptionType(optiontype);
+            return _optiontypeRepository.AddOptionType(optiontype);
         }
 
         public async Task<Boolean> UpdateOptionType(OptionTypeRequest request)
         {
-            var optiontype = await _ioptiontypeRepository.GetOptionTypeById(request.OptionTypeId);
+            var optiontype = await _optiontypeRepository.GetOptionTypeById(request.OptionTypeId);
             optiontype.OptionTypeName = request.OptionTypeName;
             optiontype.Description = request.Description;
             optiontype.Status = request.Status;
-            await _ioptiontypeRepository.UpdateOptionType(optiontype);
+            await _optiontypeRepository.UpdateOptionType(optiontype);
             return true;
         }
 
         public Task<Boolean> DeleteOptionType(int id)
         {
-            return _ioptiontypeRepository.DeleteOptionType(id);
+            return _optiontypeRepository.DeleteOptionType(id);
         }
     }
 }
