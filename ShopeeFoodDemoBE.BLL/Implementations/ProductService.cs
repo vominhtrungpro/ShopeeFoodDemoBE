@@ -12,20 +12,20 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class ProductService : IProductService
     {
-        private readonly IProductRepository _iproductRepository;
-        public ProductService(IProductRepository iproductRepository)
+        private readonly IProductRepository _productRepository;
+        public ProductService(IProductRepository productRepository)
         {
-            _iproductRepository = iproductRepository;
+            _productRepository = productRepository;
         }
 
         public Task<List<Product>> GetAllProduct()
         {
-            return _iproductRepository.GetAllProduct();
+            return _productRepository.GetAllProduct();
         }
 
         public Task<Product> GetProductById(int id)
         {
-            return _iproductRepository.GetProductById(id);
+            return _productRepository.GetProductById(id);
         }
 
         public Task<Boolean> AddProduct(ProductRequest request)
@@ -41,12 +41,12 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _iproductRepository.AddProduct(product);
+            return _productRepository.AddProduct(product);
         }
 
         public async Task<Boolean> UpdateProduct(ProductRequest request)
         {
-            var product = await _iproductRepository.GetProductById(request.ProductId);
+            var product = await _productRepository.GetProductById(request.ProductId);
             product.ProductName = request.ProductName;
             product.ProductImage = request.ProductImage;
             product.ProductPrice = request.ProductPrice;
@@ -55,13 +55,13 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             product.AmountPurchased = request.AmountPurchased;
             product.Description = request.Description;
             product.Status = request.Status;
-            await _iproductRepository.UpdateProduct(product);
+            await _productRepository.UpdateProduct(product);
             return true;
         }
 
         public Task<Boolean> DeleteProduct(int id)
         {
-            return _iproductRepository.DeleteProduct(id);
+            return _productRepository.DeleteProduct(id);
         }
     }
 }

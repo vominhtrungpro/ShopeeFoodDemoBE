@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
+using ShopeeFoodDemoBE.DAL.Models.Respone;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
 using System.Collections.Generic;
@@ -87,13 +88,13 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             }).ToListAsync();
         }
 
-        public async Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int id1, int id2)
+        public async Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId)
         {
             var query = from r in _dataContext.Restaurant
                         join c in _dataContext.City on r.CityId equals c.CityId
                         join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
                         join ca in _dataContext.Category on t.CategoryId equals ca.CategoryId
-                        where c.CityId == id2 && ca.CategoryId == id1
+                        where c.CityId == cityId && ca.CategoryId == cateId
                         select new { r };
 
             return await query.Select(x => new Restaurant()
@@ -109,25 +110,19 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             }).ToListAsync();
         }
 
-        public async Task<List<Restaurant>> GetRestaurantByListCityIdAndListRestaurantTypeId(List<int> id1,List<int> id2)
-
+        public async Task<List<Restaurant>> GetResByCityIdsAndResTypeIds(List<int> cityIds,List<int> resTypeIds) 
         {
 
             var query = from r in _dataContext.Restaurant
                         join c in _dataContext.City on r.CityId equals c.CityId
                         join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
-
-                        //where id1.Contains(c.CityId) && id2.Contains(t.RestaurantTypeId)
+                        where r.Status == "Active"
                         select new { r };
 
-            if (!id2.Any())
-                query = query.Where(a => id1.Contains(a.r.CityId));
-            else if (!id1.Any())
-                query = query.Where(a => id2.Contains(a.r.RestaurantTypeId));
-            else
-                query = query.Where(a => id1.Contains(a.r.CityId) && id2.Contains(a.r.RestaurantTypeId));
-
-
+            if (cityIds.Any())
+                query = query.Where(a => cityIds.Contains(a.r.CityId));
+            if (resTypeIds.Any())
+                query = query.Where(a => resTypeIds.Contains(a.r.RestaurantTypeId));
 
             return await query.Select(x => new Restaurant()
             {
@@ -140,6 +135,41 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
                 Description = x.r.Description,
                 Status = x.r.Status
             }).ToListAsync();
+        }
+
+        public async Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(List<int> cityIds, List<int> resTypeIds, int page)
+        {
+
+            var query = from r in _dataContext.Restaurant
+                        join c in _dataContext.City on r.CityId equals c.CityId
+                        join t in _dataContext.RestaurantType on r.RestaurantTypeId equals t.RestaurantTypeId
+                        where r.Status == "Active"
+                        select new { r };
+
+            if (cityIds.Any())
+                query = query.Where(a => cityIds.Contains(a.r.CityId));
+            if (resTypeIds.Any())
+                query = query.Where(a => resTypeIds.Contains(a.r.RestaurantTypeId));
+
+            var pageResults = 5f;
+            var pageCount = Math.Ceiling(_dataContext.Restaurant.Count() / pageResults);
+
+            return await query.Select(x => new Restaurant()
+            {
+                RestaurantId = x.r.RestaurantId,
+                CityId = x.r.CityId,
+                RestaurantTypeId = x.r.RestaurantTypeId,
+                RestaurantName = x.r.RestaurantName,
+                RestaurantAddress = x.r.RestaurantAddress,
+                RestaurantImage = x.r.RestaurantImage,
+                Description = x.r.Description,
+                Status = x.r.Status
+            })
+                .Skip((page -1)*(int)pageResults)
+                .Take((int)pageResults)
+                .ToListAsync();
+
+            
         }
 
         public async Task<List<Restaurant>> GetRestaurantByListCityId(List<int> id)

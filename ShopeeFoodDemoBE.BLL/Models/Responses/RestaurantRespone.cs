@@ -1,22 +1,20 @@
-
-
-
-using ShopeeFoodDemoBE.DAL.EF.Entities;
+﻿using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopeeFoodDemoBE.BLL.Models.Requests
+namespace ShopeeFoodDemoBE.BLL.Models.Responses
 {
-    public class RestaurantRequestListCityListRestaurantType
+    public class RestaurantRespone
     {
 
         public List<int> CityIds { get; set; }
 
         public List<int> RestaurantTypeIds { get; set; }
 
+        public int Page { get; set; }
 
     }
 }

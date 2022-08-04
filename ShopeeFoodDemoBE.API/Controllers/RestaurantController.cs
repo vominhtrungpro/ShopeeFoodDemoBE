@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -44,10 +45,17 @@ namespace ShopeeFoodDemoBE.API.Controllers
         }
 
 
-        [HttpPost("listcityidrestauranttypeid")]
-        public async Task<IActionResult> GetRestaurantByListCityId(RestaurantRequestListCityListRestaurantType request)
+        [HttpPost("by-cityids-restypeids")]
+        public async Task<IActionResult> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request)
         {
-            var restaurant = await _irestaurantService.GetRestaurantByListCityIdAndListRestaurantTypeId(request);
+            var restaurant = await _irestaurantService.GetResByCityIdsAndResTypeIds(request);
+            return Ok(restaurant);
+        }
+
+        [HttpPost("paging-cityids-restypeids")]
+        public async Task<IActionResult> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantRespone respone)
+        {
+            var restaurant = await _irestaurantService.GetResByCityIdsAndResTypeIdsWithPaging(respone);
             return Ok(restaurant);
         }
 
@@ -58,10 +66,10 @@ namespace ShopeeFoodDemoBE.API.Controllers
             return Ok(restaurant);
         }
 
-        [HttpGet("more-categoryid-{id1}-cityid-{id2}")]
-        public async Task<IActionResult> GetRestaurantByCategoryIdAndCityId(int id1, int id2)
+        [HttpGet("more-categoryid-{cateId}-cityid-{cityId}")]
+        public async Task<IActionResult> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId)
         {
-            var restaurant = await _irestaurantService.GetRestaurantByCategoryIdAndCityId(id1, id2);
+            var restaurant = await _irestaurantService.GetRestaurantByCategoryIdAndCityId(cateId, cityId);
             return Ok(restaurant);
         }
 

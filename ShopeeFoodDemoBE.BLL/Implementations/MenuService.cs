@@ -12,25 +12,25 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class MenuService : IMenuService
     {
-        private readonly IMenuRepository _imenuRepository;
-        public MenuService(IMenuRepository imenuRepository)
+        private readonly IMenuRepository _menuRepository;
+        public MenuService(IMenuRepository menuRepository)
         {
-            _imenuRepository = imenuRepository;
+            _menuRepository = menuRepository;
         }
 
         public Task<List<Menu>> GetAllMenu()
         {
-            return _imenuRepository.GetAllMenu();
+            return _menuRepository.GetAllMenu();
         }
 
         public Task<Menu> GetMenuById(int id)
         {
-            return _imenuRepository.GetMenuById(id);
+            return _menuRepository.GetMenuById(id);
         }
 
         public Task<List<Menu>> GetMenuByRestaurantId(int id)
         {
-            return _imenuRepository.GetMenuByRestaurantId(id);
+            return _menuRepository.GetMenuByRestaurantId(id);
         }
 
         public Task<Boolean> AddMenu(MenuRequest request)
@@ -42,23 +42,23 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Status = request.Status,
                 RestaurantId = request.RestaurantId
             };
-            return _imenuRepository.AddMenu(menu);
+            return _menuRepository.AddMenu(menu);
         }
 
         public async Task<Boolean> UpdateMenu(MenuRequest request)
         {
-            var menu = await _imenuRepository.GetMenuById(request.MenuId);
+            var menu = await _menuRepository.GetMenuById(request.MenuId);
             menu.MenuName = request.MenuName;
             menu.Description = request.Description;
             menu.Status = request.Status;
             menu.RestaurantId = request.RestaurantId;
-            await _imenuRepository.UpdateMenu(menu);
+            await _menuRepository.UpdateMenu(menu);
             return true;
         }
 
         public Task<Boolean> DeleteMenu(int id)
         {
-            return _imenuRepository.DeleteMenu(id);
+            return _menuRepository.DeleteMenu(id);
         }
     }
 }

@@ -12,20 +12,20 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 {
     public class OptionService : IOptionService
     {
-        private readonly IOptionRepository _ioptionRepository;
-        public OptionService(IOptionRepository ioptionRepository)
+        private readonly IOptionRepository _optionRepository;
+        public OptionService(IOptionRepository optionRepository)
         {
-            _ioptionRepository = ioptionRepository;
+            _optionRepository = optionRepository;
         }
 
         public Task<List<Option>> GetAllOption()
         {
-            return _ioptionRepository.GetAllOption();
+            return _optionRepository.GetAllOption();
         }
 
         public Task<Option> GetOptionById(int id)
         {
-            return _ioptionRepository.GetOptionById(id);
+            return _optionRepository.GetOptionById(id);
         }
 
         public Task<Boolean> AddOption(OptionRequest request)
@@ -37,23 +37,23 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Status = request.Status,
                 OptionTypeId = request.OptionTypeId
             };
-            return _ioptionRepository.AddOption(option);
+            return _optionRepository.AddOption(option);
         }
 
         public async Task<Boolean> UpdateOption(OptionRequest request)
         {
-            var option = await _ioptionRepository.GetOptionById(request.OptionId);
+            var option = await _optionRepository.GetOptionById(request.OptionId);
             option.OptionName = request.OptionName;
             option.Description = request.Description;
             option.Status = request.Status;
             option.OptionTypeId = request.OptionTypeId;
-            await _ioptionRepository.UpdateOption(option);
+            await _optionRepository.UpdateOption(option);
             return true;
         }
 
         public Task<Boolean> DeleteOption(int id)
         {
-            return _ioptionRepository.DeleteOption(id);
+            return _optionRepository.DeleteOption(id);
         }
     }
 }
