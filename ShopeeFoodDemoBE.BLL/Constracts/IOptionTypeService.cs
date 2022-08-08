@@ -1,5 +1,6 @@
 ﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
+using ShopeeFoodDemoBE.DAL.Models.Respone;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,9 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
         Task<Boolean> UpdateOptionType(OptionTypeRequest request);
 
         Task<Boolean> DeleteOptionType(int id);
+
+        Task<List<OptionType>> GetOptionTypeByProductId(int id);
+
+        Task<List<ProductOptionResponeDAL>> GetOptionTypeDetailByProductId(int id);
     }
 }

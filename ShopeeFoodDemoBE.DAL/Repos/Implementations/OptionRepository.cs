@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
+using ShopeeFoodDemoBE.DAL.Models.Respone;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,24 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             _dataContext.Option.Remove(option);
             await _dataContext.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<List<Option>> GetOptionByProductId(int id)
+        {
+            var query = from p in _dataContext.Product
+                        join i in _dataContext.ItemOption on p.ProductId equals i.ProductId
+                        join o in _dataContext.Option on i.OptionId equals o.OptionId
+                        where p.ProductId == id
+                        select new { o };
+
+            return await query.Select(x => new Option()
+            {
+                OptionId = x.o.OptionId,
+                OptionName = x.o.OptionName,
+                Description = x.o.Description,
+                Status = x.o.Status,
+                OptionTypeId = x.o.OptionTypeId
+            }).ToListAsync();
         }
     }
 }

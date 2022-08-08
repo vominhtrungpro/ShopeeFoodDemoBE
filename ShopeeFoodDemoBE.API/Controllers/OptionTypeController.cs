@@ -49,5 +49,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             var optiontype = await _ioptiontypeService.DeleteOptionType(id);
             return Ok();
         }
+
+        [HttpGet("productid-{id}")]
+        public async Task<IActionResult> GetOptionTypeByProductId(int id)
+        {
+            var optiontype = await _ioptiontypeService.GetOptionTypeByProductId(id);
+            return Ok(optiontype);
+        }
+        [HttpGet("detail-productid-{id}")]
+        public async Task<IActionResult> GetOptionTypeDetailByProductId(int id)
+        {
+            var optiontype = await _ioptiontypeService.GetOptionTypeDetailByProductId(id);
+            return Ok(optiontype);
+        }
     }
 }

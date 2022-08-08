@@ -19,5 +19,7 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
         Task<Boolean> UpdateProduct(ProductRequest request);
 
         Task<Boolean> DeleteProduct(int id);
+
+        Task<List<Product>> GetProductByMenuId(int id);
     }
 }

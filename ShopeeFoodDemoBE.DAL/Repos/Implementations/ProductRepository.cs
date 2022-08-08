@@ -48,5 +48,26 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             await _dataContext.SaveChangesAsync();
             return true;
         }
+        public async Task<List<Product>> GetProductByMenuId(int id)
+        {
+            var query = from p in _dataContext.Product
+                        join m in _dataContext.Menu
+                        on p.MenuId equals m.MenuId
+                        where m.MenuId == id
+                        select new { p };
+
+            return await query.Select(x => new Product()
+            {
+                ProductId = x.p.ProductId,
+                MenuId = x.p.MenuId,
+                ProductName = x.p.ProductName,
+                ProductPrice = x.p.ProductPrice,
+                ProductImage = x.p.ProductImage,
+                AmountStock = x.p.AmountStock,
+                AmountPurchased = x.p.AmountPurchased,
+                Description = x.p.Description,
+                Status = x.p.Status
+            }).ToListAsync();
+        }
     }
 }

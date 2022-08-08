@@ -1,6 +1,7 @@
 ﻿using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
+using ShopeeFoodDemoBE.DAL.Models.Respone;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,16 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         public Task<Boolean> DeleteOptionType(int id)
         {
             return _optiontypeRepository.DeleteOptionType(id);
+        }
+
+        public async Task<List<OptionType>> GetOptionTypeByProductId(int id)
+        {
+            return await _optiontypeRepository.GetOptionTypeByProductId(id);
+        }
+
+        public async Task<List<ProductOptionResponeDAL>> GetOptionTypeDetailByProductId(int id)
+        {
+            return await _optiontypeRepository.GetOptionTypeDetailByProductId(id);
         }
     }
 }

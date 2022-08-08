@@ -49,5 +49,12 @@ namespace ShopeeFoodDemoBE.API.Controllers
             var product = await _iproductService.DeleteProduct(id);
             return Ok();
         }
+
+        [HttpGet("menuid-{id}")]
+        public async Task<IActionResult> GetProductByMenuId(int id)
+        {
+            var menu = await _iproductService.GetProductByMenuId(id);
+            return Ok(menu);
+        }
     }
 }

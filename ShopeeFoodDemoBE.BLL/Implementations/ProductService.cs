@@ -63,5 +63,10 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         {
             return _productRepository.DeleteProduct(id);
         }
+
+        public Task<List<Product>> GetProductByMenuId(int id)
+        {
+            return _productRepository.GetProductByMenuId(id);
+        }
     }
 }

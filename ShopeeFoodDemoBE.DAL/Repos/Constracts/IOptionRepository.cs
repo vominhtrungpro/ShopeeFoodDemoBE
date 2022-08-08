@@ -18,5 +18,8 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Constracts
         Task<Boolean> UpdateOption(Option option);
 
         Task<Boolean> DeleteOption(int id);
+
+        Task<List<Option>> GetOptionByProductId(int id);
+
     }
 }

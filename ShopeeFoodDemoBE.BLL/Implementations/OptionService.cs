@@ -55,5 +55,10 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         {
             return _optionRepository.DeleteOption(id);
         }
+
+        public async Task<List<Option>> GetOptionByProductId(int id)
+        {
+            return await _optionRepository.GetOptionByProductId(id);
+        }
     }
 }

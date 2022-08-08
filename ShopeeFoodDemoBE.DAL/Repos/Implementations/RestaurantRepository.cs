@@ -151,7 +151,7 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             if (resTypeIds.Any())
                 query = query.Where(a => resTypeIds.Contains(a.r.RestaurantTypeId));
 
-            var pageResults = 5f;
+            var pageResults = 10f;
             var pageCount = Math.Ceiling(_dataContext.Restaurant.Count() / pageResults);
 
             return await query.Select(x => new Restaurant()
@@ -168,8 +168,6 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
                 .Skip((page -1)*(int)pageResults)
                 .Take((int)pageResults)
                 .ToListAsync();
-
-            
         }
 
         public async Task<List<Restaurant>> GetRestaurantByListCityId(List<int> id)
