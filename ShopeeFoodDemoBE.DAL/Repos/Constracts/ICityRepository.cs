@@ -18,5 +18,6 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Constracts
         Task<Boolean> UpdateCity(City city);
 
         Task<Boolean> DeleteCity(int id);
+
     }
 }
