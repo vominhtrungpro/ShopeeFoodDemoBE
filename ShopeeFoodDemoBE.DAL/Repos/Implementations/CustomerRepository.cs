@@ -10,42 +10,41 @@ using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly DataContext _dataContext;
-
-        public CategoryRepository(DataContext dataContext)
+        public CustomerRepository(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
 
-        public async Task<List<Category>> GetAllCategory()
+        public async Task<List<Customer>> GetAllCustomer()
         {
-            return await _dataContext.Category.ToListAsync();
+            return await _dataContext.Customer.ToListAsync();
         }
 
-        public async Task<Category> GetCategoryById(int id)
+        public async Task<Customer> GetCustomerById(int id)
         {
-            return await _dataContext.Category.FindAsync(id);
+            return await _dataContext.Customer.FindAsync(id);
         }
 
-        public async Task<Boolean> AddCategory(Category category)
+        public async Task<Boolean> AddCustomer(Customer customer)
         {
-            _dataContext.Category.Add(category);
+            _dataContext.Customer.Add(customer);
             await _dataContext.SaveChangesAsync();
             return true;
         }
 
-        public async Task<Boolean> UpdateCategory(Category category)
+        public async Task<Boolean> UpdateCustomer(Customer customer)
         {
             await _dataContext.SaveChangesAsync();
             return true;
         }
 
-        public async Task<Boolean> DeleteCategory(int id)
+        public async Task<Boolean> DeleteCustomer(int id)
         {
-            var category = await GetCategoryById(id);
-            _dataContext.Category.Remove(category);
+            var customer = await GetCustomerById(id);
+            _dataContext.Customer.Remove(customer);
             await _dataContext.SaveChangesAsync();
             return true;
         }
