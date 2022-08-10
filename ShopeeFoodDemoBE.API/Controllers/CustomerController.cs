@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -10,9 +13,11 @@ namespace ShopeeFoodDemoBE.API.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerService _customerService;
-        public CustomerController(ICustomerService customerService)
+        private readonly IConfiguration _configuration;
+        public CustomerController(ICustomerService customerService,IConfiguration configuration)
         {
             _customerService = customerService;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -48,6 +53,22 @@ namespace ShopeeFoodDemoBE.API.Controllers
         {
             var customer = await _customerService.DeleteCustomer(id);
             return Ok();
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(UserDtoRequest request)
+        {
+            var customer = await _customerService.Login(request);
+
+            string token = _customerService.CreateToken(request);
+            return Ok(new { customer, token });
+        }
+
+        [HttpGet("getusername-{username}")]
+        public async Task<IActionResult> GetCustomerByUsername(string username)
+        {
+            var customer = await _customerService.GetCustomerByUsername(username);
+            return Ok(customer);
         }
     }
 }

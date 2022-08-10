@@ -48,5 +48,10 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             await _dataContext.SaveChangesAsync();
             return true;
         }
+
+        public async Task<Customer> GetCustomerByUsername(string username)
+        {
+            return _dataContext.Customer.FirstOrDefault(c => c.CustomerUsername == username);
+        }
     }
 }

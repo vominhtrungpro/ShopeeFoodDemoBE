@@ -1,10 +1,14 @@
-﻿using ShopeeFoodDemoBE.BLL.Constracts;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,9 +17,11 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
     public class CustomerService : ICustomerService
     {
         private readonly ICustomerRepository _customerrepository;
-        public CustomerService(ICustomerRepository customerrepository)
+        private readonly IConfiguration _configuration;
+        public CustomerService(ICustomerRepository customerrepository,IConfiguration configuration)
         {
             _customerrepository = customerrepository;
+            _configuration = configuration;
         }
 
         public Task<List<Customer>> GetAllCustomer()
@@ -62,6 +68,47 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         public Task<Boolean> DeleteCustomer(int id)
         {
             return _customerrepository.DeleteCustomer(id);
+        }
+
+        public async Task<Customer> Login(UserDtoRequest request)
+        {
+            var customer = await _customerrepository.GetCustomerByUsername(request.Username);
+
+            if (customer == null)
+            {
+                return await Task.FromResult<Customer>(null);
+            }
+            else
+            {
+                return customer;
+            }
+        }
+
+        public async Task<Customer> GetCustomerByUsername(string username)
+        {
+            return await _customerrepository.GetCustomerByUsername(username);
+        }
+
+        public string CreateToken(UserDtoRequest user)
+        {
+            List<Claim> claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Username)
+            };
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
+                _configuration.GetSection("AppSettings:Token").Value));
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            var token = new JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.Now.AddDays(1),
+                signingCredentials: creds
+                );
+
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return jwt;
         }
     }
 }
