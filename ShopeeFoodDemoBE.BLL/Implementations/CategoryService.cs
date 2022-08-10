@@ -45,7 +45,6 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             category.CategoryName = request.CategoryName;
             category.Description = request.Description;
             category.Status = request.Status;
-
             await _categoryRepository.UpdateCategory(category);
             return true;
         }

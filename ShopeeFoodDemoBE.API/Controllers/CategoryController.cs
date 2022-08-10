@@ -13,18 +13,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _icategoryService;
-        private readonly DataContext _dataContext;
-        public CategoryController(ICategoryService icategoryService,DataContext dataContext)
+        public CategoryController(ICategoryService icategoryService)
         {
             _icategoryService = icategoryService;
-            _dataContext = dataContext;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllCategory()
         {
-            var category = await _icategoryService.GetAllCategory();
-            return Ok(category);
+            //var category = await _icategoryService.GetAllCategory();
+            //return Ok(category);
+
+            return Ok(await _icategoryService.GetAllCategory());
         }
 
         [HttpGet("{id}")]
