@@ -53,7 +53,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
         }
 
         [HttpPost("paging-cityids-restypeids")]
-        public async Task<IActionResult> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantRespone respone)
+        public async Task<IActionResult> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone)
         {
             var restaurant = await _irestaurantService.GetResByCityIdsAndResTypeIdsWithPaging(respone);
             return Ok(restaurant);

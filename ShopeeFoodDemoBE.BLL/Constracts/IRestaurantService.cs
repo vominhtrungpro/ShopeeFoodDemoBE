@@ -25,7 +25,7 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<List<Restaurant>> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request);
 
-        Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantRespone respone);
+        Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone);
 
         Task<Boolean> AddRestaurant(RestaurantRequest request);
 

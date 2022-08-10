@@ -9,8 +9,6 @@ namespace ShopeeFoodDemoBE.BLL.Models.Requests
     public class UserDtoRequest
     {
         public string Username { get; set; }
-
-
-        public string Password { get; set; }
+        public string Password { get; set; } 
     }
 }

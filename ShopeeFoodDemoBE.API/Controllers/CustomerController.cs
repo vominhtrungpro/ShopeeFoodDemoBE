@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -65,7 +67,10 @@ namespace ShopeeFoodDemoBE.API.Controllers
             else
             {
                 string token = _customerService.CreateToken(request);
-                return Ok(new { customer, token });
+
+                var refreshToken = GetRefreshToken();
+                SetRefreshToken(refreshToken);
+                return Ok(new { customer, token, refreshToken });
             }
         }
 
@@ -74,6 +79,34 @@ namespace ShopeeFoodDemoBE.API.Controllers
         {
             var customer = await _customerService.GetCustomerByUsernameAndPassword(username, password);
             return Ok(customer);
+        }
+
+        private RefreshTokenRequest GetRefreshToken()
+        {
+            var refreshTokenRequest = new RefreshTokenRequest
+            {
+                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
+                Expires = DateTime.Now.AddDays(7),
+                Created = DateTime.Now
+            };
+
+            return refreshTokenRequest;
+        }
+
+        private void SetRefreshToken(RefreshTokenRequest newRefreshToken)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = newRefreshToken.Expires
+            };
+            Response.Cookies.Append("refreshToken", newRefreshToken.Token, cookieOptions);
+
+            RefreshTokenRespone response = new RefreshTokenRespone();
+
+            response.Token = newRefreshToken.Token;
+            response.Created = newRefreshToken.Created;
+            response.Expires = newRefreshToken.Expires;
         }
     }
 }

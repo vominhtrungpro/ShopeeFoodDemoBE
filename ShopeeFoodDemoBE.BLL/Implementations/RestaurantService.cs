@@ -54,7 +54,7 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return _restaurantRepository.GetResByCityIdsAndResTypeIds(request.CityIds, request.RestaurantTypeIds);
         }
 
-        public Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantRespone respone)
+        public Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone)
         {
             return _restaurantRepository.GetResByCityIdsAndResTypeIdsWithPaging(respone.CityIds, respone.RestaurantTypeIds, respone.Page);
 

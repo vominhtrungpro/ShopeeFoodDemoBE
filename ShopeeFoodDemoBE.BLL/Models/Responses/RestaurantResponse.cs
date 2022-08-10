@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.BLL.Models.Responses
 {
-    public class RestaurantRespone
+    public class RestaurantResponse
     {
 
         public List<int> CityIds { get; set; }
