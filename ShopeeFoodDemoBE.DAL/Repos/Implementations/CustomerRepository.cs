@@ -49,9 +49,11 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
             return true;
         }
 
-        public async Task<Customer> GetCustomerByUsername(string username)
+        public async Task<Customer> GetCustomerByUsernameAndPassword(string username,string password)
         {
-            return _dataContext.Customer.FirstOrDefault(c => c.CustomerUsername == username);
+            return _dataContext.Customer.SingleOrDefault(c => c.CustomerUsername == username && c.CustomerPassword==password);
         }
+
+
     }
 }

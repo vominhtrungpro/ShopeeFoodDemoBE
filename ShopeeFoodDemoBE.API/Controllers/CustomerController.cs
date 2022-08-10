@@ -60,14 +60,19 @@ namespace ShopeeFoodDemoBE.API.Controllers
         {
             var customer = await _customerService.Login(request);
 
-            string token = _customerService.CreateToken(request);
-            return Ok(new { customer, token });
+            if (customer == null)
+                return BadRequest("User not found");
+            else
+            {
+                string token = _customerService.CreateToken(request);
+                return Ok(new { customer, token });
+            }
         }
 
-        [HttpGet("getusername-{username}")]
-        public async Task<IActionResult> GetCustomerByUsername(string username)
+        [HttpGet("getusernameandpassword-{username}-{password}")]
+        public async Task<IActionResult> GetCustomerByUsernameAndPassword(string username, string password)
         {
-            var customer = await _customerService.GetCustomerByUsername(username);
+            var customer = await _customerService.GetCustomerByUsernameAndPassword(username, password);
             return Ok(customer);
         }
     }

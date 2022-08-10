@@ -72,7 +72,7 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 
         public async Task<Customer> Login(UserDtoRequest request)
         {
-            var customer = await _customerrepository.GetCustomerByUsername(request.Username);
+            var customer = await _customerrepository.GetCustomerByUsernameAndPassword(request.Username,request.Password);
 
             if (customer == null)
             {
@@ -84,10 +84,11 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             }
         }
 
-        public async Task<Customer> GetCustomerByUsername(string username)
+        public async Task<Customer> GetCustomerByUsernameAndPassword(string username,string password)
         {
-            return await _customerrepository.GetCustomerByUsername(username);
+            return await _customerrepository.GetCustomerByUsernameAndPassword(username,password);
         }
+
 
         public string CreateToken(UserDtoRequest user)
         {

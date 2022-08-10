@@ -22,7 +22,7 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<Customer> Login(UserDtoRequest request);
 
-        Task<Customer> GetCustomerByUsername(string username);
+        Task<Customer> GetCustomerByUsernameAndPassword(string username,string password);
 
         string CreateToken(UserDtoRequest user);
 
