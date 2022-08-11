@@ -69,6 +69,19 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return true;
         }
 
+        public async Task<Boolean> UpdatePasswordCustomer(RestorePasswordRequest request)
+        {
+            var customer = await _customerrepository.GetCustomerById(request.CustomerId);
+            if (request.CustomerPassword == request.CustomerConfirmPassword)
+            {
+                customer.CustomerPassword = request.CustomerConfirmPassword;
+                await _customerrepository.UpdatePasswordCustomer(customer);
+                return true;
+            }
+            else
+                return false;
+        }
+
         public Task<Boolean> DeleteCustomer(int id)
         {
             return _customerrepository.DeleteCustomer(id);
@@ -91,6 +104,11 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         public async Task<Customer> GetCustomerByUsernameAndPassword(string username,string password)
         {
             return await _customerrepository.GetCustomerByUsernameAndPassword(username,password);
+        }
+
+        public async Task<Customer> GetCustomerByEmail(string email)
+        {
+            return await _customerrepository.GetCustomerByEmail(email);
         }
 
 

@@ -70,6 +70,8 @@ builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 builder.Services.AddTransient<IOrderDetailService, OrderDetailService>();
 builder.Services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
 
+builder.Services.AddTransient<IEmailService, EmailService>();
+
 
 // Add services to the container.
 

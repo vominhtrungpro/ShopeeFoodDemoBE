@@ -20,5 +20,9 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Constracts
         Task<Boolean> DeleteCustomer(int id);
 
         Task<Customer> GetCustomerByUsernameAndPassword(string username, string password);
+
+        Task<Customer> GetCustomerByEmail(string email);
+
+        Task<Boolean> UpdatePasswordCustomer(Customer customer);
     }
 }

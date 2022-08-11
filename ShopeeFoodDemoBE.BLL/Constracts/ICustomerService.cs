@@ -26,5 +26,9 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         string CreateToken(UserDtoRequest user);
 
+        Task<Customer> GetCustomerByEmail(string email);
+
+        Task<Boolean> UpdatePasswordCustomer(RestorePasswordRequest request);
+
     }
 }

@@ -50,6 +50,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             return Ok();
         }
 
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(int id)
         {
@@ -81,6 +83,13 @@ namespace ShopeeFoodDemoBE.API.Controllers
             return Ok(customer);
         }
 
+        [HttpGet("getemail-{email}")]
+        public async Task<IActionResult> GetCustomerByEmail(string email)
+        {
+            var customer = await _customerService.GetCustomerByEmail(email);
+            return Ok(customer);
+        }
+
         private RefreshTokenRequest GetRefreshToken()
         {
             var refreshTokenRequest = new RefreshTokenRequest
@@ -107,6 +116,13 @@ namespace ShopeeFoodDemoBE.API.Controllers
             response.Token = newRefreshToken.Token;
             response.Created = newRefreshToken.Created;
             response.Expires = newRefreshToken.Expires;
+        }
+
+        [HttpPut("update-password")]
+        public async Task<IActionResult> UpdatePasswordCustomer(RestorePasswordRequest request)
+        {
+            var customer = await _customerService.UpdatePasswordCustomer(request);
+            return Ok();
         }
     }
 }
