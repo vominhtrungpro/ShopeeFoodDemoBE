@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
+using System.Diagnostics;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -10,88 +11,232 @@ namespace ShopeeFoodDemoBE.API.Controllers
     [ApiController]
     public class RestaurantController : ControllerBase
     {
-        private readonly IRestaurantService _irestaurantService;
-        public RestaurantController(IRestaurantService irestaurantService)
+        private readonly IRestaurantService _restaurantService;
+        private readonly ILogger<RestaurantController> _logger;
+        public RestaurantController(IRestaurantService restaurantService, ILogger<RestaurantController> logger)
         {
-            _irestaurantService = irestaurantService;
+            _restaurantService = restaurantService;
+            _logger = logger;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllRestaurant()
         {
-            var restaurant = await _irestaurantService.GetAllRestaurant();
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get all restaurant ");
+            try
+            {
+                var restaurant = await _restaurantService.GetAllRestaurant();
+                timer.Stop();
+                _logger.LogInformation("Get all restaurant succeed in {0} s", timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }  
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetRestaurantById(int id)
         {
-            var restaurant = await _irestaurantService.GetRestaurantById(id);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by id ");
+            try
+            {
+                var restaurant = await _restaurantService.GetRestaurantById(id);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            } 
         }
 
         [HttpGet("categoryid-{id}")]
         public async Task<IActionResult> GetRestaurantByCategoryId(int id)
         {
-            var restaurant = await _irestaurantService.GetRestaurantByCategoryId(id);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by category id ");
+            try
+            {
+                var restaurant = await _restaurantService.GetRestaurantByCategoryId(id);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by category id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            } 
         }
 
         [HttpGet("cityid-{id}")]
         public async Task<IActionResult> GetRestaurantByCityId(int id)
         {
-            var restaurant = await _irestaurantService.GetRestaurantByCityId(id);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by city id ");
+            try
+            {
+                var restaurant = await _restaurantService.GetRestaurantByCityId(id);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by city id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            } 
         }
-
 
         [HttpPost("by-cityids-restypeids")]
         public async Task<IActionResult> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request)
         {
-            var restaurant = await _irestaurantService.GetResByCityIdsAndResTypeIds(request);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by city id and restaurant type id ");
+            try
+            {
+                var restaurant = await _restaurantService.GetResByCityIdsAndResTypeIds(request);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by city ids {0} and restaurant type ids {1} succeed in {2} s", request.CityIds, request.RestaurantTypeIds, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            } 
         }
 
         [HttpPost("paging-cityids-restypeids")]
         public async Task<IActionResult> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone)
         {
-            var restaurant = await _irestaurantService.GetResByCityIdsAndResTypeIdsWithPaging(respone);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by city ids and restype ids with paging ");
+            try
+            {
+                var restaurant = await _restaurantService.GetResByCityIdsAndResTypeIdsWithPaging(respone);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by city ids {0} and restype ids {1} with paging succeed in {2} s", respone.CityIds, respone.RestaurantTypeIds, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }
         }
 
         [HttpGet("restauranttypeid-{id}")]
         public async Task<IActionResult> GetRestaurantByRestaurantTypeId(int id)
         {
-            var restaurant = await _irestaurantService.GetRestaurantByRestaurantTypeId(id);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by restaurant type id ");
+            try
+            {
+                var restaurant = await _restaurantService.GetRestaurantByRestaurantTypeId(id);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by restaurant type id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }
         }
 
         [HttpGet("more-categoryid-{cateId}-cityid-{cityId}")]
         public async Task<IActionResult> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId)
         {
-            var restaurant = await _irestaurantService.GetRestaurantByCategoryIdAndCityId(cateId, cityId);
-            return Ok(restaurant);
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by category id and city id ");
+            try
+            {
+                var restaurant = await _restaurantService.GetRestaurantByCategoryIdAndCityId(cateId, cityId);
+                timer.Stop();
+                _logger.LogInformation("Get restaurant by category id {0} and city id {1} succeed in {2} s", cateId, cityId, timer.Elapsed.TotalSeconds);
+                return Ok(restaurant);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> AddRestaurant(RestaurantRequest request)
         {
-            var restaurant = await _irestaurantService.AddRestaurant(request);
-            return Ok();
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start add restaurant ");
+            try
+            {
+                var restaurant = await _restaurantService.AddRestaurant(request);
+                timer.Stop();
+                _logger.LogInformation("Add restaurant {0} succeed in {1} s", request.RestaurantName, timer.Elapsed.TotalSeconds);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }  
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateRestaurant(RestaurantRequest request)
         {
-            var restaurant = await _irestaurantService.UpdateRestaurant(request);
-            return Ok();
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start update restaurant ");
+            try
+            {
+                var restaurant = await _restaurantService.UpdateRestaurant(request);
+                timer.Stop();
+                _logger.LogInformation("Update restaurant {0} succeed in {1} s", request.RestaurantId, timer.Elapsed.TotalSeconds);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRestaurant(int id)
         {
-            var restaurant = await _irestaurantService.DeleteRestaurant(id);
-            return Ok();
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start delete restaurant ");
+            try
+            {
+                var restaurant = await _restaurantService.DeleteRestaurant(id);
+                timer.Stop();
+                _logger.LogInformation("Delete restaurant {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation("Error", e);
+                throw new Exception();
+            }
         }
     }
 }
