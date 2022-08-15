@@ -28,7 +28,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var product = await _productService.GetAllProduct();
                 timer.Stop();
-                _logger.LogInformation("Get all product succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all product succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all product ");
                 return Ok(product);
             }
             catch (Exception e)
@@ -48,7 +49,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var product = await _productService.GetProductById(id);
                 timer.Stop();
-                _logger.LogInformation("Get product by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get product by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get product by id ");
                 return Ok(product);
             }
             catch (Exception e)
@@ -68,7 +70,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var product = await _productService.AddProduct(request);
                 timer.Stop();
-                _logger.LogInformation("Add product {0} succeed in {1} s", request.ProductName, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add product name: {0},menu id: {1},product price: {2},product image: {3},amount stock: {4},amount purchased: {5},description: {6},status: {7} succeed in {8} ms", request.ProductName,request.MenuId,request.ProductPrice,request.ProductImage,request.AmountStock,request.AmountPurchased,request.Description,request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add product ");
                 return Ok();
             }
             catch (Exception e)
@@ -88,7 +91,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var product = await _productService.UpdateProduct(request);
                 timer.Stop();
-                _logger.LogInformation("Update product {0} succeed in {1} s", request.ProductId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update product id: {0}, product name: {1},menu id: {2},product price: {3},product image: {4},amount stock: {5},amount purchased: {6},description: {7},status: {8} succeed in {9} ms",request.ProductId, request.ProductName, request.MenuId, request.ProductPrice, request.ProductImage, request.AmountStock, request.AmountPurchased, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update product ");
                 return Ok();
             }
             catch (Exception e)
@@ -108,7 +112,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var product = await _productService.DeleteProduct(id);
                 timer.Stop();
-                _logger.LogInformation("Delete product {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete product {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete product ");
                 return Ok();
             }
             catch (Exception e)
@@ -128,7 +133,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _productService.GetProductByMenuId(id);
                 timer.Stop();
-                _logger.LogInformation("Get product by menu id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get product by menu id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get product by menu id ");
                 return Ok(menu);
             }
             catch (Exception e)

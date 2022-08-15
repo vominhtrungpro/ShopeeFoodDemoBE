@@ -34,7 +34,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.GetAllCustomer();
                 timer.Stop();
-                _logger.LogInformation("Get all customer succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all customer succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all customer");
                 return Ok(customer);
             }
             catch (Exception e)
@@ -54,7 +55,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.GetCustomerById(id);
                 timer.Stop();
-                _logger.LogInformation("Get customer by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get customer by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get customer by id");
                 return Ok(customer);
             }
             catch (Exception e)
@@ -74,7 +76,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.AddCustomer(request);
                 timer.Stop();
-                _logger.LogInformation("Add customer {0} succeed in {1} s", request.CustomerFullname, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add customer username: {0},password: {1},fullname: {2},address: {3},phone: {4},email: {5},description: {6},status: {7} succeed in {8} ms", request.CustomerUsername, request.CustomerPassword, request.CustomerFullname, request.CustomerAddress, request.CustomerPhone, request.CustomerEmail, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add customer by id");
                 return Ok();
             }
             catch (Exception e)
@@ -94,7 +97,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.UpdateCustomer(request);
                 timer.Stop();
-                _logger.LogInformation("Update customer {0} succeed in {1} s", request.CustomerId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update customer id: {0}, username: {1},password: {2},fullname: {3},address: {4},phone: {5},email: {6},description: {7},status: {8} succeed in {9} ms", request.CustomerId, request.CustomerUsername, request.CustomerPassword, request.CustomerFullname, request.CustomerAddress, request.CustomerPhone, request.CustomerEmail, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End Update customer by id");
                 return Ok();
             }
             catch (Exception e)
@@ -114,7 +118,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.DeleteCustomer(id);
                 timer.Stop();
-                _logger.LogInformation("Delete customer {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete customer {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete customer by id");
                 return Ok();
             }
             catch (Exception e)
@@ -141,7 +146,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
                     var refreshToken = GetRefreshToken();
                     SetRefreshToken(refreshToken);
                     timer.Stop();
-                    _logger.LogInformation("Login succeed in {0} s", timer.Elapsed.TotalSeconds);
+                    _logger.LogInformation("Login with username: {0},password: {1} succeed in {2} ms", request.Username, request.Password, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End login");
                     return Ok(new { customer, token, refreshToken });
                 }
             }
@@ -162,7 +168,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.GetCustomerByUsernameAndPassword(username, password);
                 timer.Stop();
-                _logger.LogInformation("get succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("get succeed username: {0},password: {1} in {0} s", username, password, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get username and password");
                 return Ok(customer);
             }
             catch (Exception e)
@@ -182,7 +189,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.GetCustomerByEmail(email);
                 timer.Stop();
-                _logger.LogInformation("get succeed email {0} in {1} s", email, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("get succeed email {0} in {1} ms", email, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get customer by email");
                 return Ok(customer);
             }
             catch (Exception e)
@@ -230,7 +238,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.UpdatePasswordCustomer(request);
                 timer.Stop();
-                _logger.LogInformation("Update customer {0} password succeed in {1} s", request.CustomerId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update customer id: {0},password: {1}, confirm password: {2} succeed in {3} ms", request.CustomerId, request.CustomerPassword, request.CustomerConfirmPassword, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update customer password");
                 return Ok();
             }
             catch (Exception e)

@@ -29,7 +29,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.GetAllMenu();
                 timer.Stop();
-                _logger.LogInformation("Get all menu succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all menu succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all menu ");
                 return Ok(menu);
             }
             catch (Exception e)
@@ -49,7 +50,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.GetMenuById(id);
                 timer.Stop();
-                _logger.LogInformation("Get menu by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get menu by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get menu by id ");
                 return Ok(menu);
             }
             catch (Exception e)
@@ -69,7 +71,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.GetMenuByRestaurantId(id);
                 timer.Stop();
-                _logger.LogInformation("Get menu by restaurant id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get menu by restaurant id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get menu by restaurant id ");
                 return Ok(menu);
             }
             catch (Exception e)
@@ -89,7 +92,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.AddMenu(request);
                 timer.Stop();
-                _logger.LogInformation("Add menu {0} succeed in {1} s", request.MenuName, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add menu name: {0},description: {1},status: {2},restaurand id: {3} succeed in {4} ms", request.MenuName, request.Description, request.Status, request.RestaurantId, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add menu ");
                 return Ok();
             }
             catch (Exception e)
@@ -109,7 +113,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.UpdateMenu(request);
                 timer.Stop();
-                _logger.LogInformation("Update menu {0} succeed in {1} s", request.MenuId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update menu id: {0}, menu name: {1},description: {2},status: {3},restaurand id: {4} succeed in {5} ms",request.MenuId, request.MenuName, request.Description, request.Status, request.RestaurantId, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update menu ");
                 return Ok();
             }
             catch (Exception e)
@@ -129,7 +134,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.DeleteMenu(id);
                 timer.Stop();
-                _logger.LogInformation("Delete menu {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete menu {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete menu ");
                 return Ok();
             }
             catch (Exception e)

@@ -31,8 +31,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.GetAllCategory();
                 timer.Stop();
-                _logger.LogInformation("Get all category succeed in {0} s", timer.Elapsed.TotalSeconds);
-                return Ok(category);
+                _logger.LogInformation("Get all category succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all category");
+                return Ok(category);  
             }
             catch (Exception e)
             {
@@ -51,7 +52,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.GetCategoryById(id);
                 timer.Stop();
-                _logger.LogInformation("Get category by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get category by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get category by id");
                 return Ok(category);
             }
             catch (Exception e)
@@ -71,7 +73,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.AddCategory(request);
                 timer.Stop();
-                _logger.LogInformation("add category {0} succeed in {1} s", request.CategoryName, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add category name: {0},description: {1},status: {2} succeed in {3} ms", request.CategoryName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add category");
                 return Ok();
             }
             catch (Exception e)
@@ -91,7 +94,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.UpdateCategory(request);
                 timer.Stop();
-                _logger.LogInformation("update category {0} succeed in {1} s", request.CategoryId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update category id: {0},name {1},description: {2},status: {3} succeed in {4} ms", request.CategoryId, request.CategoryName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update category");
                 return Ok();
             }
             catch (Exception e)
@@ -111,7 +115,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.DeleteCategory(id);
                 timer.Stop();
-                _logger.LogInformation("delete category id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete category");
                 return Ok();
             }
             catch (Exception e)

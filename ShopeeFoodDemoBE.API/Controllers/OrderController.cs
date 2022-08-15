@@ -28,7 +28,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var order = await _orderService.GetAllOrder();
                 timer.Stop();
-                _logger.LogInformation("Get all order succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all order succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all order ");
                 return Ok(order);
             }
             catch (Exception e)
@@ -48,7 +49,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var order = await _orderService.GetOrderById(id);
                 timer.Stop();
-                _logger.LogInformation("Get order by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get order by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get order by id ");
                 return Ok(order);
             }
             catch (Exception e)
@@ -68,7 +70,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var order = await _orderService.AddOrder(request);
                 timer.Stop();
-                _logger.LogInformation("Add order succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add order customer id: {0},total price: {1},time order: {2},place order: {3},description: {4},status: {5} succeed in {6} ms", request.CustomerId, request.TotalPrice, request.TimeOrder, request.PlaceOrder, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add order ");
                 return Ok(order);
             }
             catch (Exception e)
@@ -88,7 +91,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var order = await _orderService.UpdateOrder(request);
                 timer.Stop();
-                _logger.LogInformation("Update order {0} succeed in {1} s", request.OrderId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update order id: {0}, customer id: {1},total price: {2},time order: {3},place order: {4},description: {5},status: {6} succeed in {7} ms",request.OrderId, request.CustomerId, request.TotalPrice, request.TimeOrder, request.PlaceOrder, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update order ");
                 return Ok();
             }
             catch (Exception e)
@@ -108,7 +112,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var order = await _orderService.DeleteOrder(id);
                 timer.Stop();
-                _logger.LogInformation("Delete order {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete order {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete order ");
                 return Ok();
             }
             catch (Exception e)

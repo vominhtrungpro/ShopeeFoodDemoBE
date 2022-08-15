@@ -28,7 +28,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restauranttype = await _restauranttypeService.GetAllRestaurantType();
                 timer.Stop();
-                _logger.LogInformation("Get all restaurant type succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all restaurant type succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all restaurant type ");
                 return Ok(restauranttype);
             }
             catch (Exception e)
@@ -48,7 +49,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restauranttype = await _restauranttypeService.GetRestaurantTypeById(id);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant type by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get restaurant type by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get restaurant type by id ");
                 return Ok(restauranttype);
             }
             catch (Exception e)
@@ -68,7 +70,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restauranttype = await _restauranttypeService.GetRestaurantTypeByCategoryId(id);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant type by category id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get restaurant type by category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get restaurant type by category id ");
                 return Ok(restauranttype);
             }
             catch (Exception e)
@@ -88,7 +91,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restauranttype = await _restauranttypeService.AddRestaurantType(request);
                 timer.Stop();
-                _logger.LogInformation("Add restaurant type {0} succeed in {1} s", request.RestaurantTypeName, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add restaurant type name: {0},category id: {1},description: {2},status: {3} succeed in {4} ms", request.RestaurantTypeName,request.CategoryId,request.Description,request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add restaurant type ");
                 return Ok();
             }
             catch (Exception e)
@@ -108,7 +112,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restauranttype = await _restauranttypeService.UpdateRestaurantType(request);
                 timer.Stop();
-                _logger.LogInformation("Update restaurant type {0} succeed in {1} s", request.RestaurantTypeId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("update restaurant type id: {0}, restaurant name: {1},category id: {2},description: {3},status: {4} succeed in {5} ms",request.RestaurantTypeId, request.RestaurantTypeName, request.CategoryId, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update restaurant type ");
                 return Ok();
             }
             catch (Exception e)
@@ -128,7 +133,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restauranttype = await _restauranttypeService.DeleteRestaurantType(id);
                 timer.Stop();
-                _logger.LogInformation("Delete restaurant type {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete restaurant type {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete restaurant type ");
                 return Ok();
             }
             catch (Exception e)

@@ -28,7 +28,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var city = await _cityService.GetAllCity();
                 timer.Stop();
-                _logger.LogInformation("Get all city succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all city succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all city");
                 return Ok(city);
             }
             catch (Exception e)
@@ -48,7 +49,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var city = await _cityService.GetCityById(id);
                 timer.Stop();
-                _logger.LogInformation("Get city by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get city by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get city by id");
                 return Ok(city);
             }
             catch (Exception e)
@@ -68,7 +70,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var city = await _cityService.AddCity(request);
                 timer.Stop();
-                _logger.LogInformation("Add city {0} succeed in {1} s", request.CityName, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add city name: {0},description: {1},status: {2} succeed in {3} ms", request.CityName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add city");
                 return Ok();
             }
             catch (Exception e)
@@ -88,7 +91,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var city = await _cityService.UpdateCity(request);
                 timer.Stop();
-                _logger.LogInformation("Update city {0} succeed in {1} s", request.CityId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update city id: {0},city name: {1},description: {2},status: {3} succeed in {4} ms", request.CityId, request.CityName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update city");
                 return Ok();
             }
             catch (Exception e)
@@ -108,7 +112,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var city = await _cityService.DeleteCity(id);
                 timer.Stop();
-                _logger.LogInformation("Delete city id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete city id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End delete city");
                 return Ok();
             }
             catch (Exception e)

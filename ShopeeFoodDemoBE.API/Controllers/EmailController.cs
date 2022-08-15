@@ -29,7 +29,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 _emailService.SendEmail(request);
                 timer.Stop();
-                _logger.LogInformation("Sending mail succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Sending mail succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End sending mail");
                 return Ok();
             }
             catch (Exception e)

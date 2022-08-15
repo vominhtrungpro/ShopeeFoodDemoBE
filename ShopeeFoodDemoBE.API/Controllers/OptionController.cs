@@ -28,7 +28,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var option = await _optionService.GetAllOption();
                 timer.Stop();
-                _logger.LogInformation("Get all option succeed in {0} s", timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get all option succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get all option ");
                 return Ok(option);
             }
             catch (Exception e)
@@ -48,7 +49,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var option = await _optionService.GetOptionById(id);
                 timer.Stop();
-                _logger.LogInformation("Get option by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get option by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get option by id ");
                 return Ok(option);
             }
             catch (Exception e)
@@ -68,7 +70,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var option = await _optionService.AddOption(request);
                 timer.Stop();
-                _logger.LogInformation("Add option {0} succeed in {1} s", request.OptionName, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Add option name: {0},option type id: {1},description: {2},status: {3} succeed in {4} ms", request.OptionName, request.OptionTypeId, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End add option ");
                 return Ok();
             }
             catch (Exception e)
@@ -88,7 +91,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var option = await _optionService.UpdateOption(request);
                 timer.Stop();
-                _logger.LogInformation("Update option {0} succeed in {1} s", request.OptionId, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Update option id: {0},option name: {1},option type id: {2},description: {3},status: {4} succeed in {5} ms",request.OptionId, request.OptionName, request.OptionTypeId, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End update option ");
                 return Ok();
             }
             catch (Exception e)
@@ -108,7 +112,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var option = await _optionService.DeleteOption(id);
                 timer.Stop();
-                _logger.LogInformation("Delete option {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Delete option {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("Start delete option ");
                 return Ok();
             }
             catch (Exception e)
@@ -127,7 +132,8 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var option = await _optionService.GetOptionByProductId(id);
                 timer.Stop();
-                _logger.LogInformation("Get option by product id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
+                _logger.LogInformation("Get option by product id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                _logger.LogInformation("End get option by product id ");
                 return Ok(option);
             }
             catch (Exception e)
