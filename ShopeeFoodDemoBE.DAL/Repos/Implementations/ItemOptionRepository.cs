@@ -10,42 +10,41 @@ using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
 {
-    public class CategoryRepository : ICategoryRepository
+    public class ItemOptionRepository : IItemOptionRepository
     {
         private readonly DataContext _dataContext;
-
-        public CategoryRepository(DataContext dataContext)
+        public ItemOptionRepository(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
 
-        public async Task<List<Category>> GetAllCategory()
+        public async Task<List<ItemOption>> GetAllItemOption()
         {
-            return await _dataContext.Category.ToListAsync();
+            return await _dataContext.ItemOption.ToListAsync();
         }
 
-        public async Task<Category> GetCategoryById(int id)
+        public async Task<ItemOption> GetItemOptionById(int id)
         {
-            return await _dataContext.Category.FindAsync(id);
+            return await _dataContext.ItemOption.FindAsync(id);
         }
 
-        public async Task<Boolean> AddCategory(Category category)
+        public async Task<Boolean> AddItemOption(ItemOption itemoption)
         {
-            _dataContext.Category.Add(category);
+            _dataContext.ItemOption.Add(itemoption);
             await _dataContext.SaveChangesAsync();
             return true;
         }
 
-        public async Task<Boolean> UpdateCategory(Category category)
+        public async Task<Boolean> UpdateItemOption(ItemOption itemoption)
         {
             await _dataContext.SaveChangesAsync();
             return true;
         }
 
-        public async Task<Boolean> DeleteCategory(int id)
+        public async Task<Boolean> DeleteItemOption(int id)
         {
-            var category = await GetCategoryById(id);
-            _dataContext.Category.Remove(category);
+            var itemoption = await GetItemOptionById(id);
+            _dataContext.ItemOption.Remove(itemoption);
             await _dataContext.SaveChangesAsync();
             return true;
         }
