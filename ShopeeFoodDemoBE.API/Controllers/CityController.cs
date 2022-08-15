@@ -26,13 +26,14 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start get all city");
             try
             {
+                var city = await _cityService.GetAllCity();
                 timer.Stop();
                 _logger.LogInformation("Get all city succeed in {0} s", timer.Elapsed.TotalSeconds);
-                return Ok(await _cityService.GetAllCity());
+                return Ok(city);
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -45,13 +46,14 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start get city by id");
             try
             {
+                var city = await _cityService.GetCityById(id);
                 timer.Stop();
                 _logger.LogInformation("Get city by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
-                return Ok(await _cityService.GetCityById(id));
+                return Ok(city);
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -71,7 +73,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -91,7 +93,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -111,7 +113,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }

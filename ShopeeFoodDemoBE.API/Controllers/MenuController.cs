@@ -34,7 +34,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -54,7 +54,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }  
         }
@@ -74,7 +74,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -94,7 +94,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -114,7 +114,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }  
         }
@@ -134,7 +134,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             } 
         }

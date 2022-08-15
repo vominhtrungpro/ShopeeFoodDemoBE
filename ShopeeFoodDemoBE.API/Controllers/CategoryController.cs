@@ -29,15 +29,16 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start get all category");
             try
             {
+                var category = await _categoryService.GetAllCategory();
                 timer.Stop();
                 _logger.LogInformation("Get all category succeed in {0} s", timer.Elapsed.TotalSeconds);
-                return Ok(await _categoryService.GetAllCategory());
+                return Ok(category);
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
-            } 
+            }
         }
 
         [HttpGet("{id}")]
@@ -48,13 +49,14 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start get category by id");
             try
             {
+                var category = await _categoryService.GetCategoryById(id);
                 timer.Stop();
                 _logger.LogInformation("Get category by id {0} succeed in {1} s", id, timer.Elapsed.TotalSeconds);
-                return Ok(await _categoryService.GetCategoryById(id));
+                return Ok(category);
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -74,7 +76,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -94,7 +96,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
@@ -114,7 +116,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation("Error", e);
+                _logger.LogError("Error", e);
                 throw new Exception();
             }
         }
