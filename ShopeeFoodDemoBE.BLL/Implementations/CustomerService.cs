@@ -98,6 +98,12 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 return result;
             }
             var customer = await _customerrepository.GetCustomerById(request.CustomerId);
+            if (customer == null)
+            {
+                result.Success = false;
+                result.Message = "Customer not found!";
+                return result;
+            }
             customer.CustomerUsername = request.CustomerUsername;
             customer.CustomerPassword = request.CustomerPassword;
             customer.CustomerFullname = request.CustomerFullname;
@@ -115,7 +121,7 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             else
             {
                 result.Success = false;
-                result.Message = "Add failed!";
+                result.Message = "Update failed!";
             }
             return result;
         }
