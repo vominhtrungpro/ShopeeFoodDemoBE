@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopeeFoodDemoBE.BLL.Models.Requests
+namespace ShopeeFoodDemoBE.BLL.Models.Dto
 {
-    public class CustomerRequest
+    public class DtoCustomer
     {
- 
+
         public int CustomerId { get; set; }
 
         public string CustomerUsername { get; set; }
-
-        public string CustomerPassword { get; set; }
 
         public string CustomerFullname { get; set; }
 

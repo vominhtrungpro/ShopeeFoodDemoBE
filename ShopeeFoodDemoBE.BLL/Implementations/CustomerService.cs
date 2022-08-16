@@ -1,20 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ShopeeFoodDemoBE.BLL.Constracts;
+using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
-using Swashbuckle.Swagger;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.BLL.Implementations
 {
@@ -28,18 +21,48 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             _configuration = configuration;
         }
 
-        public Task<List<Customer>> GetAllCustomer()
+        public async Task<List<DtoCustomer>> GetAllCustomer()
         {
-            return _customerrepository.GetAllCustomer();
+            var dtoCustomer = new List<DtoCustomer>();
+            var dbCustomer = await _customerrepository.GetAllCustomer();
+            dtoCustomer = dbCustomer.Select(c => new DtoCustomer
+            {
+                CustomerId = c.CustomerId,
+                CustomerUsername = c.CustomerUsername,
+                CustomerFullname = c.CustomerFullname,
+                CustomerAddress = c.CustomerAddress,
+                CustomerPhone = c.CustomerPhone,
+                CustomerEmail = c.CustomerEmail,
+                Description = c.Description,
+                Status = c.Status
+            }).ToList();
+            return dtoCustomer;
         }
 
-        public Task<Customer> GetCustomerById(int id)
+        public async Task<DtoCustomer> GetCustomerById(int id)
         {
-            return _customerrepository.GetCustomerById(id);
+            var dtoCustomer = new DtoCustomer();
+            var dbCustomer = await _customerrepository.GetCustomerById(id);
+            dtoCustomer.CustomerId = dbCustomer.CustomerId;
+            dtoCustomer.CustomerUsername = dbCustomer.CustomerUsername;
+            dtoCustomer.CustomerFullname = dbCustomer.CustomerFullname;
+            dtoCustomer.CustomerAddress = dbCustomer.CustomerAddress;
+            dtoCustomer.CustomerPhone = dbCustomer.CustomerPhone;
+            dtoCustomer.CustomerEmail = dbCustomer.CustomerEmail;
+            dtoCustomer.Description = dbCustomer.Description;
+            dtoCustomer.Status = dbCustomer.Status;
+            return dtoCustomer;
         }
 
-        public Task<Boolean> AddCustomer(CustomerRequest request)
+        public async Task<ActionResponse> AddCustomer(CustomerRequest request)
         {
+            var result = new ActionResponse();
+            if (request.Status!="Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
             var customer = new Customer()
             {
                 CustomerUsername = request.CustomerUsername,
@@ -51,7 +74,23 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _customerrepository.AddCustomer(customer);
+
+
+
+
+
+            var addResult = await _customerrepository.AddCustomer(customer);
+            if (addResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Add failed!";
+            }
+            return result;
         }
 
         public async Task<Boolean> UpdateCustomer(CustomerRequest request)

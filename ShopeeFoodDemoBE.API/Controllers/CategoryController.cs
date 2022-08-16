@@ -94,17 +94,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var category = await _categoryService.AddCategory(request);
                 timer.Stop();
-                if (category == true)
+                if (category.Success)
                 {
                     _logger.LogInformation("Add category {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add category");
                     return Ok();
                 }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
                 else
                 {
-                    _logger.LogInformation("Add category {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add category {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,category.Message);
                     _logger.LogInformation("End add category");
-                    return BadRequest("Add category failed!");
+                    return BadRequest(category.Message);
                 }
             }
             catch (Exception e)
@@ -125,17 +129,22 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var category = await _categoryService.UpdateCategory(request);
                 timer.Stop();
-                if (category == true)
+                
+                if (category.Success)
                 {
                     _logger.LogInformation("Update category {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update category");
                     return Ok();
                 }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
                 else
                 {
-                    _logger.LogInformation("Update category {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update category {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,category.Message);
                     _logger.LogInformation("End update category");
-                    return BadRequest("Update category failed!");
+                    return BadRequest(category.Message);
                 }        
             }
             catch (Exception e)
