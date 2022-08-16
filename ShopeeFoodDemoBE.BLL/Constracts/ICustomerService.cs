@@ -18,7 +18,7 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<ActionResponse> AddCustomer(CustomerRequest request);
 
-        Task<Boolean> UpdateCustomer(CustomerRequest request);
+        Task<ActionResponse> UpdateCustomer(CustomerRequest request);
 
         Task<Boolean> DeleteCustomer(int id);
 

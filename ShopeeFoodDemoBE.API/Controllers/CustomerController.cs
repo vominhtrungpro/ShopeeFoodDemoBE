@@ -96,6 +96,12 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var customer = await _customerService.AddCustomer(request);
                 timer.Stop();
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogInformation("Add customer {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds, ModelState);
+                    _logger.LogInformation("End add customer by id");
+                    return BadRequest(ModelState);
+                }
                 if (customer.Success)
                 {
                     _logger.LogInformation("Add customer {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
@@ -127,7 +133,13 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var customer = await _customerService.UpdateCustomer(request);
                 timer.Stop();
-                if (customer == true)
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogInformation("Update customer {0} failed in {1} ms with message {2} ", jsonString, timer.Elapsed.TotalMilliseconds, ModelState);
+                    _logger.LogInformation("End Update customer by id");
+                    return BadRequest(ModelState);
+                }
+                if (customer.Success)
                 {
                     _logger.LogInformation("Update customer {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End Update customer by id");
@@ -135,9 +147,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update customer {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update customer {0} failed in {1} ms with message {2} ", jsonString, timer.Elapsed.TotalMilliseconds,customer.Message);
                     _logger.LogInformation("End Update customer by id");
-                    return BadRequest("Update customer failed!");
+                    return BadRequest(customer.Message);
                 }
                 
 

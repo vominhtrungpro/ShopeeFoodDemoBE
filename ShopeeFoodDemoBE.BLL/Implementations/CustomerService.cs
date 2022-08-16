@@ -74,11 +74,6 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-
-
-
-
-
             var addResult = await _customerrepository.AddCustomer(customer);
             if (addResult)
             {
@@ -93,8 +88,15 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return result;
         }
 
-        public async Task<Boolean> UpdateCustomer(CustomerRequest request)
+        public async Task<ActionResponse> UpdateCustomer(CustomerRequest request)
         {
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
             var customer = await _customerrepository.GetCustomerById(request.CustomerId);
             customer.CustomerUsername = request.CustomerUsername;
             customer.CustomerPassword = request.CustomerPassword;
@@ -104,8 +106,18 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             customer.CustomerEmail = request.CustomerEmail;
             customer.Description = request.Description;
             customer.Status = request.Status;
-            await _customerrepository.UpdateCustomer(customer);
-            return true;
+            var updateResult = await _customerrepository.UpdateCustomer(customer);
+            if (updateResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Add failed!";
+            }
+            return result;
         }
 
         public async Task<Boolean> UpdatePasswordCustomer(RestorePasswordRequest request)
