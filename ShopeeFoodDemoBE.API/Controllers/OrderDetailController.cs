@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -28,9 +29,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var orderdetail = await _orderdetailService.GetAllOrderDetail();
                 timer.Stop();
-                _logger.LogInformation("Get all order detail succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get all order detail ");
-                return Ok(orderdetail);
+                if (orderdetail.Any())
+                {
+                    _logger.LogInformation("Get all order detail succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get all order detail ");
+                    return Ok(orderdetail);
+                }
+                else
+                {
+                    _logger.LogInformation("Get all order detail failed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get all order detail ");
+                    return BadRequest("Orderdetails not found!");
+                }
             }
             catch (Exception e)
             {
@@ -49,9 +59,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var orderdetail = await _orderdetailService.GetOrderDetailById(id);
                 timer.Stop();
-                _logger.LogInformation("Get order detail by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get order detail by id ");
-                return Ok(orderdetail);
+                if (orderdetail != null)
+                {
+                    _logger.LogInformation("Get order detail by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get order detail by id ");
+                    return Ok(orderdetail);
+                }
+                else
+                {
+                    _logger.LogInformation("Get order detail by id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get order detail by id ");
+                    return BadRequest("Orderdetail not found!");
+                }
             }
             catch (Exception e)
             {
@@ -68,11 +87,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start add order detail ");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var orderdetail = await _orderdetailService.AddOrderDetail(request);
                 timer.Stop();
-                _logger.LogInformation("Add order detail order id: {0},product id: {1},amount: {2},price: {3} succeed in {4} ms", request.OrderId, request.ProductId, request.Amount, request.Price, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End add order detail ");
-                return Ok();
+                if (orderdetail == true)
+                {
+                    _logger.LogInformation("Add orderdetail {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add order detail ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Add orderdetail {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add order detail ");
+                    return BadRequest("Add orderdetail failed!");
+                }
             }
             catch (Exception e)
             {
@@ -89,11 +118,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start update order detail ");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var orderdetail = await _orderdetailService.UpdateOrderDetail(request);
                 timer.Stop();
-                _logger.LogInformation("Update order detail id: {0}, order id: {1},product id: {2},amount: {3},price: {4} succeed in {5} ms",request.OrderDetailId, request.OrderId, request.ProductId, request.Amount, request.Price, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End update order detail ");
-                return Ok();
+                if (orderdetail == true)
+                {
+                    _logger.LogInformation("Update orderdetail {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update order detail ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Update orderdetail {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update order detail ");
+                    return BadRequest("Update orderdetail failed!");
+                }
             }
             catch (Exception e)
             {
@@ -112,9 +151,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var orderdetail = await _orderdetailService.DeleteOrderDetail(id);
                 timer.Stop();
-                _logger.LogInformation("Delete order detail {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End delete order detail ");
-                return Ok();
+                if (orderdetail == true)
+                {
+                    _logger.LogInformation("Delete orderdetail {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete order detail ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Delete orderdetail {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete order detail ");
+                    return BadRequest("Delete orderdetail failed!");
+                }
             }
             catch (Exception e)
             {

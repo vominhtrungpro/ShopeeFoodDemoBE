@@ -4,6 +4,7 @@ using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -29,9 +30,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetAllRestaurant();
                 timer.Stop();
-                _logger.LogInformation("Get all restaurant succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("Start get all restaurant ");
-                return Ok(restaurant);
+                if (restaurant.Any())
+                {
+                    _logger.LogInformation("Get all restaurant succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Start get all restaurant ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get all restaurant failed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Start get all restaurant ");
+                    return BadRequest("Restaurants not found!");
+                }
             }
             catch (Exception e)
             {
@@ -50,9 +60,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetRestaurantById(id);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by id ");
-                return Ok(restaurant);
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by id ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by id ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -71,9 +90,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetRestaurantByCategoryId(id);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by category id ");
-                return Ok(restaurant);
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by category id ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by category id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by category id ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -92,9 +120,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetRestaurantByCityId(id);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by city id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by city id ");
-                return Ok(restaurant);
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by city id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city id ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by city id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city id ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -113,9 +150,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetResByCityIdsAndResTypeIds(request);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by city ids {0} and restaurant type ids {1} succeed in {2} ms", request.CityIds, request.RestaurantTypeIds, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by city id and restaurant type id ");
-                return Ok(restaurant);
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by city ids {0} and restaurant type ids {1} succeed in {2} ms", request.CityIds, request.RestaurantTypeIds, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city id and restaurant type id ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by city ids {0} and restaurant type ids {1} failed in {2} ms", request.CityIds, request.RestaurantTypeIds, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city id and restaurant type id ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -134,9 +180,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetResByCityIdsAndResTypeIdsWithPaging(respone);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by city ids {0} and restype ids {1} with paging succeed in {2} ms", respone.CityIds, respone.RestaurantTypeIds, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by city ids and restype ids with paging ");
-                return Ok(restaurant);
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by city ids {0} and restype ids {1} with paging succeed in {2} ms", respone.CityIds, respone.RestaurantTypeIds, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city ids and restype ids with paging ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by city ids {0} and restype ids {1} with paging failed in {2} ms", respone.CityIds, respone.RestaurantTypeIds, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city ids and restype ids with paging ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -155,9 +210,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetRestaurantByRestaurantTypeId(id);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by restaurant type id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by restaurant type id ");
-                return Ok(restaurant);
+                if (restaurant!=null)
+                {
+                    _logger.LogInformation("Get restaurant by restaurant type id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by restaurant type id ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by restaurant type id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by restaurant type id ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -176,9 +240,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.GetRestaurantByCategoryIdAndCityId(cateId, cityId);
                 timer.Stop();
-                _logger.LogInformation("Get restaurant by category id {0} and city id {1} succeed in {2} ms", cateId, cityId, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get restaurant by category id and city id ");
-                return Ok(restaurant);
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by category id {0} and city id {1} succeed in {2} ms", cateId, cityId, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by category id and city id ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by category id {0} and city id {1} failed in {2} ms", cateId, cityId, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by category id and city id ");
+                    return BadRequest("Restaurant not found!");
+                }
             }
             catch (Exception e)
             {
@@ -195,11 +268,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start add restaurant ");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var restaurant = await _restaurantService.AddRestaurant(request);
                 timer.Stop();
-                _logger.LogInformation("Add restaurant name {0},city id: {1},restaurant type id: {2},restaurant address: {3},restaurant image: {4},description: {5},status: {6} succeed in {7} ms", request.RestaurantName, request.CityId, request.RestaurantTypeId, request.RestaurantAddress, request.RestaurantImage, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End add restaurant ");
-                return Ok();
+                if (restaurant == true)
+                {
+                    _logger.LogInformation("Add restaurant {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add restaurant ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Add restaurant {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add restaurant ");
+                    return BadRequest("Add restaurant failed!");
+                }
             }
             catch (Exception e)
             {
@@ -216,11 +299,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start update restaurant ");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var restaurant = await _restaurantService.UpdateRestaurant(request);
                 timer.Stop();
-                _logger.LogInformation("Update restaurant id: {0} restaurant name {1},city id: {2},restaurant type id: {3},restaurant address: {4},restaurant image: {5},description: {6},status: {7} succeed in {8} ms",request.RestaurantId, request.RestaurantName, request.CityId, request.RestaurantTypeId, request.RestaurantAddress, request.RestaurantImage, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End update restaurant ");
-                return Ok();
+                if (restaurant == true)
+                {
+                    _logger.LogInformation("Update restaurant {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update restaurant ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Update restaurant {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update restaurant ");
+                    return BadRequest("Update restaurant failed!");
+                }
             }
             catch (Exception e)
             {
@@ -239,9 +332,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.DeleteRestaurant(id);
                 timer.Stop();
-                _logger.LogInformation("Delete restaurant {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End delete restaurant ");
-                return Ok();
+                if (restaurant == true)
+                {
+                    _logger.LogInformation("Delete restaurant {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete restaurant ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Delete restaurant {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete restaurant ");
+                    return BadRequest("Delete restaurant failed!");
+                }
             }
             catch (Exception e)
             {

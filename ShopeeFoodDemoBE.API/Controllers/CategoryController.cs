@@ -6,6 +6,7 @@ using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -31,9 +32,19 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.GetAllCategory();
                 timer.Stop();
-                _logger.LogInformation("Get all category succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get all category");
-                return Ok(category);  
+                if (category.Any())
+                {
+                    _logger.LogInformation("Get all category succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get all category");
+                    return Ok(category);
+                }
+                else
+                { 
+                    _logger.LogInformation("Get all category failed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get all category");
+                    return BadRequest("Categories not found!"); 
+                }
+                
             }
             catch (Exception e)
             {
@@ -52,9 +63,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.GetCategoryById(id);
                 timer.Stop();
-                _logger.LogInformation("Get category by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get category by id");
-                return Ok(category);
+                if (category != null)
+                {
+                    _logger.LogInformation("Get category by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get category by id");
+                    return Ok(category);
+                }
+                else
+                {
+                    _logger.LogInformation("Get category by id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get category by id");
+                    return BadRequest("Category not found!");
+                }                
             }
             catch (Exception e)
             {
@@ -71,11 +91,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start add category");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var category = await _categoryService.AddCategory(request);
                 timer.Stop();
-                _logger.LogInformation("Add category name: {0},description: {1},status: {2} succeed in {3} ms", request.CategoryName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End add category");
-                return Ok();
+                if (category == true)
+                {
+                    _logger.LogInformation("Add category {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add category");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Add category {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add category");
+                    return BadRequest("Add category failed!");
+                }
             }
             catch (Exception e)
             {
@@ -92,11 +122,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start update category");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var category = await _categoryService.UpdateCategory(request);
                 timer.Stop();
-                _logger.LogInformation("Update category id: {0},name {1},description: {2},status: {3} succeed in {4} ms", request.CategoryId, request.CategoryName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End update category");
-                return Ok();
+                if (category == true)
+                {
+                    _logger.LogInformation("Update category {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update category");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Update category {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update category");
+                    return BadRequest("Update category failed!");
+                }        
             }
             catch (Exception e)
             {
@@ -115,9 +155,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.DeleteCategory(id);
                 timer.Stop();
-                _logger.LogInformation("Delete category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End delete category");
-                return Ok();
+                if (category == true)
+                {
+                    _logger.LogInformation("Delete category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete category");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Delete category id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete category");
+                    return BadRequest("Delete category failed!");
+                }
             }
             catch (Exception e)
             {

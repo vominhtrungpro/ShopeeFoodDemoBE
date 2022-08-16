@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace ShopeeFoodDemoBE.API.Controllers
 {
@@ -28,9 +29,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var optiontype = await _optiontypeService.GetAllOptionType();
                 timer.Stop();
-                _logger.LogInformation("Get all option type succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get all option type ");
-                return Ok(optiontype);
+                if (optiontype.Any())
+                {
+                    _logger.LogInformation("Get all option type succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get all option type ");
+                    return Ok(optiontype);
+                }
+                else
+                {
+                    _logger.LogInformation("Get all option type failed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get all option type ");
+                    return BadRequest("Optiontypes not found");
+                }
             }
             catch (Exception e)
             {
@@ -49,9 +59,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var optiontype = await _optiontypeService.GetOptionTypeById(id);
                 timer.Stop();
-                _logger.LogInformation("Get option type by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get option type by id ");
-                return Ok(optiontype);
+                if (optiontype != null)
+                {
+                    _logger.LogInformation("Get option type by id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get option type by id ");
+                    return Ok(optiontype);
+                }
+                else
+                {
+                    _logger.LogInformation("Get option type by id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get option type by id ");
+                    return BadRequest("Optiontype not found!");
+                }
             }
             catch (Exception e)
             {
@@ -68,11 +87,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start add option type ");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var optiontype = await _optiontypeService.AddOptionType(request);
                 timer.Stop();
-                _logger.LogInformation("Add option type name: {0},description: {1},status: {2} succeed in {3} ms", request.OptionTypeName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End add option type ");
-                return Ok();
+                if (optiontype == true)
+                {
+                    _logger.LogInformation("Add optiontype {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add option type ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Add optiontype {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End add option type ");
+                    return BadRequest("Add optiontype failed!");
+                }
             }
             catch (Exception e)
             {
@@ -89,11 +118,21 @@ namespace ShopeeFoodDemoBE.API.Controllers
             _logger.LogInformation("Start update option type ");
             try
             {
+                string jsonString = JsonSerializer.Serialize(request);
                 var optiontype = await _optiontypeService.UpdateOptionType(request);
                 timer.Stop();
-                _logger.LogInformation("Update option type id: {0}, option type name: {1},description: {2},status: {3} succeed in {4} ms",request.OptionTypeId, request.OptionTypeName, request.Description, request.Status, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End update option type ");
-                return Ok();
+                if (optiontype == true)
+                {
+                    _logger.LogInformation("Update optiontype {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update option type ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Update optiontype {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End update option type ");
+                    return BadRequest("Update optiontype failed!");
+                }
             }
             catch (Exception e)
             {
@@ -112,9 +151,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var optiontype = await _optiontypeService.DeleteOptionType(id);
                 timer.Stop();
-                _logger.LogInformation("Delete option type {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End delete option type ");
-                return Ok();
+                if (optiontype == true)
+                {
+                    _logger.LogInformation("Delete option type {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete option type ");
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogInformation("Delete option type {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End delete option type ");
+                    return BadRequest("Delete optiontype failed!");
+                }
             }
             catch (Exception e)
             {
@@ -133,9 +181,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var optiontype = await _optiontypeService.GetOptionTypeByProductId(id);
                 timer.Stop();
-                _logger.LogInformation("Get option type by product id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get option type by product id ");
-                return Ok(optiontype);
+                if (optiontype != null)
+                {
+                    _logger.LogInformation("Get option type by product id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get option type by product id ");
+                    return Ok(optiontype);
+                }
+                else
+                {
+                    _logger.LogInformation("Get option type by product id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get option type by product id ");
+                    return BadRequest("Optiontype not found!");
+                }
             }
             catch (Exception e)
             {
@@ -153,9 +210,18 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var optiontype = await _optiontypeService.GetOptionTypeDetailByProductId(id);
                 timer.Stop();
-                _logger.LogInformation("Get option type detail by product id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
-                _logger.LogInformation("End get option type detail by product id ");
-                return Ok(optiontype);
+                if (optiontype != null)
+                {
+                    _logger.LogInformation("Get option type detail by product id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get option type detail by product id ");
+                    return Ok(optiontype);
+                }
+                else
+                {
+                    _logger.LogInformation("Get option type detail by product id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get option type detail by product id ");
+                    return BadRequest("Optiontype not found!");
+                }
             }
             catch (Exception e)
             {
