@@ -102,8 +102,8 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             dbCategory.CategoryName = request.CategoryName;
             dbCategory.Description = request.Description;
             dbCategory.Status = request.Status;
-            var addResult = await _categoryRepository.UpdateCategory(dbCategory);
-            if (addResult)
+            var updateResult = await _categoryRepository.UpdateCategory(dbCategory);
+            if (updateResult)
             {
                 result.Success = true;
                 result.Message = "Successful";
@@ -116,9 +116,29 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return result;
         }
 
-        public Task<Boolean> DeleteCategory(int id)
+        public async Task<ActionResponse> DeleteCategory(int id)
         {
-            return _categoryRepository.DeleteCategory(id);
+            var result = new ActionResponse();
+            var dbCategory = await _categoryRepository.GetCategoryById(id);
+            if (dbCategory == null)
+            {
+                result.Success = false;
+                result.Message = "Category not found!";
+                return result;
+            }
+            var deleteResult = await  _categoryRepository.DeleteCategory(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+                
+            }
+            return result;
         }
     }
 }

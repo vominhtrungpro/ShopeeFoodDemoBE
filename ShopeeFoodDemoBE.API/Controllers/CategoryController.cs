@@ -100,10 +100,6 @@ namespace ShopeeFoodDemoBE.API.Controllers
                     _logger.LogInformation("End add category");
                     return Ok();
                 }
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
                 else
                 {
                     _logger.LogInformation("Add category {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,category.Message);
@@ -136,10 +132,6 @@ namespace ShopeeFoodDemoBE.API.Controllers
                     _logger.LogInformation("End update category");
                     return Ok();
                 }
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
                 else
                 {
                     _logger.LogInformation("Update category {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,category.Message);
@@ -164,7 +156,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var category = await _categoryService.DeleteCategory(id);
                 timer.Stop();
-                if (category == true)
+                if (category.Success)
                 {
                     _logger.LogInformation("Delete category id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete category");
@@ -172,9 +164,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete category id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete category id {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds,category.Message);
                     _logger.LogInformation("End delete category");
-                    return BadRequest("Delete category failed!");
+                    return BadRequest(category.Message);
                 }
             }
             catch (Exception e)

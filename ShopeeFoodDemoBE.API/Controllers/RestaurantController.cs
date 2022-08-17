@@ -271,7 +271,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var restaurant = await _restaurantService.AddRestaurant(request);
                 timer.Stop();
-                if (restaurant == true)
+                if (restaurant.Success)
                 {
                     _logger.LogInformation("Add restaurant {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add restaurant ");
@@ -279,9 +279,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Add restaurant {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add restaurant {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,restaurant.Message);
                     _logger.LogInformation("End add restaurant ");
-                    return BadRequest("Add restaurant failed!");
+                    return BadRequest(restaurant.Message);
                 }
             }
             catch (Exception e)
@@ -302,7 +302,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var restaurant = await _restaurantService.UpdateRestaurant(request);
                 timer.Stop();
-                if (restaurant == true)
+                if (restaurant.Success)
                 {
                     _logger.LogInformation("Update restaurant {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update restaurant ");
@@ -310,9 +310,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update restaurant {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update restaurant {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds, restaurant.Message);
                     _logger.LogInformation("End update restaurant ");
-                    return BadRequest("Update restaurant failed!");
+                    return BadRequest(restaurant.Message);
                 }
             }
             catch (Exception e)
@@ -332,7 +332,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var restaurant = await _restaurantService.DeleteRestaurant(id);
                 timer.Stop();
-                if (restaurant == true)
+                if (restaurant.Success)
                 {
                     _logger.LogInformation("Delete restaurant {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete restaurant ");
@@ -340,9 +340,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete restaurant {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete restaurant {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds,restaurant.Message);
                     _logger.LogInformation("End delete restaurant ");
-                    return BadRequest("Delete restaurant failed!");
+                    return BadRequest(restaurant.Message);
                 }
             }
             catch (Exception e)

@@ -1,4 +1,6 @@
-﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
+using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,16 +12,16 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 {
     public interface IRestaurantTypeService
     {
-        Task<List<RestaurantType>> GetAllRestaurantType();
+        Task<List<DtoRestaurantType>> GetAllRestaurantType();
 
-        Task<RestaurantType> GetRestaurantTypeById(int id);
+        Task<DtoRestaurantType> GetRestaurantTypeById(int id);
 
-        Task<List<RestaurantType>> GetRestaurantTypeByCategoryId(int id);
+        Task<List<DtoRestaurantType>> GetRestaurantTypeByCategoryId(int id);
 
-        Task<Boolean> AddRestaurantType(RestaurantTypeRequest request);
+        Task<ActionResponse> AddRestaurantType(RestaurantTypeRequest request);
 
-        Task<Boolean> UpdateRestaurantType(RestaurantTypeRequest request);
+        Task<ActionResponse> UpdateRestaurantType(RestaurantTypeRequest request);
 
-        Task<Boolean> DeleteRestaurantType(int id);
+        Task<ActionResponse> DeleteRestaurantType(int id);
     }
 }

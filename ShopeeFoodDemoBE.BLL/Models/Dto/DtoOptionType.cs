@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.BLL.Models.Dto
 {
-    public class DtoCategory
+    public class DtoOptionType
     {
-        public int CategoryId { get; set; }
-        
-        public string CategoryName { get; set; }
+        public int OptionTypeId { get; set; }
+
+        public string OptionTypeName { get; set; }
 
         public string Description { get; set; }
 

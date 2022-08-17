@@ -43,15 +43,22 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         {
             var dtoCustomer = new DtoCustomer();
             var dbCustomer = await _customerrepository.GetCustomerById(id);
-            dtoCustomer.CustomerId = dbCustomer.CustomerId;
-            dtoCustomer.CustomerUsername = dbCustomer.CustomerUsername;
-            dtoCustomer.CustomerFullname = dbCustomer.CustomerFullname;
-            dtoCustomer.CustomerAddress = dbCustomer.CustomerAddress;
-            dtoCustomer.CustomerPhone = dbCustomer.CustomerPhone;
-            dtoCustomer.CustomerEmail = dbCustomer.CustomerEmail;
-            dtoCustomer.Description = dbCustomer.Description;
-            dtoCustomer.Status = dbCustomer.Status;
-            return dtoCustomer;
+            if (dbCustomer == null)
+            {
+                return await Task.FromResult<DtoCustomer>(null);
+            }
+            else
+            {
+                dtoCustomer.CustomerId = dbCustomer.CustomerId;
+                dtoCustomer.CustomerUsername = dbCustomer.CustomerUsername;
+                dtoCustomer.CustomerFullname = dbCustomer.CustomerFullname;
+                dtoCustomer.CustomerAddress = dbCustomer.CustomerAddress;
+                dtoCustomer.CustomerPhone = dbCustomer.CustomerPhone;
+                dtoCustomer.CustomerEmail = dbCustomer.CustomerEmail;
+                dtoCustomer.Description = dbCustomer.Description;
+                dtoCustomer.Status = dbCustomer.Status;
+                return dtoCustomer;
+            }  
         }
 
         public async Task<ActionResponse> AddCustomer(CustomerRequest request)
@@ -126,46 +133,129 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return result;
         }
 
-        public async Task<Boolean> UpdatePasswordCustomer(RestorePasswordRequest request)
+        public async Task<ActionResponse> UpdatePasswordCustomer(RestorePasswordRequest request)
         {
+            var result = new ActionResponse();
             var customer = await _customerrepository.GetCustomerById(request.CustomerId);
+            if (customer == null)
+            {
+                result.Success = false;
+                result.Message = "Customer not found!";
+                return result;
+            }
             if (request.CustomerPassword == request.CustomerConfirmPassword)
             {
                 customer.CustomerPassword = request.CustomerConfirmPassword;
-                await _customerrepository.UpdatePasswordCustomer(customer);
-                return true;
-            }
-            else
-                return false;
-        }
-
-        public Task<Boolean> DeleteCustomer(int id)
-        {
-            return _customerrepository.DeleteCustomer(id);
-        }
-
-        public async Task<Customer> Login(UserDtoRequest request)
-        {
-            var customer = await _customerrepository.GetCustomerByUsernameAndPassword(request.Username,request.Password);
-
-            if (customer == null)
-            {
-                return await Task.FromResult<Customer>(null);
+                var updateResult = await _customerrepository.UpdatePasswordCustomer(customer);
+                if (updateResult)
+                {
+                    result.Success = true;
+                    result.Message = "Successful";
+                }
+                else
+                {
+                    result.Success = false;
+                    result.Message = "Update failed!";
+                }
+                return result;
             }
             else
             {
-                return customer;
+                result.Success = false;
+                result.Message = "Password doesn't match";
+                return result;
             }
         }
 
-        public async Task<Customer> GetCustomerByUsernameAndPassword(string username,string password)
+        public async Task<ActionResponse> DeleteCustomer(int id)
         {
-            return await _customerrepository.GetCustomerByUsernameAndPassword(username,password);
+            var result = new ActionResponse();
+            var dbCustomer = await _customerrepository.GetCustomerById(id);
+            if (dbCustomer == null)
+            {
+                result.Success = false;
+                result.Message = "Customer not found!";
+                return result;
+            }
+            var deleteResult = await _customerrepository.DeleteCustomer(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+            }
+            return result;
         }
 
-        public async Task<Customer> GetCustomerByEmail(string email)
+        public async Task<DtoCustomer> Login(UserDtoRequest request)
         {
-            return await _customerrepository.GetCustomerByEmail(email);
+            var dtoCustomer = new DtoCustomer();
+            var dbCustomer = await _customerrepository.GetCustomerByUsernameAndPassword(request.Username,request.Password);
+
+            if (dbCustomer == null)
+            {
+                return await Task.FromResult<DtoCustomer>(null);
+            }
+            else
+            {
+                dtoCustomer.CustomerId = dbCustomer.CustomerId;
+                dtoCustomer.CustomerUsername = dbCustomer.CustomerUsername;
+                dtoCustomer.CustomerFullname = dbCustomer.CustomerFullname;
+                dtoCustomer.CustomerAddress = dbCustomer.CustomerAddress;
+                dtoCustomer.CustomerPhone = dbCustomer.CustomerPhone;
+                dtoCustomer.CustomerEmail = dbCustomer.CustomerEmail;
+                dtoCustomer.Description = dbCustomer.Description;
+                dtoCustomer.Status = dbCustomer.Status;
+                return dtoCustomer;
+            }
+        }
+
+        public async Task<DtoCustomer> GetCustomerByUsernameAndPassword(string username,string password)
+        {
+            var dtoCustomer = new DtoCustomer();
+            var dbCustomer = await _customerrepository.GetCustomerByUsernameAndPassword(username,password);
+            if (dbCustomer == null)
+            {
+                return await Task.FromResult<DtoCustomer>(null);
+            }
+            else
+            {
+                dtoCustomer.CustomerId = dbCustomer.CustomerId;
+                dtoCustomer.CustomerUsername = dbCustomer.CustomerUsername;
+                dtoCustomer.CustomerFullname = dbCustomer.CustomerFullname;
+                dtoCustomer.CustomerAddress = dbCustomer.CustomerAddress;
+                dtoCustomer.CustomerPhone = dbCustomer.CustomerPhone;
+                dtoCustomer.CustomerEmail = dbCustomer.CustomerEmail;
+                dtoCustomer.Description = dbCustomer.Description;
+                dtoCustomer.Status = dbCustomer.Status;
+                return dtoCustomer;
+            }
+        }
+
+        public async Task<DtoCustomer> GetCustomerByEmail(string email)
+        {
+            var dtoCustomer = new DtoCustomer();
+            var dbCustomer = await _customerrepository.GetCustomerByEmail(email);
+            if (dbCustomer == null)
+            {
+                return await Task.FromResult<DtoCustomer>(null);
+            }
+            else
+            {
+                dtoCustomer.CustomerId = dbCustomer.CustomerId;
+                dtoCustomer.CustomerUsername = dbCustomer.CustomerUsername;
+                dtoCustomer.CustomerFullname = dbCustomer.CustomerFullname;
+                dtoCustomer.CustomerAddress = dbCustomer.CustomerAddress;
+                dtoCustomer.CustomerPhone = dbCustomer.CustomerPhone;
+                dtoCustomer.CustomerEmail = dbCustomer.CustomerEmail;
+                dtoCustomer.Description = dbCustomer.Description;
+                dtoCustomer.Status = dbCustomer.Status;
+                return dtoCustomer;
+            }
         }
 
 

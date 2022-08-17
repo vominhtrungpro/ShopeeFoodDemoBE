@@ -1,4 +1,6 @@
-﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
+using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,16 +12,16 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 {
     public interface IMenuService
     {
-        Task<List<Menu>> GetAllMenu();
+        Task<List<DtoMenu>> GetAllMenu();
 
-        Task<Menu> GetMenuById(int id);
+        Task<DtoMenu> GetMenuById(int id);
 
-        Task<List<Menu>> GetMenuByRestaurantId(int id);
+        Task<List<DtoMenu>> GetMenuByRestaurantId(int id);
 
-        Task<Boolean> AddMenu(MenuRequest request);
+        Task<ActionResponse> AddMenu(MenuRequest request);
 
-        Task<Boolean> UpdateMenu(MenuRequest request);
+        Task<ActionResponse> UpdateMenu(MenuRequest request);
 
-        Task<Boolean> DeleteMenu(int id);
+        Task<ActionResponse> DeleteMenu(int id);
     }
 }

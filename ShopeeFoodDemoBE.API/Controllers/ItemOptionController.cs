@@ -90,7 +90,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var itemoption = await _itemoptionService.AddItemOption(request);
                 timer.Stop();
-                if (itemoption == true)
+                if (itemoption.Success)
                 {
                     _logger.LogInformation("Add item option {0}  succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add item option");
@@ -98,9 +98,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Add item option {0}  failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add item option {0}  failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,itemoption.Message);
                     _logger.LogInformation("End add item option");
-                    return BadRequest("Add itemoption failed!");
+                    return BadRequest(itemoption.Message);
                 }  
             }
             catch (Exception e)
@@ -121,7 +121,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var itemoption = await _itemoptionService.UpdateItemOption(request);
                 timer.Stop();
-                if (itemoption == true)
+                if (itemoption.Success)
                 {
                     _logger.LogInformation("Update item option {0} succeed in {1} s", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update item option");
@@ -129,9 +129,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update item option {0} failed in {1} s", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update item option {0} failed in {1} s with message {2}", jsonString, timer.Elapsed.TotalMilliseconds, itemoption.Message);
                     _logger.LogInformation("End update item option");
-                    return BadRequest("Update itemoption failed!");
+                    return BadRequest(itemoption.Message);
                 }     
             }
             catch (Exception e)
@@ -151,7 +151,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var itemoption = await _itemoptionService.DeleteItemOption(id);
                 timer.Stop();
-                if (itemoption == true)
+                if (itemoption.Success)
                 {
                     _logger.LogInformation("Delete item option succeed in {0} ms", timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete item option");
@@ -159,9 +159,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete item option failed in {0} ms", timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete item option {0} failed in {1} ms with message {2}",id, timer.Elapsed.TotalMilliseconds,itemoption.Message);
                     _logger.LogInformation("End delete item option");
-                    return BadRequest("Delete itemoption failed!");
+                    return BadRequest(itemoption.Message);
                 } 
             }
             catch (Exception e)

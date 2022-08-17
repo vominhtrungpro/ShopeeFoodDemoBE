@@ -90,7 +90,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var orderdetail = await _orderdetailService.AddOrderDetail(request);
                 timer.Stop();
-                if (orderdetail == true)
+                if (orderdetail.Success)
                 {
                     _logger.LogInformation("Add orderdetail {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add order detail ");
@@ -98,9 +98,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Add orderdetail {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add orderdetail {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,orderdetail.Message);
                     _logger.LogInformation("End add order detail ");
-                    return BadRequest("Add orderdetail failed!");
+                    return BadRequest(orderdetail.Message);
                 }
             }
             catch (Exception e)
@@ -121,7 +121,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var orderdetail = await _orderdetailService.UpdateOrderDetail(request);
                 timer.Stop();
-                if (orderdetail == true)
+                if (orderdetail.Success)
                 {
                     _logger.LogInformation("Update orderdetail {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update order detail ");
@@ -129,9 +129,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update orderdetail {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update orderdetail {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,orderdetail.Message);
                     _logger.LogInformation("End update order detail ");
-                    return BadRequest("Update orderdetail failed!");
+                    return BadRequest(orderdetail.Message);
                 }
             }
             catch (Exception e)
@@ -151,7 +151,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var orderdetail = await _orderdetailService.DeleteOrderDetail(id);
                 timer.Stop();
-                if (orderdetail == true)
+                if (orderdetail.Success)
                 {
                     _logger.LogInformation("Delete orderdetail {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete order detail ");
@@ -159,9 +159,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete orderdetail {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete orderdetail {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds,orderdetail.Message);
                     _logger.LogInformation("End delete order detail ");
-                    return BadRequest("Delete orderdetail failed!");
+                    return BadRequest(orderdetail.Message);
                 }
             }
             catch (Exception e)

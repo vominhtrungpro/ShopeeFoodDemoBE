@@ -15,6 +15,6 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<ActionResponse> UpdateCategory(UpdateCategoryRequest request);
 
-        Task<Boolean> DeleteCategory(int id);
+        Task<ActionResponse> DeleteCategory(int id);
     }
 }

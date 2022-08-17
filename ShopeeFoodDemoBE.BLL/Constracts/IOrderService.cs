@@ -1,4 +1,6 @@
-﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
+using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,14 +12,14 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 {
     public interface IOrderService
     {
-        Task<List<Order>> GetAllOrder();
+        Task<List<DtoOrder>> GetAllOrder();
 
-        Task<Order> GetOrderById(int id);
+        Task<DtoOrder> GetOrderById(int id);
 
         Task<Order> AddOrder(OrderRequest request);
 
-        Task<Boolean> UpdateOrder(OrderRequest request);
+        Task<ActionResponse> UpdateOrder(OrderRequest request);
 
-        Task<Boolean> DeleteOrder(int id);
+        Task<ActionResponse> DeleteOrder(int id);
     }
 }

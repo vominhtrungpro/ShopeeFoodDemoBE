@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopeeFoodDemoBE.BLL.Models.Requests
+namespace ShopeeFoodDemoBE.BLL.Models.Dto
 {
-    public class MenuRequest
+    public class DtoMenu
     {
         public int MenuId { get; set; }
-        [Required(ErrorMessage = "Menu Name is required")]
         public string MenuName { get; set; }
 
         public string Description { get; set; }
 
         public string Status { get; set; }
-        [Required(ErrorMessage = "Restaurant Id is required")]
+
         public int RestaurantId { get; set; }
     }
 }

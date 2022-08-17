@@ -121,7 +121,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var order = await _orderService.UpdateOrder(request);
                 timer.Stop();
-                if (order == true)
+                if (order.Success)
                 {
                     _logger.LogInformation("Update order {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update order ");
@@ -129,9 +129,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update order {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update order {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,order.Message);
                     _logger.LogInformation("End update order ");
-                    return BadRequest("Update order failed!");
+                    return BadRequest(order.Message);
                 }
             }
             catch (Exception e)
@@ -151,7 +151,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var order = await _orderService.DeleteOrder(id);
                 timer.Stop();
-                if (order == true)
+                if (order.Success)
                 {
                     _logger.LogInformation("Delete order {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete order ");
@@ -159,9 +159,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete order {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete order {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds,order.Message);
                     _logger.LogInformation("End delete order ");
-                    return BadRequest("Delete order failed!");
+                    return BadRequest(order.Message);
                 }
             }
             catch (Exception e)

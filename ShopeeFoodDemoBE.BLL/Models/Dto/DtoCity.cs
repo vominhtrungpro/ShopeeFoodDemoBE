@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopeeFoodDemoBE.BLL.Models.Requests
+namespace ShopeeFoodDemoBE.BLL.Models.Dto
 {
-    public class CityRequest
+    public class DtoCity
     {
         public int CityId { get; set; }
-        [Required(ErrorMessage = "City name is required")]
+
         public string CityName { get; set; }
 
         public string Description { get; set; }

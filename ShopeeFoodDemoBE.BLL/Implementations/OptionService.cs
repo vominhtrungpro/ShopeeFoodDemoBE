@@ -1,5 +1,7 @@
 ﻿using ShopeeFoodDemoBE.BLL.Constracts;
+using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
@@ -18,18 +20,49 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             _optionRepository = optionRepository;
         }
 
-        public Task<List<Option>> GetAllOption()
+        public async Task<List<DtoOption>> GetAllOption()
         {
-            return _optionRepository.GetAllOption();
+            var dtoOption = new List<DtoOption>();
+            var dbOption = await _optionRepository.GetAllOption();
+            dtoOption = dbOption.Select(c => new DtoOption
+            {
+                OptionId = c.OptionId,
+                OptionName = c.OptionName,
+                Description = c.Description,
+                Status = c.Status,
+                OptionTypeId = c.OptionTypeId,
+            }).ToList();
+            return dtoOption;
         }
 
-        public Task<Option> GetOptionById(int id)
+        public async Task<DtoOption> GetOptionById(int id)
         {
-            return _optionRepository.GetOptionById(id);
+            var dtoOption = new DtoOption();
+            var dbOption = await _optionRepository.GetOptionById(id);
+            if (dbOption == null)
+            {
+                return await Task.FromResult<DtoOption>(null);
+            }
+            else
+            {
+                dtoOption.OptionId = dbOption.OptionId;
+                dtoOption.OptionName = dbOption.OptionName;
+                dtoOption.Description = dbOption.Description;
+                dtoOption.Status = dbOption.Status;
+                dtoOption.OptionTypeId = dbOption.OptionTypeId;
+                return dtoOption;
+            }
         }
 
-        public Task<Boolean> AddOption(OptionRequest request)
+        public async Task<ActionResponse> AddOption(OptionRequest request)
         {
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
             var option = new Option()
             {
                 OptionName = request.OptionName,
@@ -37,28 +70,99 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Status = request.Status,
                 OptionTypeId = request.OptionTypeId
             };
-            return _optionRepository.AddOption(option);
+            var addResult = await _optionRepository.AddOption(option);
+            if (addResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Add failed!";
+            }
+            return result;
         }
 
-        public async Task<Boolean> UpdateOption(OptionRequest request)
+        public async Task<ActionResponse> UpdateOption(OptionRequest request)
         {
-            var option = await _optionRepository.GetOptionById(request.OptionId);
-            option.OptionName = request.OptionName;
-            option.Description = request.Description;
-            option.Status = request.Status;
-            option.OptionTypeId = request.OptionTypeId;
-            await _optionRepository.UpdateOption(option);
-            return true;
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
+            var dbOption = await _optionRepository.GetOptionById(request.OptionId);
+            if (dbOption == null)
+            {
+                result.Success = false;
+                result.Message = "Option not found!";
+                return result;
+            }
+            dbOption.OptionName = request.OptionName;
+            dbOption.Description = request.Description;
+            dbOption.Status = request.Status;
+            dbOption.OptionTypeId = request.OptionTypeId;
+            var updateResult = await _optionRepository.UpdateOption(dbOption);
+            if (updateResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Update failed!";
+            }
+            return result;
         }
 
-        public Task<Boolean> DeleteOption(int id)
+        public async Task<ActionResponse> DeleteOption(int id)
         {
-            return _optionRepository.DeleteOption(id);
+            var result = new ActionResponse();
+            var dbOption = await _optionRepository.GetOptionById(id);
+            if (dbOption == null)
+            {
+                result.Success = false;
+                result.Message = "Option not found!";
+                return result;
+            }
+            var deleteResult = await _optionRepository.DeleteOption(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+            }
+            return result;
         }
 
-        public async Task<List<Option>> GetOptionByProductId(int id)
+        public async Task<List<DtoOption>> GetOptionByProductId(int id)
         {
-            return await _optionRepository.GetOptionByProductId(id);
+            var dtoOption = new List<DtoOption>();
+            var dbOption = await _optionRepository.GetOptionByProductId(id);
+            if (!dbOption.Any())
+            {
+                return await Task.FromResult<List<DtoOption>>(null);
+            }
+            else
+            {
+                dtoOption = dbOption.Select(c => new DtoOption
+                {
+                    OptionId = c.OptionId,
+                    OptionName = c.OptionName,
+                    Description = c.Description,
+                    Status = c.Status,
+                    OptionTypeId = c.OptionTypeId
+
+                }).ToList();
+                return dtoOption;
+            }
         }
     }
 }

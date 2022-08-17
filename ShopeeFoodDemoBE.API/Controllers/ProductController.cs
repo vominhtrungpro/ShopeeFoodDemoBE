@@ -90,7 +90,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var product = await _productService.AddProduct(request);
                 timer.Stop();
-                if (product == true)
+                if (product.Success)
                 {
                     _logger.LogInformation("Add product {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add product ");
@@ -98,9 +98,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Add product {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add product {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,product.Message);
                     _logger.LogInformation("End add product ");
-                    return BadRequest("Add product failed!");
+                    return BadRequest(product.Message);
                 }
             }
             catch (Exception e)
@@ -121,7 +121,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var product = await _productService.UpdateProduct(request);
                 timer.Stop();
-                if (product == true)
+                if (product.Success)
                 {
                     _logger.LogInformation("Update product {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update product ");
@@ -129,9 +129,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update product {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update product {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,product.Message);
                     _logger.LogInformation("End update product ");
-                    return BadRequest("Update product failed!");
+                    return BadRequest(product.Message);
                 }
             }
             catch (Exception e)
@@ -151,7 +151,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var product = await _productService.DeleteProduct(id);
                 timer.Stop();
-                if (product == true)
+                if (product.Success)
                 {
                     _logger.LogInformation("Delete product {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete product ");
@@ -159,9 +159,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete product {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete product {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds,product.Message);
                     _logger.LogInformation("End delete product ");
-                    return BadRequest("Delete product failed!");
+                    return BadRequest(product.Message);
                 }
             }
             catch (Exception e)

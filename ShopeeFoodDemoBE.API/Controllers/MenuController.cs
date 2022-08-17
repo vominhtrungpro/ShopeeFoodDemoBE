@@ -121,17 +121,17 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var menu = await _menuService.AddMenu(request);
                 timer.Stop();
-                if (menu == true)
+                if (menu.Success)
                 {
-                    _logger.LogInformation("Add menu {0} succeed in {4} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add menu {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add menu ");
                     return Ok();
                 }
                 else
                 {
-                    _logger.LogInformation("Add menu {0} failed in {4} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add menu {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,menu.Message);
                     _logger.LogInformation("End add menu ");
-                    return BadRequest("Add menu failed!");
+                    return BadRequest(menu.Message);
                 } 
             }
             catch (Exception e)
@@ -152,7 +152,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var menu = await _menuService.UpdateMenu(request);
                 timer.Stop();
-                if (menu == true)
+                if (menu.Success)
                 {
                     _logger.LogInformation("Update menu {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update menu ");
@@ -160,9 +160,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update menu {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update menu {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,menu.Message);
                     _logger.LogInformation("End update menu ");
-                    return BadRequest("Update menu failed!");
+                    return BadRequest(menu.Message);
                 } 
             }
             catch (Exception e)
@@ -182,7 +182,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var menu = await _menuService.DeleteMenu(id);
                 timer.Stop();
-                if (menu == true)
+                if (menu.Success)
                 {
                     _logger.LogInformation("Delete menu {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete menu ");
@@ -190,9 +190,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete menu {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete menu {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds, menu.Message);
                     _logger.LogInformation("End delete menu ");
-                    return BadRequest("Delete menu failed!");
+                    return BadRequest(menu.Message);
                 }
             }
             catch (Exception e)

@@ -1,5 +1,7 @@
 ﻿using ShopeeFoodDemoBE.BLL.Constracts;
+using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
@@ -18,14 +20,43 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             _orderRepository = orderRepository;
         }
 
-        public Task<List<Order>> GetAllOrder()
+        public async Task<List<DtoOrder>> GetAllOrder()
         {
-            return _orderRepository.GetAllOrder();
+            var dtoOrder = new List<DtoOrder>();
+            var dbOrder = await _orderRepository.GetAllOrder();
+            dtoOrder = dbOrder.Select(c => new DtoOrder
+            {
+                OrderId = c.OrderId,
+                CustomerId = c.CustomerId,
+                TotalPrice = c.TotalPrice,
+                TimeOrder = c.TimeOrder,
+                PlaceOrder = c.PlaceOrder,
+                Description = c.Description,
+                Status = c.Status
+
+            }).ToList();
+            return dtoOrder;
         }
 
-        public Task<Order> GetOrderById(int id)
+        public async Task<DtoOrder> GetOrderById(int id)
         {
-            return _orderRepository.GetOrderById(id);
+            var dtoOrder = new DtoOrder();
+            var dbOrder = await _orderRepository.GetOrderById(id);
+            if (dbOrder == null)
+            {
+                return await Task.FromResult<DtoOrder>(null);
+            }
+            else
+            {
+                dtoOrder.OrderId = dbOrder.OrderId;
+                dtoOrder.CustomerId = dbOrder.CustomerId;
+                dtoOrder.TotalPrice = dbOrder.TotalPrice;
+                dtoOrder.TimeOrder = dbOrder.TimeOrder;
+                dtoOrder.PlaceOrder = dbOrder.PlaceOrder;
+                dtoOrder.Description = dbOrder.Description;
+                dtoOrder.Status = dbOrder.Status;
+                return dtoOrder;
+            }
         }
 
         public Task<Order> AddOrder(OrderRequest request)
@@ -42,22 +73,64 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return _orderRepository.AddOrder(order);
         }
 
-        public async Task<Boolean> UpdateOrder(OrderRequest request)
+        public async Task<ActionResponse> UpdateOrder(OrderRequest request)
         {
-            var order = await _orderRepository.GetOrderById(request.OrderId);
-            order.CustomerId = request.CustomerId;
-            order.TotalPrice = request.TotalPrice;
-            order.TimeOrder = request.TimeOrder;
-            order.PlaceOrder = request.PlaceOrder;
-            order.Description = request.Description;
-            order.Status = request.Status;
-            await _orderRepository.UpdateOrder(order);
-            return true;
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
+            var dbOrder = await _orderRepository.GetOrderById(request.OrderId);
+            if (dbOrder == null)
+            {
+                result.Success = false;
+                result.Message = "Order not found!";
+                return result;
+            }
+            dbOrder.CustomerId = request.CustomerId;
+            dbOrder.TotalPrice = request.TotalPrice;
+            dbOrder.TimeOrder = request.TimeOrder;
+            dbOrder.PlaceOrder = request.PlaceOrder;
+            dbOrder.Description = request.Description;
+            dbOrder.Status = request.Status;
+            var updateResult = await _orderRepository.UpdateOrder(dbOrder);
+            if (updateResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Update failed!";
+            }
+            return result;
         }
 
-        public Task<Boolean> DeleteOrder(int id)
+        public async Task<ActionResponse> DeleteOrder(int id)
         {
-            return _orderRepository.DeleteOrder(id);
+            var result = new ActionResponse();
+            var dbMenu = await _orderRepository.GetOrderById(id);
+            if (dbMenu == null)
+            {
+                result.Success = false;
+                result.Message = "Order not found!";
+                return result;
+            }
+            var deleteResult = await _orderRepository.DeleteOrder(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+            }
+            return result;
         }
     }
 }

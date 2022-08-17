@@ -20,17 +20,17 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<ActionResponse> UpdateCustomer(CustomerRequest request);
 
-        Task<Boolean> DeleteCustomer(int id);
+        Task<ActionResponse> DeleteCustomer(int id);
 
-        Task<Customer> Login(UserDtoRequest request);
+        Task<DtoCustomer> Login(UserDtoRequest request);
 
-        Task<Customer> GetCustomerByUsernameAndPassword(string username,string password);
+        Task<DtoCustomer> GetCustomerByUsernameAndPassword(string username,string password);
 
         string CreateToken(UserDtoRequest user);
 
-        Task<Customer> GetCustomerByEmail(string email);
+        Task<DtoCustomer> GetCustomerByEmail(string email);
 
-        Task<Boolean> UpdatePasswordCustomer(RestorePasswordRequest request);
+        Task<ActionResponse> UpdatePasswordCustomer(RestorePasswordRequest request);
 
     }
 }

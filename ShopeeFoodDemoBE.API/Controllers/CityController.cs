@@ -91,7 +91,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var city = await _cityService.AddCity(request);
                 timer.Stop();
-                if (city == true)
+                if (city.Success)
                 {
                     _logger.LogInformation("Add city {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End add city");
@@ -99,9 +99,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Add city {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Add city {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds, city.Message);
                     _logger.LogInformation("End add city");
-                    return BadRequest("Add city failed!");
+                    return BadRequest(city.Message);
                 }
             }
             catch (Exception e)
@@ -122,7 +122,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var city = await _cityService.UpdateCity(request);
                 timer.Stop();
-                if (city == true)
+                if (city.Success)
                 {
                     _logger.LogInformation("Update city {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update city");
@@ -130,9 +130,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update city {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update city {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,city.Message);
                     _logger.LogInformation("End update city");
-                    return BadRequest("Update city failed!");
+                    return BadRequest(city.Message);
                 }  
             }
             catch (Exception e)
@@ -152,7 +152,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var city = await _cityService.DeleteCity(id);
                 timer.Stop();
-                if (city == true)
+                if (city.Success)
                 {
                     _logger.LogInformation("Delete city id {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete city");
@@ -160,9 +160,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete city id {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete city id {0} failed in {1} ms with message {2}", id, timer.Elapsed.TotalMilliseconds,city.Message);
                     _logger.LogInformation("End delete city");
-                    return BadRequest("Delete city failed!");
+                    return BadRequest(city.Message);
                 }
             }
             catch (Exception e)

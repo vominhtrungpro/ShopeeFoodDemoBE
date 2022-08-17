@@ -1,4 +1,5 @@
-﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
+using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
@@ -11,9 +12,9 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 {
     public interface IRestaurantService
     {
-        Task<List<Restaurant>> GetAllRestaurant();
+        Task<List<DtoRestaurant>> GetAllRestaurant();
 
-        Task<Restaurant> GetRestaurantById(int id);
+        Task<DtoRestaurant> GetRestaurantById(int id);
 
         Task<List<Restaurant>> GetRestaurantByCategoryId(int id);
 
@@ -27,10 +28,10 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone);
 
-        Task<Boolean> AddRestaurant(RestaurantRequest request);
+        Task<ActionResponse> AddRestaurant(RestaurantRequest request);
 
-        Task<Boolean> UpdateRestaurant(RestaurantRequest request);
+        Task<ActionResponse> UpdateRestaurant(RestaurantRequest request);
 
-        Task<Boolean> DeleteRestaurant(int id);
+        Task<ActionResponse> DeleteRestaurant(int id);
     }
 }

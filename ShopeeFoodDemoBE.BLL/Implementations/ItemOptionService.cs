@@ -1,5 +1,7 @@
 ﻿using ShopeeFoodDemoBE.BLL.Constracts;
+using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
@@ -18,38 +20,107 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             _itemoptionRepository = itemoptionRepository;
         }
 
-        public Task<List<ItemOption>> GetAllItemOption()
+        public async Task<List<DtoItemOption>> GetAllItemOption()
         {
-            return _itemoptionRepository.GetAllItemOption();
+            var dtoItemOption = new List<DtoItemOption>();
+            var dbItemOption = await _itemoptionRepository.GetAllItemOption();
+            dtoItemOption = dbItemOption.Select(c => new DtoItemOption
+            {
+                ItemOptionId = c.ItemOptionId,
+                ProductId = c.ProductId,
+                OptionId = c.OptionId,
+            }).ToList();
+            return dtoItemOption;
         }
 
-        public Task<ItemOption> GetItemOptionById(int id)
+        public async Task<DtoItemOption> GetItemOptionById(int id)
         {
-            return _itemoptionRepository.GetItemOptionById(id);
+            var dtoItemOption = new DtoItemOption();
+            var dbItemOption = await _itemoptionRepository.GetItemOptionById(id);
+            if (dbItemOption == null)
+            {
+                return await Task.FromResult<DtoItemOption>(null);
+            }
+            else
+            {
+                dtoItemOption.ItemOptionId = dbItemOption.ItemOptionId;
+                dtoItemOption.ProductId = dbItemOption.ProductId;
+                dtoItemOption.OptionId = dbItemOption.OptionId;
+                return dtoItemOption;
+            }
         }
 
-        public Task<Boolean> AddItemOption(ItemOptionRequest request)
+        public async Task<ActionResponse> AddItemOption(ItemOptionRequest request)
         {
+            var result = new ActionResponse();
             var itemoption = new ItemOption()
             {
+                ItemOptionId = request.ItemOptionId,
                 ProductId = request.ProductId,
                 OptionId = request.OptionId
             };
-            return _itemoptionRepository.AddItemOption(itemoption);
+            var addResult = await _itemoptionRepository.AddItemOption(itemoption);
+            if (addResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Add failed!";
+            }
+            return result;
         }
 
-        public async Task<Boolean> UpdateItemOption(ItemOptionRequest request)
+        public async Task<ActionResponse> UpdateItemOption(ItemOptionRequest request)
         {
-            var itemoption = await _itemoptionRepository.GetItemOptionById(request.ItemOptionId);
-            itemoption.ProductId = request.ProductId;
-            itemoption.OptionId = request.OptionId;
-            await _itemoptionRepository.UpdateItemOption(itemoption);
-            return true;
+            var result = new ActionResponse();
+            var dbItemoption = await _itemoptionRepository.GetItemOptionById(request.ItemOptionId);
+            if (dbItemoption == null)
+            {
+                result.Success = false;
+                result.Message = "ItemOption not found!";
+                return result;
+            }
+            dbItemoption.ProductId = request.ProductId;
+            dbItemoption.OptionId = request.OptionId;
+            var updateResult = await _itemoptionRepository.UpdateItemOption(dbItemoption);
+            if (updateResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Update failed!";
+            }
+            return result;
         }
 
-        public Task<Boolean> DeleteItemOption(int id)
+        public async Task<ActionResponse> DeleteItemOption(int id)
         {
-            return _itemoptionRepository.DeleteItemOption(id);
+            var result = new ActionResponse();
+            var dbItemoption = await _itemoptionRepository.GetItemOptionById(id);
+            if (dbItemoption == null)
+            {
+                result.Success = false;
+                result.Message = "ItemOption not found!";
+                return result;
+            }
+            var deleteResult = await _itemoptionRepository.DeleteItemOption(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+            }
+            return result;
         }
     }
 }

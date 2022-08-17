@@ -1,4 +1,5 @@
 ﻿using ShopeeFoodDemoBE.BLL.Constracts;
+using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
@@ -19,14 +20,45 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             _restaurantRepository = restaurantRepository;
         }
 
-        public Task<List<Restaurant>> GetAllRestaurant()
+        public async Task<List<DtoRestaurant>> GetAllRestaurant()
         {
-            return _restaurantRepository.GetAllRestaurant();
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetAllRestaurant();
+            dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+            {
+                RestaurantId = c.RestaurantId,
+                CityId = c.CityId,
+                RestaurantTypeId = c.RestaurantTypeId,
+                RestaurantName = c.RestaurantName,
+                RestaurantAddress = c.RestaurantAddress,
+                RestaurantImage = c.RestaurantImage,
+                Description = c.Description,
+                Status = c.Status,
+
+            }).ToList();
+            return dtoRestaurant;
         }
 
-        public Task<Restaurant> GetRestaurantById(int id)
+        public async Task<DtoRestaurant> GetRestaurantById(int id)
         {
-            return _restaurantRepository.GetRestaurantById(id);
+            var dtoRestaurant = new DtoRestaurant();
+            var dbMdbRestaurantenu = await _restaurantRepository.GetRestaurantById(id);
+            if (dbMdbRestaurantenu == null)
+            {
+                return await Task.FromResult<DtoRestaurant>(null);
+            }
+            else
+            {
+                dtoRestaurant.RestaurantId = dbMdbRestaurantenu.RestaurantId;
+                dtoRestaurant.CityId = dbMdbRestaurantenu.CityId;
+                dtoRestaurant.RestaurantTypeId = dbMdbRestaurantenu.RestaurantTypeId;
+                dtoRestaurant.RestaurantName = dbMdbRestaurantenu.RestaurantName;
+                dtoRestaurant.RestaurantAddress = dbMdbRestaurantenu.RestaurantAddress;
+                dtoRestaurant.RestaurantImage = dbMdbRestaurantenu.RestaurantImage;
+                dtoRestaurant.Description = dbMdbRestaurantenu.Description;
+                dtoRestaurant.Status = dbMdbRestaurantenu.Status;
+                return dtoRestaurant;
+            }
         }
 
         public Task<List<Restaurant>> GetRestaurantByCategoryId(int id)
@@ -60,8 +92,15 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 
         }
 
-        public Task<Boolean> AddRestaurant(RestaurantRequest request)
+        public async Task<ActionResponse> AddRestaurant(RestaurantRequest request)
         {
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
             var restaurant = new Restaurant()
             {
                 CityId = request.CityId,
@@ -70,28 +109,81 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 RestaurantAddress = request.RestaurantAddress,
                 RestaurantImage = request.RestaurantImage,
                 Description = request.Description,
-                Status = request.Status
+                Status = request.Status,
             };
-            return _restaurantRepository.AddRestaurant(restaurant);
+            var addResult = await _restaurantRepository.AddRestaurant(restaurant);
+            if (addResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Add failed!";
+            }
+            return result;
         }
 
-        public async Task<Boolean> UpdateRestaurant(RestaurantRequest request)
+        public async Task<ActionResponse> UpdateRestaurant(RestaurantRequest request)
         {
-            var restaurant = await _restaurantRepository.GetRestaurantById(request.RestaurantId);
-            restaurant.CityId = request.CityId;
-            restaurant.RestaurantTypeId = request.RestaurantTypeId;
-            restaurant.RestaurantName = request.RestaurantName;
-            restaurant.RestaurantAddress = request.RestaurantAddress;
-            restaurant.RestaurantImage = request.RestaurantImage;
-            restaurant.Description = request.Description;
-            restaurant.Status = request.Status;
-            await _restaurantRepository.UpdateRestaurant(restaurant);
-            return true;
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
+            var dbRestaurant = await _restaurantRepository.GetRestaurantById(request.RestaurantId);
+            if (dbRestaurant == null)
+            {
+                result.Success = false;
+                result.Message = "Restaurant not found!";
+                return result;
+            }
+            dbRestaurant.CityId = request.CityId;
+            dbRestaurant.RestaurantTypeId = request.RestaurantTypeId;
+            dbRestaurant.RestaurantName = request.RestaurantName;
+            dbRestaurant.RestaurantAddress = request.RestaurantAddress;
+            dbRestaurant.RestaurantImage = request.RestaurantImage;
+            dbRestaurant.Description = request.Description;
+            dbRestaurant.Status = request.Status;
+            var updateResult = await _restaurantRepository.UpdateRestaurant(dbRestaurant);
+            if (updateResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Update failed!";
+            }
+            return result;
         }
 
-        public Task<Boolean> DeleteRestaurant(int id)
+        public async Task<ActionResponse> DeleteRestaurant(int id)
         {
-            return _restaurantRepository.DeleteRestaurant(id);
+            var result = new ActionResponse();
+            var dbMenu = await _restaurantRepository.GetRestaurantById(id);
+            if (dbMenu == null)
+            {
+                result.Success = false;
+                result.Message = "Restaurant not found!";
+                return result;
+            }
+            var deleteResult = await _restaurantRepository.DeleteRestaurant(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+            }
+            return result;
         }
     }
 }

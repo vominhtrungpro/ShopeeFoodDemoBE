@@ -452,3 +452,254 @@
 2022-08-16 16:58:12.0467 Info Adding target FileTarget(Name=otherFile-web)
 2022-08-16 16:58:12.0845 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
 2022-08-16 16:58:12.7853 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:17:21.9420 Info Message Template Auto Format enabled
+2022-08-17 09:17:21.9420 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:17:22.0174 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:17:22.0174 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:17:22.0536 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:17:22.8004 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:20:27.0129 Info Message Template Auto Format enabled
+2022-08-17 09:20:27.0249 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:20:27.1156 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:20:27.1156 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:20:27.1775 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:20:28.6044 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:23:50.6113 Info Message Template Auto Format enabled
+2022-08-17 09:23:50.6113 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:23:51.0534 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:23:51.0914 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:23:51.1654 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:23:52.0699 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:29:23.7876 Info Message Template Auto Format enabled
+2022-08-17 09:29:23.8016 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:29:23.8819 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:29:23.8819 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:29:23.9404 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:29:25.0351 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:32:13.5640 Info Message Template Auto Format enabled
+2022-08-17 09:32:13.5640 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:32:13.6679 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:32:13.6770 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:32:13.7170 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:32:14.2870 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:38:07.0613 Info Message Template Auto Format enabled
+2022-08-17 09:38:07.0740 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:38:07.1451 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:38:07.1451 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:38:07.1892 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:38:07.8410 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:39:10.6240 Info Message Template Auto Format enabled
+2022-08-17 09:39:10.6361 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:39:10.7053 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:39:10.7053 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:39:10.7459 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:39:11.2995 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:50:05.1631 Info Message Template Auto Format enabled
+2022-08-17 09:50:05.1742 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:50:05.2426 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:50:05.2426 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:50:05.2813 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:50:05.9621 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:52:47.8996 Info Message Template Auto Format enabled
+2022-08-17 09:52:47.9100 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 09:52:47.9755 Info Adding target FileTarget(Name=alldata)
+2022-08-17 09:52:47.9755 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 09:52:48.0180 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 09:52:48.6014 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:04:09.3425 Info Message Template Auto Format enabled
+2022-08-17 10:04:09.3549 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:04:09.4232 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:04:09.4380 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:04:09.4821 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:04:10.2580 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:04:59.8719 Info Message Template Auto Format enabled
+2022-08-17 10:04:59.8828 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:04:59.9533 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:04:59.9533 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:04:59.9957 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:05:00.5996 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:05:33.9195 Info Message Template Auto Format enabled
+2022-08-17 10:05:34.0453 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:05:34.0535 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:05:34.0901 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:05:34.6497 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:06:07.4249 Info Message Template Auto Format enabled
+2022-08-17 10:06:07.4380 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:06:07.5100 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:06:07.5171 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:06:07.5552 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:06:08.1026 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:08:35.6076 Info Message Template Auto Format enabled
+2022-08-17 10:08:35.6191 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:08:35.6856 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:08:35.6914 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:08:35.7252 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:08:36.2899 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:27:26.5275 Info Message Template Auto Format enabled
+2022-08-17 10:27:26.5384 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:27:26.6082 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:27:26.6146 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:27:26.6495 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:27:27.1898 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:28:29.7832 Info Message Template Auto Format enabled
+2022-08-17 10:28:29.7977 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:28:29.8677 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:28:29.8677 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:28:29.9126 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:28:30.4665 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:30:48.0111 Info Message Template Auto Format enabled
+2022-08-17 10:30:48.0214 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:30:48.0869 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:30:48.0869 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:30:48.1286 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:30:48.6749 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:36:09.3796 Info Message Template Auto Format enabled
+2022-08-17 10:36:09.3910 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:36:09.4631 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:36:09.4690 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:36:09.5031 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:36:10.0442 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:47:42.3157 Info Message Template Auto Format enabled
+2022-08-17 10:47:42.3157 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:47:42.4238 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:47:42.4238 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:47:42.4670 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:47:43.0312 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:48:28.6481 Info Message Template Auto Format enabled
+2022-08-17 10:48:28.6626 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:48:28.7358 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:48:28.7358 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:48:28.7758 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:48:29.3832 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:51:23.4054 Info Message Template Auto Format enabled
+2022-08-17 10:51:23.4162 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 10:51:23.6019 Info Adding target FileTarget(Name=alldata)
+2022-08-17 10:51:23.6019 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 10:51:23.6430 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 10:51:24.1892 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:09:39.8714 Info Message Template Auto Format enabled
+2022-08-17 11:09:39.8861 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:09:39.9807 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:09:40.0034 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:09:40.0426 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:09:40.5688 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:12:00.4667 Info Message Template Auto Format enabled
+2022-08-17 11:12:00.4789 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:12:00.5491 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:12:00.5491 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:12:00.5943 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:12:01.4090 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:28:32.4476 Info Message Template Auto Format enabled
+2022-08-17 11:28:32.4592 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:28:32.5251 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:28:32.5251 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:28:32.5685 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:28:33.1184 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:36:52.9485 Info Message Template Auto Format enabled
+2022-08-17 11:36:52.9644 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:36:53.0731 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:36:53.0824 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:36:53.1270 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:36:53.6846 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:38:13.0249 Info Message Template Auto Format enabled
+2022-08-17 11:38:13.0381 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:38:13.1076 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:38:13.1136 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:38:13.1470 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:38:13.6911 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:38:39.9892 Info Message Template Auto Format enabled
+2022-08-17 11:38:39.9892 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:38:40.0729 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:38:40.0789 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:38:40.1217 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:38:40.7227 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:39:29.2632 Info Message Template Auto Format enabled
+2022-08-17 11:39:29.2750 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:39:29.3512 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:39:29.3512 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:39:29.3912 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:39:30.0989 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:40:35.7711 Info Message Template Auto Format enabled
+2022-08-17 11:40:35.7822 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:40:35.8979 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:40:35.8979 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:40:35.9403 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:40:36.4929 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:47:05.4002 Info Message Template Auto Format enabled
+2022-08-17 11:47:05.4137 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 11:47:05.5006 Info Adding target FileTarget(Name=alldata)
+2022-08-17 11:47:05.5006 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 11:47:05.5411 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 11:47:06.0666 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 12:57:49.1411 Info Message Template Auto Format enabled
+2022-08-17 12:57:49.1411 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 12:57:49.2220 Info Adding target FileTarget(Name=alldata)
+2022-08-17 12:57:49.2220 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 12:57:49.2856 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 12:57:49.9185 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:13:37.8343 Info Message Template Auto Format enabled
+2022-08-17 13:13:37.8456 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 13:13:37.9257 Info Adding target FileTarget(Name=alldata)
+2022-08-17 13:13:37.9257 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 13:13:37.9703 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:13:38.6205 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:15:02.7259 Info Message Template Auto Format enabled
+2022-08-17 13:15:02.7368 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 13:15:02.8237 Info Adding target FileTarget(Name=alldata)
+2022-08-17 13:15:02.8293 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 13:15:02.8688 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:15:03.4537 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:18:52.3292 Info Message Template Auto Format enabled
+2022-08-17 13:18:52.3292 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 13:18:52.4083 Info Adding target FileTarget(Name=alldata)
+2022-08-17 13:18:52.4083 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 13:18:52.4486 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:18:53.1511 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:20:11.8100 Info Message Template Auto Format enabled
+2022-08-17 13:20:11.8204 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 13:20:11.8966 Info Adding target FileTarget(Name=alldata)
+2022-08-17 13:20:11.8966 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 13:20:11.9434 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:20:12.5062 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:31:32.6970 Info Message Template Auto Format enabled
+2022-08-17 13:31:32.7104 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 13:31:32.7862 Info Adding target FileTarget(Name=alldata)
+2022-08-17 13:31:32.7862 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 13:31:32.8254 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:31:33.4039 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:36:12.2444 Info Message Template Auto Format enabled
+2022-08-17 13:36:12.2572 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 13:36:12.3384 Info Adding target FileTarget(Name=alldata)
+2022-08-17 13:36:12.3464 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 13:36:12.4009 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 13:36:12.9452 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:06:52.5747 Info Message Template Auto Format enabled
+2022-08-17 14:06:52.5957 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 14:06:52.6960 Info Adding target FileTarget(Name=alldata)
+2022-08-17 14:06:52.7067 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 14:06:52.7446 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:06:53.5496 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:25:59.7871 Info Message Template Auto Format enabled
+2022-08-17 14:25:59.7986 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 14:25:59.8772 Info Adding target FileTarget(Name=alldata)
+2022-08-17 14:25:59.8772 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 14:25:59.9286 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:26:00.5207 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:41:16.4974 Info Message Template Auto Format enabled
+2022-08-17 14:41:16.5088 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 14:41:16.5810 Info Adding target FileTarget(Name=alldata)
+2022-08-17 14:41:16.5810 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 14:41:16.6279 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:41:17.2814 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:44:47.2450 Info Message Template Auto Format enabled
+2022-08-17 14:44:47.2560 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 14:44:47.3301 Info Adding target FileTarget(Name=alldata)
+2022-08-17 14:44:47.3301 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 14:44:47.3696 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:44:47.8762 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:50:09.6216 Info Message Template Auto Format enabled
+2022-08-17 14:50:09.6336 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-17 14:50:09.6980 Info Adding target FileTarget(Name=alldata)
+2022-08-17 14:50:09.6980 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-17 14:50:09.7374 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-17 14:50:10.3014 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config

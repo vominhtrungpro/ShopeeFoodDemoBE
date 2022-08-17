@@ -1,4 +1,6 @@
-﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
+using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,14 +12,14 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 {
     public interface ICityService
     {
-        Task<List<City>> GetAllCity();
+        Task<List<DtoCity>> GetAllCity();
 
-        Task<City> GetCityById(int id);
+        Task<DtoCity> GetCityById(int id);
 
-        Task<Boolean> AddCity(CityRequest request);
+        Task<ActionResponse> AddCity(CityRequest request);
 
-        Task<Boolean> UpdateCity(CityRequest request);
+        Task<ActionResponse> UpdateCity(CityRequest request);
 
-        Task<Boolean> DeleteCity(int id);
+        Task<ActionResponse> DeleteCity(int id);
     }
 }

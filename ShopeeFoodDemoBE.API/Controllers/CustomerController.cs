@@ -96,12 +96,6 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var customer = await _customerService.AddCustomer(request);
                 timer.Stop();
-                if (!ModelState.IsValid)
-                {
-                    _logger.LogInformation("Add customer {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds, ModelState);
-                    _logger.LogInformation("End add customer by id");
-                    return BadRequest(ModelState);
-                }
                 if (customer.Success)
                 {
                     _logger.LogInformation("Add customer {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
@@ -133,12 +127,6 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var customer = await _customerService.UpdateCustomer(request);
                 timer.Stop();
-                if (!ModelState.IsValid)
-                {
-                    _logger.LogInformation("Update customer {0} failed in {1} ms with message {2} ", jsonString, timer.Elapsed.TotalMilliseconds, ModelState);
-                    _logger.LogInformation("End Update customer by id");
-                    return BadRequest(ModelState);
-                }
                 if (customer.Success)
                 {
                     _logger.LogInformation("Update customer {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
@@ -171,7 +159,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
             {
                 var customer = await _customerService.DeleteCustomer(id);
                 timer.Stop();
-                if (customer == true)
+                if (customer.Success)
                 {
                     _logger.LogInformation("Delete customer {0} succeed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End delete customer by id");
@@ -179,9 +167,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Delete customer {0} failed in {1} ms", id, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Delete customer {0} failed in {1} ms with messag {2}", id, timer.Elapsed.TotalMilliseconds,customer.Message);
                     _logger.LogInformation("End delete customer by id");
-                    return BadRequest("Delete customer failed!");
+                    return BadRequest(customer.Message);
                 }
                 
             }
@@ -212,7 +200,6 @@ namespace ShopeeFoodDemoBE.API.Controllers
                     _logger.LogInformation("End login");
                     return BadRequest("User not found!");
                 }
-                    
                 else
                 {
                     _logger.LogInformation("Login user {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
@@ -327,7 +314,7 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 string jsonString = JsonSerializer.Serialize(request);
                 var customer = await _customerService.UpdatePasswordCustomer(request);
                 timer.Stop();
-                if (customer == true)
+                if (customer.Success)
                 {
                     _logger.LogInformation("Update customer {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End update customer password");
@@ -335,9 +322,9 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation("Update customer {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("Update customer {0} failed in {1} ms with message {2}", jsonString, timer.Elapsed.TotalMilliseconds,customer.Message);
                     _logger.LogInformation("End update customer password");
-                    return BadRequest("Update password failed!");
+                    return BadRequest(customer.Message);
                 }
             }
             catch (Exception e)
