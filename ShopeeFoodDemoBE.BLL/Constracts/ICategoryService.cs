@@ -1,23 +1,20 @@
-﻿using ShopeeFoodDemoBE.BLL.Models.Requests;
+﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
+using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.BLL.Constracts
 {
     public interface ICategoryService
     {
-        Task<List<Category>> GetAllCategory();
+        Task<List<DtoCategory>> GetAllCategory();
 
-        Task<Category> GetCategoryById(int id);
+        Task<DtoCategory> GetCategoryById(int id);
 
-        Task<Boolean> AddCategory(CreateCategoryRequest request);
+        Task<ActionResponse> AddCategory(CreateCategoryRequest request);
 
-        Task<Boolean> UpdateCategory(UpdateCategoryRequest request);
+        Task<ActionResponse> UpdateCategory(UpdateCategoryRequest request);
 
-        Task<Boolean> DeleteCategory(int id);
+        Task<ActionResponse> DeleteCategory(int id);
     }
 }

@@ -1,5 +1,7 @@
 ﻿using ShopeeFoodDemoBE.BLL.Constracts;
+using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
+using ShopeeFoodDemoBE.BLL.Models.Responses;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using System;
@@ -18,41 +20,125 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             _categoryRepository = categoryRepository;
         }
 
-        public Task<List<Category>> GetAllCategory()
+        public async Task<List<DtoCategory>> GetAllCategory()
         {
-            return _categoryRepository.GetAllCategory();
+            var dtoCategory = new List<DtoCategory>();
+            var dbCategory = await _categoryRepository.GetAllCategory();
+            dtoCategory = dbCategory.Select(c => new DtoCategory
+            {
+                CategoryId = c.CategoryId,
+                CategoryName = c.CategoryName,
+                Description = c.Description,
+                Status = c.Status
+
+            }).ToList();
+            return dtoCategory;
         }
 
-        public Task<Category> GetCategoryById(int id)
+        public async Task<DtoCategory> GetCategoryById(int id)
         {
-            return _categoryRepository.GetCategoryById(id);
+            var dtoCategory = new DtoCategory();
+            var dbCategory = await _categoryRepository.GetCategoryById(id);
+            if (dbCategory == null)
+            {
+                return await Task.FromResult<DtoCategory>(null);
+            }
+            else
+            {
+                dtoCategory.CategoryId = dbCategory.CategoryId;
+                dtoCategory.CategoryName = dbCategory.CategoryName;
+                dtoCategory.Description = dbCategory.Description;
+                dtoCategory.Status = dbCategory.Status;
+                return dtoCategory;
+            }
+            
         }
 
-        public Task<Boolean> AddCategory(CreateCategoryRequest request)
+        public async Task<ActionResponse> AddCategory(CreateCategoryRequest request)
         {
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
             var category = new Category()
             {
                 CategoryName = request.CategoryName,
                 Description = request.Description,
                 Status = request.Status
             };
-            return _categoryRepository.AddCategory(category);
+            var addResult = await _categoryRepository.AddCategory(category);
+            if (addResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Add failed!";
+            }
+            return result;
         }
 
-        public async Task<Boolean> UpdateCategory(UpdateCategoryRequest request)
+        public async Task<ActionResponse> UpdateCategory(UpdateCategoryRequest request)
         {
-            var category = await _categoryRepository.GetCategoryById(request.CategoryId);
-            category.CategoryName = request.CategoryName;
-            category.Description = request.Description;
-            category.Status = request.Status;
-
-            await _categoryRepository.UpdateCategory(category);
-            return true;
+            var result = new ActionResponse();
+            if (request.Status != "Active")
+            {
+                result.Success = false;
+                result.Message = "Status invalid!";
+                return result;
+            }
+            var dbCategory = await _categoryRepository.GetCategoryById(request.CategoryId);
+            if (dbCategory == null)
+            {
+                result.Success = false;
+                result.Message = "Category not found!";
+                return result;
+            }
+            dbCategory.CategoryName = request.CategoryName;
+            dbCategory.Description = request.Description;
+            dbCategory.Status = request.Status;
+            var updateResult = await _categoryRepository.UpdateCategory(dbCategory);
+            if (updateResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Update failed!";
+            }
+            return result;
         }
 
-        public Task<Boolean> DeleteCategory(int id)
+        public async Task<ActionResponse> DeleteCategory(int id)
         {
-            return _categoryRepository.DeleteCategory(id);
+            var result = new ActionResponse();
+            var dbCategory = await _categoryRepository.GetCategoryById(id);
+            if (dbCategory == null)
+            {
+                result.Success = false;
+                result.Message = "Category not found!";
+                return result;
+            }
+            var deleteResult = await  _categoryRepository.DeleteCategory(id);
+            if (deleteResult)
+            {
+                result.Success = true;
+                result.Message = "Successful";
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "Delete failed";
+                
+            }
+            return result;
         }
     }
 }
