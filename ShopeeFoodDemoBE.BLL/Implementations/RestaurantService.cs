@@ -61,35 +61,132 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             }
         }
 
-        public Task<List<Restaurant>> GetRestaurantByCategoryId(int id)
+        public async Task<List<DtoRestaurant>> GetRestaurantByCategoryId(int id)
         {
-            return _restaurantRepository.GetRestaurantByCategoryId(id);
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetRestaurantByCategoryId(id);
+            if (!dbRestaurant.Any())
+            {
+                return await Task.FromResult<List<DtoRestaurant>>(null);
+            }
+            else
+            {
+                dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+                {
+                    RestaurantId = c.RestaurantId,
+                    CityId = c.CityId,
+                    RestaurantTypeId = c.RestaurantTypeId,
+                    RestaurantName = c.RestaurantName,
+                    RestaurantAddress = c.RestaurantAddress,
+                    RestaurantImage = c.RestaurantImage,
+                    Description = c.Description,
+                    Status = c.Status
+
+                }).ToList();
+                return dtoRestaurant;
+            }
         }
 
-        public Task<List<Restaurant>> GetRestaurantByCityId(int id)
+        public async Task<List<DtoRestaurant>> GetRestaurantByCityId(int id)
         {
-            return _restaurantRepository.GetRestaurantByCityId(id);
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetRestaurantByCityId(id);
+            if (!dbRestaurant.Any())
+            {
+                return await Task.FromResult<List<DtoRestaurant>>(null);
+            }
+            else
+            {
+                dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+                {
+                    RestaurantId = c.RestaurantId,
+                    CityId = c.CityId,
+                    RestaurantTypeId = c.RestaurantTypeId,
+                    RestaurantName = c.RestaurantName,
+                    RestaurantAddress = c.RestaurantAddress,
+                    RestaurantImage = c.RestaurantImage,
+                    Description = c.Description,
+                    Status = c.Status
+
+                }).ToList();
+                return dtoRestaurant;
+            }
         }
 
-        public Task<List<Restaurant>> GetRestaurantByRestaurantTypeId(int id)
+        public async Task<List<DtoRestaurant>> GetRestaurantByRestaurantTypeId(int id)
         {
-            return _restaurantRepository.GetRestaurantByRestaurantTypeId(id);
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetRestaurantByRestaurantTypeId(id);
+            dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+            {
+                RestaurantId = c.RestaurantId,
+                CityId = c.CityId,
+                RestaurantTypeId = c.RestaurantTypeId,
+                RestaurantName = c.RestaurantName,
+                RestaurantAddress = c.RestaurantAddress,
+                RestaurantImage = c.RestaurantImage,
+                Description = c.Description,
+                Status = c.Status
+
+            }).ToList();
+            return dtoRestaurant;
         }
 
-        public Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId)
+        public async Task<List<DtoRestaurant>> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId)
         {
-            return _restaurantRepository.GetRestaurantByCategoryIdAndCityId(cateId, cityId);
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetRestaurantByCategoryIdAndCityId(cateId, cityId);
+            dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+            {
+                RestaurantId = c.RestaurantId,
+                CityId = c.CityId,
+                RestaurantTypeId = c.RestaurantTypeId,
+                RestaurantName = c.RestaurantName,
+                RestaurantAddress = c.RestaurantAddress,
+                RestaurantImage = c.RestaurantImage,
+                Description = c.Description,
+                Status = c.Status
+
+            }).ToList();
+            return dtoRestaurant;
         }
 
-        public Task<List<Restaurant>> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request)
+        public async Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request)
         {
-            return _restaurantRepository.GetResByCityIdsAndResTypeIds(request.CityIds, request.RestaurantTypeIds);
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetResByCityIdsAndResTypeIds(request.CityIds, request.RestaurantTypeIds);
+            dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+            {
+                RestaurantId = c.RestaurantId,
+                CityId = c.CityId,
+                RestaurantTypeId = c.RestaurantTypeId,
+                RestaurantName = c.RestaurantName,
+                RestaurantAddress = c.RestaurantAddress,
+                RestaurantImage = c.RestaurantImage,
+                Description = c.Description,
+                Status = c.Status
+
+            }).ToList();
+            return dtoRestaurant;
         }
 
-        public Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone)
+        public async Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone)
         {
-            return _restaurantRepository.GetResByCityIdsAndResTypeIdsWithPaging(respone.CityIds, respone.RestaurantTypeIds, respone.Page);
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetResByCityIdsAndResTypeIdsWithPaging(respone.CityIds, respone.RestaurantTypeIds, respone.Page);
+            dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+            {
+                RestaurantId = c.RestaurantId,
+                CityId = c.CityId,
+                RestaurantTypeId = c.RestaurantTypeId,
+                RestaurantName = c.RestaurantName,
+                RestaurantAddress = c.RestaurantAddress,
+                RestaurantImage = c.RestaurantImage,
+                Description = c.Description,
+                Status = c.Status
 
+            }).ToList();
+            return dtoRestaurant;
         }
 
         public async Task<ActionResponse> AddRestaurant(RestaurantRequest request)

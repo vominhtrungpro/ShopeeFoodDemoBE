@@ -16,17 +16,17 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<DtoRestaurant> GetRestaurantById(int id);
 
-        Task<List<Restaurant>> GetRestaurantByCategoryId(int id);
+        Task<List<DtoRestaurant>> GetRestaurantByCategoryId(int id);
 
-        Task<List<Restaurant>> GetRestaurantByCityId(int id);
+        Task<List<DtoRestaurant>> GetRestaurantByCityId(int id);
 
-        Task<List<Restaurant>> GetRestaurantByRestaurantTypeId(int id);
+        Task<List<DtoRestaurant>> GetRestaurantByRestaurantTypeId(int id);
 
-        Task<List<Restaurant>> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId);
+        Task<List<DtoRestaurant>> GetRestaurantByCategoryIdAndCityId(int cateId, int cityId);
 
-        Task<List<Restaurant>> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request);
+        Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIds(RestaurantRequestListCityListRestaurantType request);
 
-        Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone);
+        Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone);
 
         Task<ActionResponse> AddRestaurant(RestaurantRequest request);
 
