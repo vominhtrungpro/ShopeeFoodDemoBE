@@ -5,11 +5,6 @@ using MimeKit;
 using MimeKit.Text;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.BLL.Implementations
 {

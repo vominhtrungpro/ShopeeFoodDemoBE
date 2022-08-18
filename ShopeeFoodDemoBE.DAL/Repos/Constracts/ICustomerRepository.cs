@@ -21,6 +21,8 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Constracts
 
         Task<Customer> GetCustomerByUsernameAndPassword(string username, string password);
 
+        Task<Customer> GetCustomerByUsername(string username);
+
         Task<Customer> GetCustomerByEmail(string email);
 
         Task<Boolean> UpdatePasswordCustomer(Customer customer);

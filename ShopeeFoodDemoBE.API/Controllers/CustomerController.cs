@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
 using System.Diagnostics;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text.Json;
 
@@ -194,17 +190,52 @@ namespace ShopeeFoodDemoBE.API.Controllers
                 var refreshToken = GetRefreshToken();
                 SetRefreshToken(refreshToken);
                 timer.Stop();
-                if (customer == null)
+                if (customer != null)
+                {
+                    _logger.LogInformation("Login user {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End login");
+                    return Ok(new { customer, token, refreshToken });
+                }
+                else
                 {
                     _logger.LogInformation("Login user {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End login");
                     return BadRequest("User not found!");
                 }
-                else
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Error", e);
+                throw new Exception();
+            }
+        }
+
+        [HttpPost("login-checkpass")]
+        public async Task<IActionResult> Logincheckpass(UserDtoRequest request)
+        {
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start login");
+            try
+            {
+                string jsonString = JsonSerializer.Serialize(request);
+                var customer = await _customerService.LoginCheckPass(request);
+                string token = _customerService.CreateToken(request);
+                var refreshToken = GetRefreshToken();
+                SetRefreshToken(refreshToken);
+                timer.Stop();
+                if (customer.Success)
                 {
+                    var result = await _customerService.Login(request);
                     _logger.LogInformation("Login user {0} succeed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
                     _logger.LogInformation("End login");
-                    return Ok(new { customer, token, refreshToken });
+                    return Ok(new { result, token, refreshToken });
+                }
+                else
+                {
+                    _logger.LogInformation("Login user {0} failed in {1} ms", jsonString, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End login");
+                    return BadRequest(customer.Message);
                 }
             }
             catch (Exception e)

@@ -1,7 +1,6 @@
 ﻿using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
 using ShopeeFoodDemoBE.BLL.Models.Responses;
-using ShopeeFoodDemoBE.DAL.EF.Entities;
 
 namespace ShopeeFoodDemoBE.BLL.Constracts
 {

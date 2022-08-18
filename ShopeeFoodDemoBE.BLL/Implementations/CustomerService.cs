@@ -214,6 +214,28 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             }
         }
 
+        public async Task<ActionResponse> LoginCheckPass(UserDtoRequest request)
+        {
+            var result = new ActionResponse();
+            var dbCustomer = await _customerrepository.GetCustomerByUsername(request.Username);
+            if (dbCustomer == null)
+            {
+                result.Success = false;
+                result.Message = "User not found!";
+            }
+            else if (dbCustomer.CustomerPassword != request.Password)
+            {
+                result.Success = false;
+                result.Message = "Wrong password!";
+            }
+            else
+            {
+                result.Success = true;
+                result.Message = "Successful!";
+            }
+            return result;
+        }
+
         public async Task<DtoCustomer> GetCustomerByUsernameAndPassword(string username,string password)
         {
             var dtoCustomer = new DtoCustomer();
