@@ -14,8 +14,9 @@ using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBETest 
 {
-    public class OrderTest
+    public class OrderTest : DbContext
     {
+     
 
     }
 }

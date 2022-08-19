@@ -25,7 +25,8 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
 
         public async Task<Order> GetOrderById(int id)
         {
-            return await _dataContext.Order.FindAsync(id);
+            var result = await _dataContext.Order.FindAsync(id);
+            return result;
         }
 
         public async Task<Order> AddOrder(Order order)
