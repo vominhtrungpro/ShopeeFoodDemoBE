@@ -29,11 +29,11 @@ namespace ShopeeFoodDemoBEnUnitTest
         }
 
         [Test]
-        public void GetOrderById()
+        public async Task GetOrderById()
         {
-            var repo = new OrderRepository(_dbContext);
-            var result = repo.GetOrderById(1);
-            Assert.IsNull(result);
+            OrderRepository repo = new OrderRepository(_dbContext);
+            var result1 = await repo.GetOrderById(1);
+            Assert.IsNull(result1);
         }
     }
 }
