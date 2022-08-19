@@ -16,7 +16,7 @@ namespace ShopeeFoodDemoBETest
     public class OrderTest
     {
         private Mock<IOrderRepository> mockOrderRepository = new Mock<IOrderRepository>();
-
+        private Mock<DataContext> mockDb = new Mock<DataContext>();
         [Fact]
         public async void GetOrderById()
         {
