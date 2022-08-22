@@ -67,7 +67,6 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Status = request.Status
             };
             return await _orderRepository.AddOrder(order);
-            
         }
 
         public async Task<ActionResponse> UpdateOrder(OrderRequest request)
