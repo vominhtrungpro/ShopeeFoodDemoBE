@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Moq;
 using ShopeeFoodDemoBE.BLL.Implementations;
 using ShopeeFoodDemoBE.DAL.EF.Data;
+using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
 using ShopeeFoodDemoBE.DAL.Repos.Implementations;
 using System;
@@ -18,12 +19,6 @@ namespace ShopeeFoodDemoBEnUnitTest
     {
         [SetUp]
         public void Setup()
-        {
-
-        }
-
-        [Test]
-        public async Task GetOrderById()
         {
 
         }

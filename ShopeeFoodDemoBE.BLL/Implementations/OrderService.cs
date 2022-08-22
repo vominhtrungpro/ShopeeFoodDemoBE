@@ -54,10 +54,11 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             }
         }
 
-        public Task<Order> AddOrder(OrderRequest request)
+        public async Task<Order> AddOrder(OrderRequest request)
         {
             var order = new Order()
             {
+                OrderId = request.OrderId,
                 CustomerId = request.CustomerId,
                 TotalPrice = request.TotalPrice,
                 TimeOrder = request.TimeOrder,
@@ -65,7 +66,7 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 Description = request.Description,
                 Status = request.Status
             };
-            return _orderRepository.AddOrder(order);
+            return await _orderRepository.AddOrder(order);
         }
 
         public async Task<ActionResponse> UpdateOrder(OrderRequest request)
