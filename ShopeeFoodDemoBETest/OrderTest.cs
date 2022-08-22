@@ -106,15 +106,18 @@ namespace ShopeeFoodDemoBETest
                 TimeOrder = Convert.ToDateTime("2022-08-09T02:23:12.927"),
                 PlaceOrder = "Tien Giang",
                 Description = "200000",
-                Status = "Active"
+                Status = "haha"
             };
             var dbOrder = order[0];
             mockOrderRepository.Setup(r => r.AddOrder(It.IsAny<Order>())).ReturnsAsync(dbOrder);
             OrderService orderService = new OrderService(mockOrderRepository.Object);
-            var addResult = await orderService.AddOrder(request);
-            var obj1Str = JsonConvert.SerializeObject(dbOrder);
-            var obj2Str = JsonConvert.SerializeObject(addResult);
-            Assert.Equal(obj1Str, obj2Str);
+            var exception = await Assert.ThrowsAsync<Exception>(() => orderService.AddOrder(request));
+            Assert.Equal("Status invalid!", exception.Message);
+
+            //var addResult = await orderService.AddOrder(request);
+            //var obj1Str = JsonConvert.SerializeObject(dbOrder);
+            //var obj2Str = JsonConvert.SerializeObject(addResult);
+            //Assert.Equal(System.Exception("Status invalid!"),obj2Str);
         }
 
         [Theory]

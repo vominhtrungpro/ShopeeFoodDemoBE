@@ -56,17 +56,25 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
 
         public async Task<Order> AddOrder(OrderRequest request)
         {
-            var order = new Order()
+
+            if (request.Status != "Active")
             {
-                OrderId = request.OrderId,
-                CustomerId = request.CustomerId,
-                TotalPrice = request.TotalPrice,
-                TimeOrder = request.TimeOrder,
-                PlaceOrder = request.PlaceOrder,
-                Description = request.Description,
-                Status = request.Status
-            };
-            return await _orderRepository.AddOrder(order);
+                throw new Exception("Status invalid!");
+            }
+            else
+            {
+                var order = new Order()
+                {
+                    OrderId = request.OrderId,
+                    CustomerId = request.CustomerId,
+                    TotalPrice = request.TotalPrice,
+                    TimeOrder = request.TimeOrder,
+                    PlaceOrder = request.PlaceOrder,
+                    Description = request.Description,
+                    Status = request.Status
+                };
+                return await _orderRepository.AddOrder(order);
+            }      
         }
 
         public async Task<ActionResponse> UpdateOrder(OrderRequest request)
