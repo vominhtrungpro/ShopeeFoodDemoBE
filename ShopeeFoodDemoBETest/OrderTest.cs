@@ -1,23 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Moq;
+﻿using Moq;
 using Newtonsoft.Json;
-using ShopeeFoodDemoBE.BLL.Constracts;
 using ShopeeFoodDemoBE.BLL.Implementations;
-using ShopeeFoodDemoBE.BLL.Models.Dto;
 using ShopeeFoodDemoBE.BLL.Models.Requests;
-using ShopeeFoodDemoBE.BLL.Models.Responses;
-using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
-using ShopeeFoodDemoBE.DAL.Repos.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ShopeeFoodDemoBETest 
+namespace ShopeeFoodDemoBETest
 {
     public class OrderTest 
     {
@@ -76,32 +64,42 @@ namespace ShopeeFoodDemoBETest
             Assert.Equal(obj1Str, obj2Str);
         }
 
-        [Fact]
-        public async void GetOrderById()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(99)]
+        [InlineData(-99)]
+        public async void GetOrderById(int id)
         {
             mockOrderRepository.Setup(p => p.GetOrderById(1)).ReturnsAsync(order[0]);
             OrderService orderService = new OrderService(mockOrderRepository.Object);
-            var result = await orderService.GetOrderById(1);
-            var dbOrder = new Order();
-            dbOrder.OrderId = result.OrderId;
-            dbOrder.CustomerId = result.CustomerId;
-            dbOrder.TotalPrice = result.TotalPrice;
-            dbOrder.TimeOrder = result.TimeOrder;
-            dbOrder.PlaceOrder = result.PlaceOrder;
-            dbOrder.Description = result.Description;
-            dbOrder.Status = result.Status;
-
-            var obj1Str = JsonConvert.SerializeObject(order[0]);
-            var obj2Str = JsonConvert.SerializeObject(dbOrder);
-            Assert.Equal(obj1Str, obj2Str);
+            var getResult = await orderService.GetOrderById(id);
+            if (id == 1)
+            {
+                var dbOrder = new Order();
+                dbOrder.OrderId = getResult.OrderId;
+                dbOrder.CustomerId = getResult.CustomerId;
+                dbOrder.TotalPrice = getResult.TotalPrice;
+                dbOrder.TimeOrder = getResult.TimeOrder;
+                dbOrder.PlaceOrder = getResult.PlaceOrder;
+                dbOrder.Description = getResult.Description;
+                dbOrder.Status = getResult.Status;
+                var obj1Str = JsonConvert.SerializeObject(order[0]);
+                var obj2Str = JsonConvert.SerializeObject(dbOrder);
+                Assert.Equal(obj1Str, obj2Str);
+            }
+            else
+            {
+                Assert.Null(getResult);
+            }
+            
         }
 
         [Fact]
         public async Task AddOrder()
         {
-            mockOrderRepository.Setup(r => r.AddOrder(order[0])).ReturnsAsync(order[0]);
             OrderRequest request = new OrderRequest()
-            {      
+            {
                 OrderId = 1,
                 CustomerId = 1,
                 TotalPrice = 200000,
@@ -110,13 +108,19 @@ namespace ShopeeFoodDemoBETest
                 Description = "200000",
                 Status = "Active"
             };
+            var dbOrder = order[0];
+            mockOrderRepository.Setup(r => r.AddOrder(dbOrder)).ReturnsAsync(dbOrder);
             OrderService orderService = new OrderService(mockOrderRepository.Object);
             var addResult = await orderService.AddOrder(request);
             Assert.NotNull(addResult);
         }
 
-        [Fact]
-        public async void UpdateOrder()
+        [Theory]
+        [InlineData("Successful", 1,1,200000, "2022-08-09T02:23:12.927","Tien Giang","200000","Active")]
+        [InlineData("Order not found!", 2, 1, 200000, "2022 -08-09T02:23:12.927", "Tien Giang", "200000", "Active")]
+        [InlineData("Status invalid!", 1, 1, 200000, "2022-08-09T02:23:12.927", "Tien Giang", "200000", "Unactive")]
+        [InlineData("Successful", 1, 1, 200000, "2022-08-09T02:23:12.927", "", "", "Active")]
+        public async void UpdateOrder(string result,int orderId, int customerId, double totalPrice, DateTime timeOrder, string placeOrder, string description, string status)
         {
             Order dbOrder = new Order()
             {
@@ -132,27 +136,31 @@ namespace ShopeeFoodDemoBETest
             OrderService orderService = new OrderService(mockOrderRepository.Object);
             OrderRequest request = new OrderRequest()
             {
-                OrderId = 1,
-                CustomerId = 1,
-                TotalPrice = 200000,
-                TimeOrder = Convert.ToDateTime("2022-08-09T02:23:12.927"),
-                PlaceOrder = "Tien Giang",
-                Description = "200000",
-                Status = "Active"
+                OrderId = orderId,
+                CustomerId = customerId,
+                TotalPrice = totalPrice,
+                TimeOrder = Convert.ToDateTime(timeOrder),
+                PlaceOrder = placeOrder,
+                Description = description,
+                Status = status
             };
             var updateResult = await orderService.UpdateOrder(request);
-            Assert.Equal("Successful", updateResult.Message);
+            Assert.Equal(result, updateResult.Message);
         }
-         
 
-        [Fact]
-        public async void DeleteOrder()
+
+        [Theory]
+        [InlineData(1,"Successful")]
+        [InlineData(2, "Order not found!")]
+        [InlineData(99, "Order not found!")]
+        [InlineData(-99, "Order not found!")]
+        public async void DeleteOrder(int id,string result)
         {
-            mockOrderRepository.Setup(p => p.GetOrderById(1)).ReturnsAsync(order[0]);
-            mockOrderRepository.Setup(p => p.DeleteOrder(1)).ReturnsAsync(true);
+            mockOrderRepository.Setup(p => p.GetOrderById(id)).ReturnsAsync(order[0]);
+            mockOrderRepository.Setup(p => p.DeleteOrder(id)).ReturnsAsync(true);
             OrderService orderService = new OrderService(mockOrderRepository.Object);
             var deleteResult = await orderService.DeleteOrder(1);
-            Assert.Equal("Successful", deleteResult.Message);
+            Assert.Equal(deleteResult.Message, result);
         }
     }
 }
