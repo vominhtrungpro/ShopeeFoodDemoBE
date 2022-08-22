@@ -27,8 +27,6 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
         public async Task<Category> GetCategoryById(int id)
         {
             return await _dataContext.Category.FindAsync(id);
-
-            //return await _datacontext.Category.FirstOrDefaultAsync(c => c.CategoryId == id);
         }
 
         public async Task<Boolean> AddCategory(Category category)
