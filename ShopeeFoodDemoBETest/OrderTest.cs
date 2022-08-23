@@ -95,29 +95,38 @@ namespace ShopeeFoodDemoBETest
             
         }
 
-        [Fact]
-        public async Task AddOrder()
+        [Theory]
+        [InlineData(1, 1, 200000, "2022-08-09T02:23:12.927", "Tien Giang", "200000", "Active")]
+        [InlineData(1, 1, 200000, "2022-08-09T02:23:12.927", "Tien Giang", "200000", "Unactive")]
+
+        public async Task AddOrder(int orderId,int customerId, int totalPrice, DateTime timeOrder, string placeOrder, string description, string status)
         {
             OrderRequest request = new OrderRequest()
             {
-                OrderId = 1,
-                CustomerId = 1,
-                TotalPrice = 200000,
-                TimeOrder = Convert.ToDateTime("2022-08-09T02:23:12.927"),
-                PlaceOrder = "Tien Giang",
-                Description = "200000",
-                Status = "haha"
+                OrderId = orderId,
+                CustomerId = customerId,
+                TotalPrice = totalPrice,
+                TimeOrder = Convert.ToDateTime(timeOrder),
+                PlaceOrder = placeOrder,
+                Description = description,
+                Status = status
             };
             var dbOrder = order[0];
             mockOrderRepository.Setup(r => r.AddOrder(It.IsAny<Order>())).ReturnsAsync(dbOrder);
             OrderService orderService = new OrderService(mockOrderRepository.Object);
-            var exception = await Assert.ThrowsAsync<Exception>(() => orderService.AddOrder(request));
-            Assert.Equal("Status invalid!", exception.Message);
+            if (status == "Active")
+            {
 
-            //var addResult = await orderService.AddOrder(request);
-            //var obj1Str = JsonConvert.SerializeObject(dbOrder);
-            //var obj2Str = JsonConvert.SerializeObject(addResult);
-            //Assert.Equal(System.Exception("Status invalid!"),obj2Str);
+                var addResult = await orderService.AddOrder(request);
+                var obj1Str = JsonConvert.SerializeObject(dbOrder);
+                var obj2Str = JsonConvert.SerializeObject(addResult);
+                Assert.Equal(obj1Str, obj2Str);
+            }
+            else
+            {
+                var exception = await Assert.ThrowsAsync<Exception>(() => orderService.AddOrder(request));
+                Assert.Equal("Status invalid!", exception.Message);
+            }
         }
 
         [Theory]
