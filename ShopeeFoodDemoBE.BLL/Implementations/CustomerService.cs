@@ -70,6 +70,13 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
                 result.Message = "Status invalid!";
                 return result;
             }
+            var customerUsername = _customerrepository.GetCustomerByUsername(request.CustomerUsername);
+            if (customerUsername != null)
+            {
+                result.Success = false;
+                result.Message = "User already exist!";
+                return result;
+            }
             var customer = new Customer()
             {
                 CustomerUsername = request.CustomerUsername,

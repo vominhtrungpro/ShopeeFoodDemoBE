@@ -10,9 +10,11 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
     public class OrderDetailService : IOrderDetailService
     {
         private readonly IOrderDetailRepository _orderdetailRepository;
-        public OrderDetailService(IOrderDetailRepository orderdetailRepository)
+        private readonly IProductRepository _productRepository;
+        public OrderDetailService(IOrderDetailRepository orderdetailRepository, IProductRepository productRepository)
         {
             _orderdetailRepository = orderdetailRepository;
+            _productRepository = productRepository;
         }
 
         public async Task<List<DtoOrderDetail>> GetAllOrderDetail()
@@ -52,6 +54,19 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
         public async Task<ActionResponse> AddOrderDetail(OrderDetailRequest request)
         {
             var result = new ActionResponse();
+            var dbProduct = await _productRepository.GetProductById(request.ProductId);
+            if (dbProduct.AmountStock == 0)
+            {
+                result.Success = false;
+                result.Message = "Out of stock";
+                return result;
+            }
+            if (request.Amount > dbProduct.AmountStock)
+            {
+                result.Success = false;
+                result.Message = "Out of stock";
+                return result;
+            }
             var orderdetail = new OrderDetail()
             {
                 OrderId = request.OrderId,
@@ -62,6 +77,9 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             var addResult = await _orderdetailRepository.AddOrderDetail(orderdetail);
             if (addResult)
             {
+                dbProduct.AmountStock = dbProduct.AmountStock - request.Amount;
+                dbProduct.AmountPurchased = dbProduct.AmountPurchased + request.Amount;
+                var updateResult = await _productRepository.UpdateProduct(dbProduct);
                 result.Success = true;
                 result.Message = "Successful";
             }

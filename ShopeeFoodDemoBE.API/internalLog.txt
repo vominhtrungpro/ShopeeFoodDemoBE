@@ -1025,3 +1025,1012 @@
 2022-08-23 08:43:34.2626 Info Adding target FileTarget(Name=otherFile-web)
 2022-08-23 08:43:34.3071 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
 2022-08-23 08:43:35.0386 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:13:32.7664 Info Message Template Auto Format enabled
+2022-08-23 10:13:32.7847 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:13:32.8964 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:13:32.9420 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:13:33.0148 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:13:33.3111 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:13:33.5440 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:13:33.5440 Info LogFactory has been closed.
+2022-08-23 10:14:22.7616 Info Message Template Auto Format enabled
+2022-08-23 10:14:22.7616 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:14:22.8342 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:14:22.8423 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:14:22.8793 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 10:14:23.0857 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 10:14:23.1305 Info Shutdown() called. Logger closing...
+2022-08-23 10:14:23.1353 Info Closing old configuration.
+2022-08-23 10:14:23.1616 Info Logger has been closed down.
+2022-08-23 10:14:24.5471 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:14:24.5471 Info LogFactory has been closed.
+2022-08-23 10:15:15.5808 Info Message Template Auto Format enabled
+2022-08-23 10:15:15.5922 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:15:15.6492 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:15:15.6558 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:15:15.6922 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:15:15.8849 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:15:15.9267 Info Shutdown() called. Logger closing...
+2022-08-23 10:15:15.9267 Info Closing old configuration.
+2022-08-23 10:15:15.9592 Info Logger has been closed down.
+2022-08-23 10:15:15.9947 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:15:16.0012 Info LogFactory has been closed.
+2022-08-23 10:33:50.8986 Info Message Template Auto Format enabled
+2022-08-23 10:33:50.9163 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:33:50.9971 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:33:51.0070 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:33:51.0451 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:33:51.2933 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:33:51.3495 Info Shutdown() called. Logger closing...
+2022-08-23 10:33:51.3579 Info Closing old configuration.
+2022-08-23 10:33:51.4085 Info Logger has been closed down.
+2022-08-23 10:33:51.4293 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:33:51.4360 Info LogFactory has been closed.
+2022-08-23 10:33:58.1088 Info Message Template Auto Format enabled
+2022-08-23 10:33:58.1088 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:33:58.1869 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:33:58.1869 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:33:58.2279 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:33:58.5328 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:33:58.6313 Info Shutdown() called. Logger closing...
+2022-08-23 10:33:58.6313 Info Closing old configuration.
+2022-08-23 10:33:58.6726 Info Logger has been closed down.
+2022-08-23 10:33:58.7588 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:33:58.7588 Info LogFactory has been closed.
+2022-08-23 10:34:45.3545 Info Message Template Auto Format enabled
+2022-08-23 10:34:45.3647 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:34:45.4194 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:34:45.4263 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:34:45.4593 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 10:34:45.6415 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 10:34:45.6817 Info Shutdown() called. Logger closing...
+2022-08-23 10:34:45.6869 Info Closing old configuration.
+2022-08-23 10:34:45.7139 Info Logger has been closed down.
+2022-08-23 10:34:46.9690 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:34:46.9690 Info LogFactory has been closed.
+2022-08-23 10:34:59.7682 Info Message Template Auto Format enabled
+2022-08-23 10:34:59.7820 Info Message Template Auto Format enabled
+2022-08-23 10:34:59.7932 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:34:59.7995 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:34:59.8619 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:34:59.8737 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:34:59.8857 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:34:59.8926 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:34:59.9152 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:34:59.9248 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:34:59.9821 Warn FileTarget(Name=alldata): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 10:35:00.0016 Warn FileTarget(Name=otherFile-web): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 10:35:00.1493 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:35:00.1695 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:35:00.1960 Warn FileTarget(Name=alldata): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 10:35:00.1960 Warn FileTarget(Name=otherFile-web): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 10:35:00.2221 Info Shutdown() called. Logger closing...
+2022-08-23 10:35:00.2221 Info Closing old configuration.
+2022-08-23 10:35:00.2366 Info Shutdown() called. Logger closing...
+2022-08-23 10:35:00.2366 Info Closing old configuration.
+2022-08-23 10:35:00.2898 Info Logger has been closed down.
+2022-08-23 10:35:00.2912 Info Logger has been closed down.
+2022-08-23 10:35:00.2984 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:35:00.2984 Info LogFactory has been closed.
+2022-08-23 10:35:00.3088 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:35:00.3117 Info LogFactory has been closed.
+2022-08-23 10:57:50.4359 Info Message Template Auto Format enabled
+2022-08-23 10:57:50.4359 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:57:50.5339 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:57:50.5473 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:57:50.6256 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:57:50.9733 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:57:51.0683 Info Shutdown() called. Logger closing...
+2022-08-23 10:57:51.0683 Info Closing old configuration.
+2022-08-23 10:57:51.0974 Info Logger has been closed down.
+2022-08-23 10:57:51.1409 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:57:51.1409 Info LogFactory has been closed.
+2022-08-23 10:57:55.8774 Info Message Template Auto Format enabled
+2022-08-23 10:57:55.8774 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 10:57:55.9426 Info Adding target FileTarget(Name=alldata)
+2022-08-23 10:57:55.9426 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 10:57:55.9772 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:57:56.1587 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 10:57:56.1939 Info Shutdown() called. Logger closing...
+2022-08-23 10:57:56.1939 Info Closing old configuration.
+2022-08-23 10:57:56.2141 Info Logger has been closed down.
+2022-08-23 10:57:56.2528 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 10:57:56.2528 Info LogFactory has been closed.
+2022-08-23 11:04:25.6855 Info Message Template Auto Format enabled
+2022-08-23 11:04:25.7104 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:04:25.8587 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:04:25.8587 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:04:25.9163 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:04:26.7428 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:04:59.9398 Info Message Template Auto Format enabled
+2022-08-23 11:04:59.9691 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:05:00.1388 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:05:00.1483 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:05:00.2187 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:05:01.0165 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:05:33.1043 Info Message Template Auto Format enabled
+2022-08-23 11:05:33.1514 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:05:33.4691 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:05:33.4861 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:05:33.5724 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:05:34.3823 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:11.1364 Info Message Template Auto Format enabled
+2022-08-23 11:06:11.1581 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:06:11.2304 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:06:11.2498 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:06:11.3059 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:11.5776 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:11.6651 Info Shutdown() called. Logger closing...
+2022-08-23 11:06:11.6842 Info Closing old configuration.
+2022-08-23 11:06:11.7277 Info Logger has been closed down.
+2022-08-23 11:06:11.8232 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:06:11.8311 Info LogFactory has been closed.
+2022-08-23 11:06:16.4593 Info Message Template Auto Format enabled
+2022-08-23 11:06:16.4698 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:06:16.5258 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:06:16.5258 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:06:16.5586 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:16.7623 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:16.8020 Info Shutdown() called. Logger closing...
+2022-08-23 11:06:16.8020 Info Closing old configuration.
+2022-08-23 11:06:16.8248 Info Logger has been closed down.
+2022-08-23 11:06:16.8623 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:06:16.8623 Info LogFactory has been closed.
+2022-08-23 11:06:44.2100 Info Message Template Auto Format enabled
+2022-08-23 11:06:44.2202 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:06:44.2545 Info Message Template Auto Format enabled
+2022-08-23 11:06:44.2681 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:06:44.2793 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:06:44.2867 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:06:44.3255 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:44.3345 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:06:44.3345 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:06:44.3765 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:44.4420 Warn FileTarget(Name=alldata): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 11:06:44.4615 Warn FileTarget(Name=otherFile-web): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 11:06:44.5238 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:44.5571 Info Shutdown() called. Logger closing...
+2022-08-23 11:06:44.5571 Info Closing old configuration.
+2022-08-23 11:06:44.5796 Info Logger has been closed down.
+2022-08-23 11:06:44.5956 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:06:44.6233 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:06:44.6233 Info LogFactory has been closed.
+2022-08-23 11:06:44.6268 Info Shutdown() called. Logger closing...
+2022-08-23 11:06:44.6268 Info Closing old configuration.
+2022-08-23 11:06:44.6492 Info Logger has been closed down.
+2022-08-23 11:06:44.6964 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:06:44.6964 Info LogFactory has been closed.
+2022-08-23 11:07:41.9788 Info Message Template Auto Format enabled
+2022-08-23 11:07:41.9885 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:07:42.0469 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:07:42.0469 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:07:42.0878 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:07:42.2722 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:07:42.3158 Info Shutdown() called. Logger closing...
+2022-08-23 11:07:42.3158 Info Closing old configuration.
+2022-08-23 11:07:42.3477 Info Logger has been closed down.
+2022-08-23 11:07:42.3850 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:07:42.3909 Info LogFactory has been closed.
+2022-08-23 11:08:20.5685 Info Message Template Auto Format enabled
+2022-08-23 11:08:20.5784 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:08:20.6330 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:08:20.6330 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:08:20.6726 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 11:08:20.8565 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 11:08:20.8960 Info Shutdown() called. Logger closing...
+2022-08-23 11:08:20.8960 Info Closing old configuration.
+2022-08-23 11:08:20.9240 Info Logger has been closed down.
+2022-08-23 11:08:22.1930 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:08:22.1930 Info LogFactory has been closed.
+2022-08-23 11:48:53.3625 Info Message Template Auto Format enabled
+2022-08-23 11:48:53.3625 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:48:53.4369 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:48:53.4369 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:48:53.4823 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:48:53.7411 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:48:53.8142 Info Shutdown() called. Logger closing...
+2022-08-23 11:48:53.8142 Info Closing old configuration.
+2022-08-23 11:48:53.8536 Info Logger has been closed down.
+2022-08-23 11:48:53.9236 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:48:53.9236 Info LogFactory has been closed.
+2022-08-23 11:48:56.5923 Info Message Template Auto Format enabled
+2022-08-23 11:48:56.5923 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:48:56.6506 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:48:56.6506 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:48:56.6848 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:48:56.8679 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:48:56.9046 Info Shutdown() called. Logger closing...
+2022-08-23 11:48:56.9069 Info Closing old configuration.
+2022-08-23 11:48:56.9287 Info Logger has been closed down.
+2022-08-23 11:48:56.9683 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 11:48:56.9683 Info LogFactory has been closed.
+2022-08-23 11:54:37.4990 Info Message Template Auto Format enabled
+2022-08-23 11:54:37.4990 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 11:54:37.6173 Info Adding target FileTarget(Name=alldata)
+2022-08-23 11:54:37.6240 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 11:54:37.6681 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 11:54:38.7627 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 12:55:41.9808 Info Message Template Auto Format enabled
+2022-08-23 12:55:41.9912 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 12:55:42.0509 Info Adding target FileTarget(Name=alldata)
+2022-08-23 12:55:42.0509 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 12:55:42.0925 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 12:55:42.3636 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 12:55:42.4233 Info Shutdown() called. Logger closing...
+2022-08-23 12:55:42.4233 Info Closing old configuration.
+2022-08-23 12:55:42.4533 Info Logger has been closed down.
+2022-08-23 12:55:42.4818 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 12:55:42.4882 Info LogFactory has been closed.
+2022-08-23 12:59:57.9003 Info Message Template Auto Format enabled
+2022-08-23 12:59:57.9117 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 12:59:57.9675 Info Adding target FileTarget(Name=alldata)
+2022-08-23 12:59:57.9675 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 12:59:58.0073 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 12:59:58.1818 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 12:59:58.2204 Info Shutdown() called. Logger closing...
+2022-08-23 12:59:58.2204 Info Closing old configuration.
+2022-08-23 12:59:58.2501 Info Logger has been closed down.
+2022-08-23 12:59:58.2825 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 12:59:58.2825 Info LogFactory has been closed.
+2022-08-23 13:00:14.8595 Info Message Template Auto Format enabled
+2022-08-23 13:00:14.8737 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 13:00:14.9454 Info Adding target FileTarget(Name=alldata)
+2022-08-23 13:00:14.9518 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 13:00:14.9874 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 13:00:15.2472 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 13:00:15.3231 Info Shutdown() called. Logger closing...
+2022-08-23 13:00:15.3231 Info Closing old configuration.
+2022-08-23 13:00:15.3859 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 13:00:15.4037 Info Logger has been closed down.
+2022-08-23 13:00:15.4037 Info LogFactory has been closed.
+2022-08-23 13:00:17.4089 Info Message Template Auto Format enabled
+2022-08-23 13:00:17.4089 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 13:00:17.4716 Info Adding target FileTarget(Name=alldata)
+2022-08-23 13:00:17.4716 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 13:00:17.5062 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 13:00:17.6848 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 13:00:17.7194 Info Shutdown() called. Logger closing...
+2022-08-23 13:00:17.7194 Info Closing old configuration.
+2022-08-23 13:00:17.7419 Info Logger has been closed down.
+2022-08-23 13:00:17.7832 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 13:00:17.7832 Info LogFactory has been closed.
+2022-08-23 13:00:37.5860 Info Message Template Auto Format enabled
+2022-08-23 13:00:37.5959 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 13:00:37.6494 Info Adding target FileTarget(Name=alldata)
+2022-08-23 13:00:37.6556 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 13:00:37.6879 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 13:00:37.8701 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 13:00:37.9093 Info Shutdown() called. Logger closing...
+2022-08-23 13:00:37.9093 Info Closing old configuration.
+2022-08-23 13:00:37.9399 Info Logger has been closed down.
+2022-08-23 13:00:39.2187 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 13:00:39.2187 Info LogFactory has been closed.
+2022-08-23 13:27:47.4661 Info Message Template Auto Format enabled
+2022-08-23 13:27:47.4762 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 13:27:47.5328 Info Adding target FileTarget(Name=alldata)
+2022-08-23 13:27:47.5328 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 13:27:47.5742 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 13:27:47.8406 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 13:27:47.9083 Info Shutdown() called. Logger closing...
+2022-08-23 13:27:47.9083 Info Closing old configuration.
+2022-08-23 13:27:47.9381 Info Logger has been closed down.
+2022-08-23 13:27:47.9716 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 13:27:47.9716 Info LogFactory has been closed.
+2022-08-23 13:28:04.9216 Info Message Template Auto Format enabled
+2022-08-23 13:28:04.9216 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 13:28:04.9844 Info Adding target FileTarget(Name=alldata)
+2022-08-23 13:28:04.9844 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 13:28:05.0232 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 13:28:05.2403 Info Shutdown() called. Logger closing...
+2022-08-23 13:28:05.2403 Info Closing old configuration.
+2022-08-23 13:28:05.2714 Info Logger has been closed down.
+2022-08-23 13:28:06.4974 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 13:28:06.5035 Info LogFactory has been closed.
+2022-08-23 13:50:36.4243 Info Message Template Auto Format enabled
+2022-08-23 13:50:36.4984 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 13:50:37.0665 Info Adding target FileTarget(Name=alldata)
+2022-08-23 13:50:37.0966 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 13:50:37.2166 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 13:50:37.8326 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:05:59.2242 Info Message Template Auto Format enabled
+2022-08-23 14:05:59.2437 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:05:59.3191 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:05:59.3336 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:05:59.3716 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:05:59.7862 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:05:59.9054 Info Shutdown() called. Logger closing...
+2022-08-23 14:05:59.9054 Info Closing old configuration.
+2022-08-23 14:05:59.9358 Info Logger has been closed down.
+2022-08-23 14:06:00.0199 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 14:06:00.0199 Info LogFactory has been closed.
+2022-08-23 14:06:44.5082 Info Message Template Auto Format enabled
+2022-08-23 14:06:44.5178 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:06:44.5708 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:06:44.5708 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:06:44.6041 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:06:44.8016 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:06:44.8377 Info Shutdown() called. Logger closing...
+2022-08-23 14:06:44.8377 Info Closing old configuration.
+2022-08-23 14:06:44.8575 Info Logger has been closed down.
+2022-08-23 14:06:46.1821 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 14:06:46.1821 Info LogFactory has been closed.
+2022-08-23 14:12:23.0848 Info Message Template Auto Format enabled
+2022-08-23 14:12:23.0947 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:12:23.1506 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:12:23.1506 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:12:23.1847 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:12:23.3692 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:12:23.4055 Info Shutdown() called. Logger closing...
+2022-08-23 14:12:23.4055 Info Closing old configuration.
+2022-08-23 14:12:23.4252 Info Logger has been closed down.
+2022-08-23 14:12:23.4647 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 14:12:23.4647 Info LogFactory has been closed.
+2022-08-23 14:12:37.5842 Info Message Template Auto Format enabled
+2022-08-23 14:12:37.5932 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:12:37.6451 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:12:37.6451 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:12:37.6784 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:12:37.8551 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:12:37.8879 Info Shutdown() called. Logger closing...
+2022-08-23 14:12:37.8879 Info Closing old configuration.
+2022-08-23 14:12:37.9079 Info Logger has been closed down.
+2022-08-23 14:12:39.2053 Info AppDomain Shutting down. LogFactory closing...
+2022-08-23 14:12:39.2053 Info LogFactory has been closed.
+2022-08-23 14:25:05.7223 Info Message Template Auto Format enabled
+2022-08-23 14:25:05.7549 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:25:05.8512 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:25:05.8582 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:25:05.9235 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:25:06.4804 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:25:42.5940 Info Message Template Auto Format enabled
+2022-08-23 14:25:42.6138 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:25:42.7016 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:25:42.7097 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:25:42.7673 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:25:43.3294 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:26:07.5193 Info Message Template Auto Format enabled
+2022-08-23 14:26:07.5385 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:26:07.6318 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:26:07.6409 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:26:07.7058 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:26:08.3097 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:26:31.6813 Info Message Template Auto Format enabled
+2022-08-23 14:26:31.7011 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:26:31.8088 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:26:31.8175 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:26:31.8749 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:26:32.5109 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:29:20.8801 Info Message Template Auto Format enabled
+2022-08-23 14:29:20.8995 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:29:20.9764 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:29:20.9764 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:29:21.0376 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:29:21.6085 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:34:50.9354 Info Message Template Auto Format enabled
+2022-08-23 14:34:50.9575 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:34:51.0383 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:34:51.0452 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:34:51.1150 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:34:51.7445 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:37:29.4524 Info Message Template Auto Format enabled
+2022-08-23 14:37:29.5043 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:37:29.7153 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:37:29.7831 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:37:30.3554 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:40:15.9438 Info Message Template Auto Format enabled
+2022-08-23 14:40:15.9547 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:40:16.0104 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:40:16.0168 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:40:16.0517 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:40:16.2395 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:40:16.2999 Info Shutdown() called. Logger closing...
+2022-08-23 14:40:16.2999 Info Closing old configuration.
+2022-08-23 14:40:16.3545 Info Logger has been closed down.
+2022-08-23 14:41:31.0143 Info Message Template Auto Format enabled
+2022-08-23 14:41:31.0143 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:41:31.0843 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:41:31.0923 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:41:31.1276 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:41:31.3024 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:41:31.3396 Info Shutdown() called. Logger closing...
+2022-08-23 14:41:31.3446 Info Closing old configuration.
+2022-08-23 14:41:31.3688 Info Logger has been closed down.
+2022-08-23 14:42:15.7204 Info Message Template Auto Format enabled
+2022-08-23 14:42:15.7204 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:42:15.7862 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:42:15.7862 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:42:15.8258 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:42:15.9960 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:42:16.0338 Info Shutdown() called. Logger closing...
+2022-08-23 14:42:16.0338 Info Closing old configuration.
+2022-08-23 14:42:16.0625 Info Logger has been closed down.
+2022-08-23 14:45:01.5356 Info Message Template Auto Format enabled
+2022-08-23 14:45:01.5477 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:45:01.6220 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:45:01.6274 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:45:01.6633 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:45:01.9945 Info Shutdown() called. Logger closing...
+2022-08-23 14:45:01.9996 Info Closing old configuration.
+2022-08-23 14:45:02.0246 Info Logger has been closed down.
+2022-08-23 14:45:16.2061 Info Message Template Auto Format enabled
+2022-08-23 14:45:16.2301 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:45:16.3113 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:45:16.3113 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:45:16.3666 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:45:16.9184 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:46:00.2155 Info Message Template Auto Format enabled
+2022-08-23 14:46:00.2252 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:46:00.2826 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:46:00.2826 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:46:00.4950 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:46:00.5319 Info Shutdown() called. Logger closing...
+2022-08-23 14:46:00.5319 Info Closing old configuration.
+2022-08-23 14:46:00.5596 Info Logger has been closed down.
+2022-08-23 14:46:14.3732 Info Message Template Auto Format enabled
+2022-08-23 14:46:14.3853 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:46:14.4373 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:46:14.4373 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:46:14.4684 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:46:14.6371 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:46:14.6717 Info Shutdown() called. Logger closing...
+2022-08-23 14:46:14.6717 Info Closing old configuration.
+2022-08-23 14:46:14.6939 Info Logger has been closed down.
+2022-08-23 14:48:09.3025 Info Message Template Auto Format enabled
+2022-08-23 14:48:09.3211 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:48:09.4142 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:48:09.4204 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:48:09.4737 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:48:09.9891 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 14:49:24.5728 Info Message Template Auto Format enabled
+2022-08-23 14:49:24.5817 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 14:49:24.6361 Info Adding target FileTarget(Name=alldata)
+2022-08-23 14:49:24.6417 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 14:49:24.6742 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:49:24.8374 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 14:49:24.8727 Info Shutdown() called. Logger closing...
+2022-08-23 14:49:24.8727 Info Closing old configuration.
+2022-08-23 14:49:24.9015 Info Logger has been closed down.
+2022-08-23 15:02:08.2351 Info Message Template Auto Format enabled
+2022-08-23 15:02:08.2351 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:02:08.3044 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:02:08.3113 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:02:08.3460 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:02:08.5274 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:02:08.5676 Info Shutdown() called. Logger closing...
+2022-08-23 15:02:08.5676 Info Closing old configuration.
+2022-08-23 15:02:08.5967 Info Logger has been closed down.
+2022-08-23 15:02:23.6023 Info Message Template Auto Format enabled
+2022-08-23 15:02:23.6124 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:02:23.6685 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:02:23.6748 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:02:23.7093 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:02:23.8859 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:02:23.9237 Info Shutdown() called. Logger closing...
+2022-08-23 15:02:23.9237 Info Closing old configuration.
+2022-08-23 15:02:23.9535 Info Logger has been closed down.
+2022-08-23 15:05:07.0007 Info Message Template Auto Format enabled
+2022-08-23 15:05:07.0007 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:05:07.0677 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:05:07.0677 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:05:07.1084 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:05:07.3786 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:05:07.4465 Info Shutdown() called. Logger closing...
+2022-08-23 15:05:07.4465 Info Closing old configuration.
+2022-08-23 15:05:07.4757 Info Logger has been closed down.
+2022-08-23 15:06:30.8075 Info Message Template Auto Format enabled
+2022-08-23 15:06:30.8164 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:06:30.8710 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:06:30.8770 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:06:30.9096 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:06:31.0872 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:06:31.1233 Info Shutdown() called. Logger closing...
+2022-08-23 15:06:31.1233 Info Closing old configuration.
+2022-08-23 15:06:31.1493 Info Logger has been closed down.
+2022-08-23 15:06:45.0166 Info Message Template Auto Format enabled
+2022-08-23 15:06:45.0166 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:06:45.0778 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:06:45.0778 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:06:45.1142 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:06:45.2916 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:06:45.3265 Info Shutdown() called. Logger closing...
+2022-08-23 15:06:45.3265 Info Closing old configuration.
+2022-08-23 15:16:35.3088 Info Message Template Auto Format enabled
+2022-08-23 15:16:35.3295 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:16:35.4151 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:16:35.4210 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:16:35.4734 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:16:36.0445 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:16:55.4337 Info Message Template Auto Format enabled
+2022-08-23 15:16:55.4519 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:16:55.5352 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:16:55.5352 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:16:55.5924 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:16:56.0919 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:17:36.1141 Info Message Template Auto Format enabled
+2022-08-23 15:17:36.1306 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:17:36.1976 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:17:36.2054 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:17:36.2392 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:17:36.4230 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:17:36.4651 Info Shutdown() called. Logger closing...
+2022-08-23 15:17:36.4699 Info Closing old configuration.
+2022-08-23 15:17:36.4943 Info Logger has been closed down.
+2022-08-23 15:17:41.8226 Info Message Template Auto Format enabled
+2022-08-23 15:17:41.8349 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:17:41.8917 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:17:41.8917 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:17:41.9252 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:17:42.1158 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:17:42.1497 Info Shutdown() called. Logger closing...
+2022-08-23 15:17:42.1497 Info Closing old configuration.
+2022-08-23 15:17:42.1698 Info Logger has been closed down.
+2022-08-23 15:19:08.5183 Info Message Template Auto Format enabled
+2022-08-23 15:19:08.5183 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:19:08.5915 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:19:08.6000 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:19:08.6367 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:19:08.6530 Info Message Template Auto Format enabled
+2022-08-23 15:19:08.6665 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:19:08.7217 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:19:08.7217 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:19:08.7608 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:19:08.8085 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:19:08.9972 Info Shutdown() called. Logger closing...
+2022-08-23 15:19:08.9981 Info Closing old configuration.
+2022-08-23 15:19:09.0176 Info Logger has been closed down.
+2022-08-23 15:19:34.4435 Info Message Template Auto Format enabled
+2022-08-23 15:19:34.4533 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:19:34.5134 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:19:34.5195 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:19:34.5541 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:19:34.7183 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 15:19:34.7521 Info Shutdown() called. Logger closing...
+2022-08-23 15:19:34.7521 Info Closing old configuration.
+2022-08-23 15:19:34.7793 Info Logger has been closed down.
+2022-08-23 15:24:30.1130 Info Message Template Auto Format enabled
+2022-08-23 15:24:30.1322 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:24:30.2112 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:24:30.2179 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:24:30.2699 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:24:30.7968 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:24:49.3813 Info Message Template Auto Format enabled
+2022-08-23 15:24:49.4015 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:24:49.4826 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:24:49.4826 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:24:49.5425 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:24:50.0525 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:29:00.8164 Info Message Template Auto Format enabled
+2022-08-23 15:29:00.8365 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 15:29:00.9210 Info Adding target FileTarget(Name=alldata)
+2022-08-23 15:29:00.9210 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 15:29:00.9788 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 15:29:01.4945 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:05:19.8131 Info Message Template Auto Format enabled
+2022-08-23 16:05:19.8379 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:05:19.8660 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:05:19.9338 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:05:19.9591 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:05:19.9829 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:05:20.0180 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:05:20.1429 Warn FileTarget(Name=alldata): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 16:05:20.2050 Warn FileTarget(Name=otherFile-web): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 16:05:20.4224 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:05:20.4780 Warn FileTarget(Name=alldata): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 16:05:20.5285 Warn FileTarget(Name=otherFile-web): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 16:05:20.5422 Info Shutdown() called. Logger closing...
+2022-08-23 16:05:20.5450 Info Closing old configuration.
+2022-08-23 16:05:20.5659 Info Shutdown() called. Logger closing...
+2022-08-23 16:05:20.5659 Info Closing old configuration.
+2022-08-23 16:05:20.6132 Info Logger has been closed down.
+2022-08-23 16:05:23.0773 Info Message Template Auto Format enabled
+2022-08-23 16:05:23.0936 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:05:23.1752 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:05:23.1752 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:05:23.2368 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:05:23.4984 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:05:23.5713 Info Shutdown() called. Logger closing...
+2022-08-23 16:05:23.5713 Info Closing old configuration.
+2022-08-23 16:06:12.6968 Info Message Template Auto Format enabled
+2022-08-23 16:06:12.7067 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:06:12.7655 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:06:12.7655 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:06:12.7881 Info Message Template Auto Format enabled
+2022-08-23 16:06:12.8035 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:06:12.8124 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:06:12.8625 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:06:12.8625 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:06:12.9069 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:06:12.9660 Warn FileTarget(Name=alldata): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 16:06:12.9844 Warn FileTarget(Name=otherFile-web): Failed to create file appender: D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log Exception: System.IO.IOException: The process cannot access the file 'D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\demo-Other-2022-08-23.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-08-23 16:06:13.0062 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:06:13.0409 Info Shutdown() called. Logger closing...
+2022-08-23 16:06:13.0409 Info Closing old configuration.
+2022-08-23 16:06:13.0657 Info Logger has been closed down.
+2022-08-23 16:06:13.1173 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:06:13.1469 Info Shutdown() called. Logger closing...
+2022-08-23 16:06:13.1469 Info Closing old configuration.
+2022-08-23 16:06:13.1734 Info Logger has been closed down.
+2022-08-23 16:08:42.4390 Info Message Template Auto Format enabled
+2022-08-23 16:08:42.4537 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:08:42.5418 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:08:42.5655 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:08:42.6475 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:08:53.5602 Info Message Template Auto Format enabled
+2022-08-23 16:08:53.5834 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:08:53.6664 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:08:53.6764 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:08:53.7348 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:08:54.0306 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:08:54.0737 Info Shutdown() called. Logger closing...
+2022-08-23 16:08:54.0737 Info Closing old configuration.
+2022-08-23 16:08:54.0997 Info Logger has been closed down.
+2022-08-23 16:11:49.8524 Info Message Template Auto Format enabled
+2022-08-23 16:11:49.8828 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:11:50.2022 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:11:50.8949 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:13:41.0447 Info Message Template Auto Format enabled
+2022-08-23 16:13:41.0646 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:13:41.1446 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:13:41.1446 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:13:41.2091 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:13:41.7645 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:14:02.5360 Info Message Template Auto Format enabled
+2022-08-23 16:14:02.5551 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:14:02.6455 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:14:02.6455 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:14:02.7079 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:14:03.2584 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:14:59.8694 Info Message Template Auto Format enabled
+2022-08-23 16:14:59.8892 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:14:59.9694 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:14:59.9694 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:15:00.0336 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:15:00.5946 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:16:10.4581 Info Message Template Auto Format enabled
+2022-08-23 16:16:10.4796 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:16:10.5702 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:16:10.5702 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:16:10.6351 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:16:11.1807 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:16:33.4750 Info Message Template Auto Format enabled
+2022-08-23 16:16:33.4960 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:16:33.5845 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:16:33.5845 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:16:33.6454 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:16:34.1995 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:17:29.8190 Info Message Template Auto Format enabled
+2022-08-23 16:17:29.8299 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:17:29.8868 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:17:29.8931 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:17:29.9307 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:17:30.1264 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:17:30.1719 Info Shutdown() called. Logger closing...
+2022-08-23 16:17:30.1719 Info Closing old configuration.
+2022-08-23 16:17:30.2060 Info Logger has been closed down.
+2022-08-23 16:19:06.9847 Info Message Template Auto Format enabled
+2022-08-23 16:19:06.9847 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:19:07.0535 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:19:07.0535 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:19:07.0922 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:19:07.2739 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-23 16:19:07.3129 Info Shutdown() called. Logger closing...
+2022-08-23 16:19:07.3129 Info Closing old configuration.
+2022-08-23 16:19:07.3411 Info Logger has been closed down.
+2022-08-23 16:19:23.4541 Info Message Template Auto Format enabled
+2022-08-23 16:19:23.4668 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:19:23.5154 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:19:23.5154 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:19:23.5458 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:19:23.7323 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:19:23.7676 Info Shutdown() called. Logger closing...
+2022-08-23 16:19:23.7676 Info Closing old configuration.
+2022-08-23 16:19:23.7870 Info Logger has been closed down.
+2022-08-23 16:37:51.9021 Info Message Template Auto Format enabled
+2022-08-23 16:37:51.9243 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 16:37:52.0237 Info Adding target FileTarget(Name=alldata)
+2022-08-23 16:37:52.0298 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 16:37:52.0943 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 16:37:53.4933 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 17:11:06.2837 Info Message Template Auto Format enabled
+2022-08-23 17:11:06.3028 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-23 17:11:06.3897 Info Adding target FileTarget(Name=alldata)
+2022-08-23 17:11:06.3897 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-23 17:11:06.4519 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-23 17:11:07.4004 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Release\net6.0\NLog.config
+2022-08-24 11:21:44.2805 Info Message Template Auto Format enabled
+2022-08-24 11:21:44.2921 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-24 11:21:44.3736 Info Adding target FileTarget(Name=alldata)
+2022-08-24 11:21:44.3736 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-24 11:21:44.4193 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-24 11:21:45.0246 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 08:36:34.2252 Info Message Template Auto Format enabled
+2022-08-25 08:36:34.2384 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 08:36:34.3240 Info Adding target FileTarget(Name=alldata)
+2022-08-25 08:36:34.3240 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 08:36:34.3713 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 08:41:48.6937 Info Message Template Auto Format enabled
+2022-08-25 08:41:48.7051 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 08:41:48.7863 Info Adding target FileTarget(Name=alldata)
+2022-08-25 08:41:48.7930 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 08:41:48.8310 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 08:41:49.4794 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:00:19.1319 Info Message Template Auto Format enabled
+2022-08-25 09:00:19.1466 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:00:19.2439 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:00:19.2504 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:00:19.2924 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:00:19.8660 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:11:47.1097 Info Message Template Auto Format enabled
+2022-08-25 09:11:47.1233 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:11:47.2147 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:11:47.2147 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:11:47.2627 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:11:47.9373 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:14:38.4870 Info Message Template Auto Format enabled
+2022-08-25 09:14:38.4999 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:14:38.5900 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:14:38.5900 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:14:38.6393 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:14:39.1953 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:15:37.5891 Info Message Template Auto Format enabled
+2022-08-25 09:15:37.5891 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:15:37.6860 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:15:37.6860 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:15:37.7360 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:15:38.2817 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:16:55.9078 Info Message Template Auto Format enabled
+2022-08-25 09:16:55.9203 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:16:56.0229 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:16:56.0293 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:16:56.0707 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:16:56.6388 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:18:38.6159 Info Message Template Auto Format enabled
+2022-08-25 09:18:38.6311 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:18:38.7186 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:18:38.7186 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:18:38.7745 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:18:39.3635 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:18:50.9718 Info Message Template Auto Format enabled
+2022-08-25 09:18:50.9865 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:18:51.0850 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:18:51.0918 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:18:51.1362 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:18:51.7482 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:48:51.1932 Info Message Template Auto Format enabled
+2022-08-25 09:48:51.2379 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:48:51.3206 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:48:51.3271 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:48:51.3683 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:48:52.0678 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:51:39.3087 Info Message Template Auto Format enabled
+2022-08-25 09:51:39.3087 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:51:39.4321 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:51:39.4398 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:51:39.4806 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:51:40.2004 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:58:11.0077 Info Message Template Auto Format enabled
+2022-08-25 09:58:11.0201 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 09:58:11.1016 Info Adding target FileTarget(Name=alldata)
+2022-08-25 09:58:11.1083 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 09:58:11.1468 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 09:58:11.6746 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:04:53.7184 Info Message Template Auto Format enabled
+2022-08-25 10:04:53.7306 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 10:04:53.8198 Info Adding target FileTarget(Name=alldata)
+2022-08-25 10:04:53.8277 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 10:04:53.8679 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:04:54.5160 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:18:56.3886 Info Message Template Auto Format enabled
+2022-08-25 10:18:56.3886 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 10:18:56.4813 Info Adding target FileTarget(Name=alldata)
+2022-08-25 10:18:56.4813 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 10:18:56.5276 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:18:57.0649 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:34:37.5681 Info Message Template Auto Format enabled
+2022-08-25 10:34:37.5801 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 10:34:37.6707 Info Adding target FileTarget(Name=alldata)
+2022-08-25 10:34:37.6707 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 10:34:37.7175 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:34:38.2629 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:50:07.1349 Info Message Template Auto Format enabled
+2022-08-25 10:50:07.1511 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 10:50:07.2347 Info Adding target FileTarget(Name=alldata)
+2022-08-25 10:50:07.2347 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 10:50:07.2839 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 10:50:07.8787 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 11:02:20.6071 Info Message Template Auto Format enabled
+2022-08-25 11:02:20.6071 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 11:02:20.7006 Info Adding target FileTarget(Name=alldata)
+2022-08-25 11:02:20.7006 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 11:02:20.7469 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 11:02:21.3574 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 11:42:27.2372 Info Message Template Auto Format enabled
+2022-08-25 11:42:27.2590 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 11:42:27.3513 Info Adding target FileTarget(Name=alldata)
+2022-08-25 11:42:27.3578 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 11:42:27.4003 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 11:42:28.0835 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 12:59:22.8063 Info Message Template Auto Format enabled
+2022-08-25 12:59:22.8200 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 12:59:22.9809 Info Adding target FileTarget(Name=alldata)
+2022-08-25 12:59:23.0192 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 12:59:23.0770 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 12:59:23.7989 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 13:21:05.4022 Info Message Template Auto Format enabled
+2022-08-25 13:21:05.4185 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 13:21:05.5718 Info Adding target FileTarget(Name=alldata)
+2022-08-25 13:21:05.5943 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 13:21:05.7312 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 13:21:06.8735 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 13:43:21.1266 Info Message Template Auto Format enabled
+2022-08-25 13:43:21.1452 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 13:43:21.3324 Info Adding target FileTarget(Name=alldata)
+2022-08-25 13:43:21.3439 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 13:43:21.4003 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 13:43:22.2671 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 13:54:11.9298 Info Message Template Auto Format enabled
+2022-08-25 13:54:11.9531 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 13:54:12.0568 Info Adding target FileTarget(Name=alldata)
+2022-08-25 13:54:12.0654 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 13:54:12.1088 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 13:54:13.0595 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:04:30.6968 Info Message Template Auto Format enabled
+2022-08-25 14:04:30.7092 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 14:04:30.7906 Info Adding target FileTarget(Name=alldata)
+2022-08-25 14:04:30.7970 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 14:04:30.8683 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:04:31.8135 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:06:23.6981 Info Message Template Auto Format enabled
+2022-08-25 14:06:23.6981 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 14:06:23.9132 Info Adding target FileTarget(Name=alldata)
+2022-08-25 14:06:23.9825 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 14:06:24.2353 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:06:24.9943 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:12:26.3211 Info Message Template Auto Format enabled
+2022-08-25 14:12:26.3342 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 14:12:26.4565 Info Adding target FileTarget(Name=alldata)
+2022-08-25 14:12:26.4650 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 14:12:26.5151 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:12:27.1248 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:13:51.3652 Info Message Template Auto Format enabled
+2022-08-25 14:13:51.3778 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 14:13:51.5124 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:13:52.0795 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:14:29.6582 Info Message Template Auto Format enabled
+2022-08-25 14:14:29.6721 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-25 14:14:29.7605 Info Adding target FileTarget(Name=alldata)
+2022-08-25 14:14:29.7670 Info Adding target FileTarget(Name=otherFile-web)
+2022-08-25 14:14:29.8063 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
+2022-08-25 14:14:30.4105 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\ShopeeFoodDemoBE\ShopeeFoodDemoBE.API\bin\Debug\net6.0\NLog.config
