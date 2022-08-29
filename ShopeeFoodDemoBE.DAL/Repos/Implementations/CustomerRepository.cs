@@ -57,7 +57,8 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
 
         public async Task<Customer> GetCustomerByUsername(string username)
         {
-            return _dataContext.Customer.SingleOrDefault(c => c.CustomerUsername == username);
+            var customer = _dataContext.Customer.SingleOrDefault(c => c.CustomerUsername == username);
+            return customer;
         }
 
         public async Task<Customer> GetCustomerByEmail(string email)
