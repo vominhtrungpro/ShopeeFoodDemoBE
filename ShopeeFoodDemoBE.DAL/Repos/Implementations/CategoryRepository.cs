@@ -2,11 +2,6 @@
 using ShopeeFoodDemoBE.DAL.EF.Data;
 using ShopeeFoodDemoBE.DAL.EF.Entities;
 using ShopeeFoodDemoBE.DAL.Repos.Constracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
 {
@@ -27,8 +22,6 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Implementations
         public async Task<Category> GetCategoryById(int id)
         {
             return await _dataContext.Category.FindAsync(id);
-
-            //return await _datacontext.Category.FirstOrDefaultAsync(c => c.CategoryId == id);
         }
 
         public async Task<Boolean> AddCategory(Category category)
