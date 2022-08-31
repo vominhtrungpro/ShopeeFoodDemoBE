@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopeeFoodDemoBE.DAL", "ShopeeFoodDemoBE.DAL\ShopeeFoodDemoBE.DAL.csproj", "{11B8B5D9-D18E-474E-9DFC-6E2877963462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopeeFoodDemoBE.DAL", "ShopeeFoodDemoBE.DAL\ShopeeFoodDemoBE.DAL.csproj", "{11B8B5D9-D18E-474E-9DFC-6E2877963462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopeeFoodDemoBE.BLL", "ShopeeFoodDemoBE.BLL\ShopeeFoodDemoBE.BLL.csproj", "{7EF84D5B-FB9C-4D83-8200-EACA49D985B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopeeFoodDemoBE.BLL", "ShopeeFoodDemoBE.BLL\ShopeeFoodDemoBE.BLL.csproj", "{7EF84D5B-FB9C-4D83-8200-EACA49D985B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopeeFoodDemoBE.API", "ShopeeFoodDemoBE.API\ShopeeFoodDemoBE.API.csproj", "{3CCCAEBA-89D6-4BD0-90FB-EFC338CC834C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopeeFoodDemoBE.API", "ShopeeFoodDemoBE.API\ShopeeFoodDemoBE.API.csproj", "{3CCCAEBA-89D6-4BD0-90FB-EFC338CC834C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopeeFoodDemoBETest", "ShopeeFoodDemoBETest\ShopeeFoodDemoBETest.csproj", "{D087A32C-BE91-43DC-B841-90C8A1293C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopeeFoodDemoBEnUnitTest", "ShopeeFoodDemoBEnUnitTest\ShopeeFoodDemoBEnUnitTest.csproj", "{32DC3082-AB27-40E5-BDC6-1D8D09BAC361}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{3CCCAEBA-89D6-4BD0-90FB-EFC338CC834C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CCCAEBA-89D6-4BD0-90FB-EFC338CC834C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CCCAEBA-89D6-4BD0-90FB-EFC338CC834C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D087A32C-BE91-43DC-B841-90C8A1293C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D087A32C-BE91-43DC-B841-90C8A1293C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D087A32C-BE91-43DC-B841-90C8A1293C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D087A32C-BE91-43DC-B841-90C8A1293C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32DC3082-AB27-40E5-BDC6-1D8D09BAC361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DC3082-AB27-40E5-BDC6-1D8D09BAC361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DC3082-AB27-40E5-BDC6-1D8D09BAC361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DC3082-AB27-40E5-BDC6-1D8D09BAC361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
