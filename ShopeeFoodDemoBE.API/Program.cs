@@ -83,6 +83,9 @@ try
 
     builder.Services.AddTransient<IEmailService, EmailService>();
 
+    builder.Services.AddTransient<ISearchService, SearchService>();
+    builder.Services.AddTransient<ISearchRepository, SearchRepository>();
+
 
     // Add services to the container.
 

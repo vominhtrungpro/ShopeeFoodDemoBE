@@ -184,6 +184,25 @@ namespace ShopeeFoodDemoBE.BLL.Implementations
             return dtoRestaurant;
         }
 
+        public async Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIdsAndTextWithPaging(RestaurantResponseWithText respone)
+        {
+            var dtoRestaurant = new List<DtoRestaurant>();
+            var dbRestaurant = await _restaurantRepository.GetResByCityIdsAndResTypeIdsAndTextWithPaging(respone.CityIds, respone.RestaurantTypeIds,respone.Text, respone.Page);
+            dtoRestaurant = dbRestaurant.Select(c => new DtoRestaurant
+            {
+                RestaurantId = c.RestaurantId,
+                CityId = c.CityId,
+                RestaurantTypeId = c.RestaurantTypeId,
+                RestaurantName = c.RestaurantName,
+                RestaurantAddress = c.RestaurantAddress,
+                RestaurantImage = c.RestaurantImage,
+                Description = c.Description,
+                Status = c.Status
+
+            }).ToList();
+            return dtoRestaurant;
+        }
+
         public async Task<ActionResponse> AddRestaurant(RestaurantRequest request)
         {
             var result = new ActionResponse();

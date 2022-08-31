@@ -199,6 +199,36 @@ namespace ShopeeFoodDemoBE.API.Controllers
             }
         }
 
+        [HttpPost("paging-with-textcityIdsrestypeIds")]
+        public async Task<IActionResult> GetResByCityIdsAndResTypeIdsAndTextWithPaging(RestaurantResponseWithText respone)
+        {
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            _logger.LogInformation("Start get restaurant by city ids and restype ids with paging ");
+            try
+            {
+                var restaurant = await _restaurantService.GetResByCityIdsAndResTypeIdsAndTextWithPaging(respone);
+                timer.Stop();
+                if (restaurant != null)
+                {
+                    _logger.LogInformation("Get restaurant by city ids {0} and restype ids {1} and text {2} with paging succeed in {3} ms", respone.CityIds, respone.RestaurantTypeIds,respone.Text, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city ids and restype ids with paging ");
+                    return Ok(restaurant);
+                }
+                else
+                {
+                    _logger.LogInformation("Get restaurant by city ids {0} and restype ids {1} and text {2} with paging failed in {3} ms", respone.CityIds, respone.RestaurantTypeIds,respone.Text, timer.Elapsed.TotalMilliseconds);
+                    _logger.LogInformation("End get restaurant by city ids and restype ids with paging ");
+                    return BadRequest("Restaurant not found!");
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Error", e);
+                throw new Exception();
+            }
+        }
+
         [HttpGet("restauranttypeid-{id}")]
         public async Task<IActionResult> GetRestaurantByRestaurantTypeId(int id)
         {

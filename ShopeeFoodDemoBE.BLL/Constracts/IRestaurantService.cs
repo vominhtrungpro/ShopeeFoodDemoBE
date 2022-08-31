@@ -22,6 +22,8 @@ namespace ShopeeFoodDemoBE.BLL.Constracts
 
         Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIdsWithPaging(RestaurantResponse respone);
 
+        Task<List<DtoRestaurant>> GetResByCityIdsAndResTypeIdsAndTextWithPaging(RestaurantResponseWithText respone);
+
         Task<ActionResponse> AddRestaurant(RestaurantRequest request);
 
         Task<ActionResponse> UpdateRestaurant(RestaurantRequest request);

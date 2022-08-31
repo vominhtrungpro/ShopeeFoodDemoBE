@@ -25,6 +25,8 @@ namespace ShopeeFoodDemoBE.DAL.Repos.Constracts
 
         Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsWithPaging(List<int> cityIds, List<int> resTypeIds, int page);
 
+        Task<List<Restaurant>> GetResByCityIdsAndResTypeIdsAndTextWithPaging(List<int> cityIds, List<int> resTypeIds, string text, int page);
+
         Task<List<Restaurant>> GetRestaurantByListCityId(List<int> id);
 
         Task<List<Restaurant>> GetRestaurantByListRestaurantTypeId(List<int> id);
